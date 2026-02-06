@@ -1,215 +1,245 @@
-import { Award, MapPin, Calendar, Book, CheckCircle, AlertTriangle, Heart, Users, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+"use client";
 
-function Bouteille() {
-  return (
-    <div className="min-h-screen bg-white">
-      <nav className="bg-white border-b border-gray-200 px-8 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Award className="w-5 h-5 text-amber-600" />
-            <span className="font-semibold text-gray-800">Mémoire de la Déportation</span>
-          </Link>
-          <div className="flex gap-8 items-center">
-            <a href="#biographie" className="text-gray-600 hover:text-gray-900 text-sm">Biographie</a>
-            <a href="#resistance" className="text-gray-600 hover:text-gray-900 text-sm">Résistance</a>
-            <a href="#deportation" className="text-gray-600 hover:text-gray-900 text-sm">Déportation</a>
-            <a href="#heritage" className="text-gray-600 hover:text-gray-900 text-sm">Héritage</a>
-            <Link to="/" className="flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-semibold">
-              <ArrowLeft className="w-4 h-4" />
-              Retour
-            </Link>
-          </div>
-        </div>
-      </nav>
+import { motion } from "framer-motion";
+import {
+  FileText,
+  User,
+  AlertTriangle,
+  Shield,
+  MapPin,
+  Calendar,
+  Quote,
+  History,
+  Scale,
+} from "lucide-react";
+import React from "react";
 
-      <div className="max-w-6xl mx-auto px-8 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="md:col-span-1">
-            <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-lg p-8 text-white sticky top-8">
-              <div className="mb-6">
-                <div className="w-full h-48 bg-blue-700 rounded-lg mb-4 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-blue-400" />
-                </div>
-                <h1 className="text-2xl font-bold">Robert BOUTEILLE</h1>
-                <p className="text-blue-200 text-sm">1923 - 1945</p>
-              </div>
-
-              <div className="space-y-4 border-t border-blue-700 pt-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
-                  <span className="text-sm">Auxtin le Montagne (Dore)</span>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
-                  <span className="text-sm">28 mai 1944</span>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Book className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
-                  <span className="text-sm">Professeur de philosophie</span>
-                </div>
-
-                <div className="border-t border-blue-700 pt-4 mt-4">
-                  <div className="text-red-300 font-semibold text-sm mb-2 flex items-center gap-2">
-                    <AlertTriangle className="w-4 h-4" />
-                    Déportation
-                  </div>
-                  <p className="text-xs text-blue-100">
-                    Buchenwald<br />
-                    Libération: 8 avril 1945
-                  </p>
-                </div>
-
-                <div className="border-t border-blue-700 pt-4 mt-4">
-                  <div className="text-blue-400 font-semibold text-sm mb-2 flex items-center gap-2">
-                    <Book className="w-4 h-4" />
-                    Archives
-                  </div>
-                  <p className="text-xs text-blue-100">
-                    Sources biographiques de la Dépêche<br />
-                    (présentes)
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-2 space-y-6">
-            <div id="biographie" className="bg-gray-50 rounded-lg p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Biographie</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Robert Bouteille, né en 1923 dans le Puy-de-Dôme, est un enseignant qui enseigne la Montagne Granel. L'art et les De-Denau Derbelle, que amis décédés. Professeur de philosophie engagé, il rejoint rapidement la résistance aux côtés de ses pairs et de ses collègues.
-              </p>
-            </div>
-
-            <div id="resistance" className="bg-green-50 border-l-4 border-green-500 rounded-lg p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-green-700 mb-4 flex items-center gap-2">
-                <CheckCircle className="w-6 h-6" />
-                L'engagement dans la Résistance
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Après la défaite de 1940, il rejoint en 1941 les mouvements de la résistance français où il s'implique au travail souterrain. Caché auprès de ses amis, il quitte sa vie ordinaire pour celles plus intenses d'une résistance à jamais honorée.
-              </p>
-              <div className="bg-white p-4 rounded border border-green-200">
-                <p className="text-sm text-gray-700 font-semibold mb-2">Participation</p>
-                <p className="text-sm text-gray-600">
-                  En 1942, lors de la politique de France, il est arrêté le 9 juillet. Grâce à l'implication, consultances investis une compagnie de travail forcé, la surface plus tard d'une année renfermées dans les forteresses et présidents.
-                </p>
-              </div>
-            </div>
-
-            <div id="deportation" className="bg-red-50 border-l-4 border-red-500 rounded-lg p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-red-700 mb-4 flex items-center gap-2">
-                <AlertTriangle className="w-6 h-6" />
-                L'Importation à Buchenwald
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Il est déporté au camp de Buchenwald, ce 3 mai 19 1943. En raison de son handicap, il est affecté au blocs rellevés, un certain temps et un ateliers motages au travail.
-              </p>
-              <div className="bg-white p-4 rounded border border-red-200 mb-4">
-                <p className="text-sm text-gray-700 font-semibold mb-3">Témoignages de l'Horreur abonde du camp:</p>
-                <div className="grid md:grid-cols-2 gap-3 text-xs text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                    Faim permanente
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                    Maladies
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                    Violences quotidiennes
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                    Chantour d'arsia
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                    Mort omniprésente
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs text-red-600 font-semibold">
-                55 000 personnes sont mortes à Buchenwald
-              </p>
-            </div>
-
-            <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-blue-700 mb-4 flex items-center gap-2">
-                <Heart className="w-6 h-6" />
-                Libération et rôle de l'éminentisseur
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Après la libération du camp en avril 1945, ses capteurs devant ivre — retrouvés. Ils revient des rescapés français, témoignarage de là où il se montre hommage aux victimes prise l'oubliée.
-              </p>
-              <div className="space-y-3 text-sm text-gray-700">
-                <p>
-                  <span className="font-semibold text-blue-700">• </span>
-                  Il participe activement à la conférence de Yalta, où l'encontre politiquement vers l'expérience de liberté.
-                </p>
-                <p>
-                  <span className="font-semibold text-blue-700">• </span>
-                  Il dénonce auprès de la majorité au l'Importation de toutteries organisations juridiques antérà certains déclarant — une forme de l'action civiles, aidées.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-purple-50 border-l-4 border-purple-500 rounded-lg p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-purple-700 mb-4 flex items-center gap-2">
-                <Users className="w-6 h-6" />
-                Après-guerre
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Après sa libération, il continue dans les détails d'infamies et militants. Il s'implique qui commence aussi divers centres et le Mémorial de la de n° groupe.
-              </p>
-              <div className="bg-white p-4 rounded border border-purple-200">
-                <p className="text-sm text-gray-700 leading-relaxed">
-                  Il participe au témoignage d'aujourd'hui, dont Marcel Langer, l'Église de la Louvain-le-Neuve, qui du 97 NDT à Toulouse.
-                </p>
-              </div>
-            </div>
-          </div>
+const Section = ({
+  title,
+  icon: Icon,
+  children,
+  id,
+}: {
+  title: string;
+  icon: any;
+  children: React.ReactNode;
+  id: string;
+}) => (
+  <motion.section
+    id={id}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8 }}
+    className="mb-24 last:mb-0 relative"
+  >
+    <div className="bg-[#186974]/15 p-8 md:p-10 border border-[#186974]/25">
+      <div className="flex items-center gap-4 mb-8 border-b border-[#186974]/30 pb-4">
+        <Icon className="w-6 h-6 text-[#186974]" />
+        <h2 className="text-2xl font-serif font-bold tracking-tight uppercase text-white italic">
+          {title}
+        </h2>
+        <div className="ml-auto text-xs font-mono text-white/30 uppercase tracking-widest">
+          Dossier Ref: {id.toUpperCase()}
         </div>
       </div>
+      <div className="prose max-w-none font-sans leading-relaxed text-white/70">
+        {children}
+      </div>
+    </div>
+  </motion.section>
+);
 
-      <footer className="bg-blue-900 text-white py-12 px-8 mt-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="font-bold mb-4">Mémoire de la Déportation</h3>
-              <p className="text-sm text-blue-200">
-                Respectons et commémorons la mémoire des déportés par les nazis.
-              </p>
+export default function Home() {
+  return (
+      <div className="min-h-screen bg-gradient-to-br from-[#0B1A2E] via-[#132B4A] to-[#1A1A3E] text-white/80 font-sans selection:bg-[#F28C1A]/30 selection:text-white overflow-x-hidden">
+      <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]" />
+
+      <main className="px-6 md:px-12 lg:px-20 py-20 md:py-32">
+        <header className="mb-32 relative !w-full !h-[279px]">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="inline-block px-4 py-1 mb-6 border border-[#F28C1A] text-[#F28C1A] font-mono text-xs font-bold uppercase tracking-widest rotate-[-2deg]"
+          >
+            CONFIDENTIEL / DÉPORTÉ
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-6xl md:text-8xl font-serif font-bold tracking-tighter mb-8 text-white"
+          >
+            Robert <br />
+            <span className="italic font-normal serif">Bouteille</span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-wrap gap-8 font-mono text-sm text-white/50 border-t border-[#186974]/30 pt-8"
+          >
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4" />
+              1904 – ?
             </div>
-            <div>
-              <h3 className="font-bold mb-4">Liens utiles</h3>
-              <ul className="text-sm text-blue-200 space-y-2">
-                <li><a href="#" className="hover:text-white">Archives nationales</a></li>
-                <li><a href="#" className="hover:text-white">CNRD officiel</a></li>
-                <li><a href="#" className="hover:text-white">Fondation de la Résistance</a></li>
-              </ul>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4" />
+              Auchy-la-Montagne
             </div>
-            <div>
-              <h3 className="font-bold mb-4">Contact</h3>
-              <p className="text-sm text-blue-200">
-                Avez vous des informations supplémentaires?
-              </p>
-              <p className="text-sm text-blue-200">
-                ✉️ contact@mémoire.fr
+            <div className="flex items-center gap-2">
+              <User className="w-4 h-4" />
+              Professeur de Philosophie
+            </div>
+          </motion.div>
+
+          <div className="absolute -right-4 top-0 opacity-[0.06] pointer-events-none hidden lg:block">
+            <FileText className="w-64 h-64 rotate-12 text-[#186974]" />
+          </div>
+        </header>
+
+        <Section id="identite" title="Profil & Origines" icon={User}>
+          <p className="text-xl leading-relaxed mb-6">
+            Fils de Désiré Bouteille, ancien député, Robert Bouteille appartient
+            à un milieu social politisé et cultivé. Toutefois, son parcours est
+            profondément structuré par une{" "}
+            <span className="underline decoration-[#F28C1A]/40 underline-offset-4 decoration-2">
+              instabilité psychique durable
+            </span>
+            , qui traverse l&apos;ensemble de sa vie et brouille la portée de sa
+            parole après la guerre.
+          </p>
+        </Section>
+
+        <Section
+          id="fragilite"
+          title="Fragilité Psychique"
+          icon={AlertTriangle}
+        >
+            <div className="bg-[#186974]/30 p-8 border-l-4 border-[#F28C1A] mb-8 italic text-white/50">
+            &quot;Un comportement impulsif, conflictuel et désorganisé.&quot;
+          </div>
+          <p className="mb-6">
+            Bien avant la Seconde Guerre mondiale, Bouteille présente des
+            troubles mentaux avérés. Interné à plusieurs reprises avant 1939,
+            ses archives administratives attestent d&apos;une fragilité
+            antérieure à la déportation.
+          </p>
+          <p>
+            Le traumatisme concentrationnaire a pu aggraver ces troubles, mais
+            ils s&apos;inscrivent dans une durée qui dépasse largement le cadre
+            des camps.
+          </p>
+        </Section>
+
+        <Section
+          id="resistance"
+          title="Engagement & Arrestation"
+          icon={Shield}
+        >
+          <p className="mb-6">
+            Après la défaite de 1940, il rejoint les réseaux{" "}
+            <strong className="text-white font-semibold">Buckmaster</strong>{" "}
+            (SOE britannique). Il participe activement à la circulation de faux
+            papiers, ce qui conduit à son arrestation par les autorités
+            allemandes en novembre 1943.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+              <div className="border border-[#186974]/30 p-6 bg-[#186974]/20">
+                <h3 className="font-mono text-xs uppercase mb-4 text-white/40">
+                  Réseau clandestin
+                </h3>
+                <p className="text-sm text-white/70">
+                  Buckmaster / SOE (Special Operations Executive)
+                </p>
+              </div>
+              <div className="border border-[#186974]/30 p-6 bg-[#186974]/20">
+                <h3 className="font-mono text-xs uppercase mb-4 text-white/40">
+                  Motif d&apos;arrestation
+                </h3>
+                <p className="text-sm text-white/70">
+                Fabrication et circulation de faux documents d&apos;identité
               </p>
             </div>
           </div>
-          <div className="border-t border-blue-800 pt-6 text-center text-sm text-blue-200">
-            <p>© 2024 Mémoire de la Déportation. Tous droits réservés.</p>
+        </Section>
+
+        <Section
+          id="buchenwald"
+          title="Buchenwald : Bloc des Invalides"
+          icon={History}
+        >
+          <p className="mb-6">
+            Déporté en janvier 1944, Bouteille survit quinze mois à Buchenwald.
+            Amputé de la jambe droite, il est affecté au{" "}
+            <strong className="text-white font-semibold">
+              Bloc des Invalides
+            </strong>
+            , secteur réservé aux détenus inaptes au travail.
+          </p>
+          <p className="mb-8 text-lg">
+            Cette infirmité limite son exposition au travail forcé extrême,
+            faisant de lui un survivant marginal au sein des structures de
+            résistance interne du camp.
+          </p>
+
+            <div className="pl-8 border-l-2 border-[#D4770A] py-4 mb-8 bg-[#186974]/20">
+            <h4 className="font-bold text-sm uppercase mb-2 text-white/80">
+              Témoignage de l&apos;Horreur
+            </h4>
+            <p className="text-sm italic text-white/50">
+              &quot;Faim permanente, violence quotidienne, disparition des
+              compagnons et mort omniprésente... Près de 55 000 détenus ont péri
+              dans l&apos;ombre de ce camp.&quot;
+            </p>
           </div>
+        </Section>
+
+        <Section
+          id="mythomanie"
+          title="Mythomanie & Après-Guerre"
+          icon={Scale}
+        >
+          <p className="mb-6">
+            Dès 1945, son discours s&apos;amplifie. En 1955, la Sûreté
+            nationale le qualifie officiellement de{" "}
+            <span className="font-bold uppercase tracking-tighter text-sm">
+              mythomane
+            </span>
+            . Il se met en scène sous des identités multiples : héros mutilé,
+            philosophe reconnu, détenteur de documents secrets explosifs.
+          </p>
+        </Section>
+
+        <Section id="conclusion" title="Conclusion" icon={Quote}>
+          <p className="text-2xl leading-relaxed italic font-serif text-white/60">
+            &quot;Robert Bouteille n&apos;est ni un faux déporté ni un héros
+            oublié. Il est un survivant psychiquement fragile, dont la parole
+            est brouillée par un besoin de reconnaissance mal maîtrisé.&quot;
+          </p>
+        </Section>
+
+        <footer className="mt-48 pt-12 border-t border-[#186974]/30 flex flex-col md:flex-row justify-between items-start gap-8 opacity-50 hover:opacity-100 transition-opacity">
+          <div className="font-mono text-[10px] uppercase tracking-widest text-white/30">
+            <p className="mb-2">Sources Archive :</p>
+            <ul className="list-none p-0 m-0">
+              <li>Lalieu Olivier &quot;La zone grise&quot;</li>
+              <li>Mouvement national contre le racisme (LICA)</li>
+            </ul>
+          </div>
+          <div className="font-mono text-[10px] uppercase tracking-widest text-right text-white/30">
+            Dossier Classé - Reproduction interdite sans autorisation
+          </div>
+        </footer>
+      </main>
+
+      <div className="fixed top-10 right-10 pointer-events-none opacity-[0.12] hidden xl:block">
+        <div className="border-4 border-[#D4770A] text-[#D4770A] px-6 py-2 font-mono font-black text-4xl rotate-12 tracking-tighter">
+          ARCHIVE 001
         </div>
-      </footer>
+      </div>
     </div>
   );
 }
-
-export default Bouteille;
