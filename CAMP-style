@@ -1,0 +1,192 @@
+## Design System -- Page Auschwitz (Concours de la Resistance)
+
+### 1. Palette de couleurs
+
+| Role | Token | Valeur OKLCH | Rendu approximatif
+|-----|-----|-----|-----
+| **Background** | `--background` | `oklch(0.13 0 0)` | Noir charbon tres profond
+| **Foreground** | `--foreground` | `oklch(0.92 0 0)` | Blanc casse / gris tres clair
+| **Primary (accent)** | `--primary` | `oklch(0.75 0.06 75)` | Or / ambre sourd
+| **Secondary** | `--secondary` | `oklch(0.22 0 0)` | Gris charbon un ton au-dessus du fond
+| **Muted foreground** | `--muted-foreground` | `oklch(0.60 0 0)` | Gris moyen (corps de texte)
+| **Border** | `--border` | `oklch(0.25 0 0)` | Gris sombre (liseres, separateurs)
+| **Card** | `--card` | `oklch(0.17 0 0)` | Noir legerement plus clair que le fond
+
+
+**Resume : 4 couleurs utilisees** -- noir charbon (fond), blanc casse (texte principal), or/ambre (accent), gris moyen (texte secondaire). Aucun gradient utilise sauf sur le hero (fade-to-background du bas vers le haut via `bg-gradient-to-t from-background via-background/60 to-transparent`).
+
+---
+
+### 2. Typographie
+
+| Usage | Police | Classe Tailwind | Poids
+|-----|-----|-----|-----
+| **Titres (H1-H3)** | Playfair Display | `font-serif` | `font-bold`
+| **Corps, labels, UI** | Source Sans 3 | `font-sans` | normal / `font-semibold` / `font-medium`
+
+
+**Hierarchie typographique :**
+
+| Niveau | Classe | Taille mobile | Taille desktop
+|-----|-----|-----|-----
+| **H1 (Hero)** | `text-5xl` -> `md:text-7xl lg:text-8xl` | ~3rem | ~4.5rem-6rem
+| **H2 (Section)** | `text-3xl` -> `md:text-4xl` | ~1.875rem | ~2.25rem
+| **H3 (Sous-titre)** | `text-xl` ou `text-2xl` | ~1.25rem-1.5rem | idem
+| **Body** | `text-lg` | ~1.125rem | idem
+| **Small/meta** | `text-sm` ou `text-xs` | ~0.875rem-0.75rem | idem
+| **Statistiques** | `text-4xl` -> `md:text-5xl` | ~2.25rem | ~3rem
+
+
+- `leading-relaxed` (line-height ~1.625) sur tous les paragraphes
+- `tracking-[0.3em]` + `uppercase` + `text-sm` ou `text-xs` pour les labels de section (label "category" pattern)
+- `tracking-tight` sur le H1 hero
+- `text-balance` sur tous les H2
+
+
+---
+
+### 3. UI & composants
+
+**Labels de section :**
+
+- Pattern recurrent : `<p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">` suivi d'un `<h2>` et d'un separateur `<div className="mt-4 h-px w-16 bg-primary" />`
+
+
+**Separateurs/filets :**
+
+- Ligne horizontale fine : `h-px w-16 bg-primary` (16px de large, couleur or)
+- Variante large : `h-px w-24 bg-primary` (hero et memorial)
+
+
+**Cards :**
+
+- Bordure : `border border-border` (pas d'ombre, pas de radius)
+- Fond : `bg-card` ou `bg-secondary` selon le contexte
+- Padding : `p-8`
+- Hover : `hover:border-primary` (transition subtile vers l'or)
+- Pas de `rounded` (angles droits partout, radius: 0.375rem defini mais non utilise visuellement)
+
+
+**Listes a puces :**
+
+- Pas de `<ul>` avec bullets standards
+- Pattern : `<span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />` + `<span>` texte
+- Points en or, 6px de diametre
+
+
+**Border-left sections :**
+
+- `border-l-2 border-border pl-6` pour les sous-sections (extermination, resistance)
+- `hover:border-primary` en transition sur certains blocs
+- `border-l-2 border-primary pl-6` pour les citations et blocs importants
+
+
+**Badge/statut (deportes) :**
+
+- Evade : `bg-primary/20 text-primary` + `rounded-sm px-3 py-1 text-xs font-semibold uppercase tracking-wider`
+- Deporte : `bg-muted text-muted-foreground` meme structure
+
+
+**Citations (blockquote) :**
+
+- `border-l-2 border-primary py-4 pl-6 text-left`
+- Texte : `font-serif text-xl italic leading-relaxed text-foreground`
+- Attribution : `text-sm text-muted-foreground` prefixe par un em dash
+
+
+**Images :**
+
+- `object-cover` plein cadre avec overlay semi-transparent (`bg-background/30` ou `/20`)
+- Aspect ratios : `aspect-[21/9]` (panoramique), `aspect-[16/9]`
+- `rounded-sm` seulement
+- Legende : `text-center text-sm text-muted-foreground` en dessous
+
+
+---
+
+### 4. Layout & spacing
+
+**Grille :**
+
+- Largeur max : `max-w-4xl` (896px) pour le contenu texte, `max-w-5xl` (1024px) pour les camps, `max-w-3xl` (768px) pour le memorial
+- Padding horizontal : `px-6` partout
+- Mobile-first, responsive avec `md:` et `lg:`
+
+
+**Sections :**
+
+- Padding vertical : `py-20 md:py-28` (espacement genereux entre sections)
+- Alternance fond : background normal / `bg-secondary` pour creer un rythme visuel
+
+
+**Layouts internes :**
+
+- Flex en 1/3 + 2/3 pour les sections avec titre lateral : `md:flex-row md:gap-16` avec `md:w-1/3` et `md:w-2/3`
+- Grid 2 colonnes : `md:grid-cols-2` (conditions, deportes)
+- Grid 3 colonnes : `md:grid-cols-3` (stats principales)
+- Grid 4 colonnes : `lg:grid-cols-4` (stats secondaires)
+- Gap standard : `gap-6` pour les grilles, `gap-8` ou `gap-12` pour les listes verticales
+
+
+**Hero :**
+
+- `min-h-[85vh]` avec `flex items-end`
+- Image plein ecran en `fill` + gradient overlay
+- Contenu positionne en bas avec `pb-16 md:pb-24`
+
+
+**Timeline :**
+
+- Ligne verticale centree : `absolute left-4 md:left-1/2 w-px bg-border`
+- Points : cercles de 12px avec `border-2 border-primary bg-background`
+- Alternance gauche/droite sur desktop
+
+
+---
+
+### 5. Effets visuels
+
+- **Aucune ombre** (pas de `shadow-*` nulle part)
+- **Transitions** : `transition-colors` sur les blocs border-left et les cards (hover vers `border-primary`)
+- **Pas d'animations** complexes, pas de keyframes
+- **Overlays images** : `bg-background/30` ou `bg-background/20` (voile sombre subtil)
+- **Gradient** : uniquement sur le hero (`bg-gradient-to-t from-background via-background/60 to-transparent`)
+
+
+---
+
+### 6. Ton visuel global
+
+**Style** : Editorial / Memorial / Museal. Solennel et depouille, inspire des musees d'histoire et des monuments commemoratifs. Elegance dans la retenue absolue.
+
+**Contraste** : Eleve. Texte clair sur fond tres sombre. L'accent dore/ambre apporte de la gravite sans frivolite.
+
+**Principes** :
+
+- Zero decoration superflue
+- Angles droits (pas de border-radius visible)
+- Hierarchie par la typographie (serif pour l'autorite, sans-serif pour la lisibilite)
+- Espacement genereux comme dans un livre d'art
+- Rythme alternance fond sombre / fond plus sombre
+
+
+---
+
+### Prompt final optimise pour reproduire ce style sur une autre page
+
+> **Cree une page web en Next.js + Tailwind CSS avec le style suivant, sans aucune reinterpretation creative :**
+
+- **Fond** : noir charbon profond (`oklch(0.13 0 0)`). Sections alternees avec un fond legerement plus clair (`oklch(0.22 0 0)`).
+- **Texte** : blanc casse (`oklch(0.92 0 0)`) pour les titres et texte important, gris moyen (`oklch(0.60 0 0)`) pour le corps de texte.
+- **Accent unique** : or/ambre sourd (`oklch(0.75 0.06 75)`) utilise pour les labels de section, les separateurs, les puces, les bordures gauche actives et les badges.
+- **Typographie** : Playfair Display (serif, bold) pour tous les titres. Source Sans 3 (sans-serif) pour le corps. Maximum 2 polices. Leading-relaxed sur tous les paragraphes.
+- **Labels de section** : petite ligne uppercase en `tracking-[0.3em]` couleur accent au-dessus de chaque H2, suivi d'un filet `h-px w-16` en accent.
+- **Layout** : `max-w-4xl mx-auto px-6`. Sections en `py-20 md:py-28`. Layouts 1/3 + 2/3 en flex pour titre lateral + contenu. Grids `md:grid-cols-2` ou `md:grid-cols-3` pour les cartes.
+- **Cards** : bordure 1px couleur border, fond card, `p-8`, angles droits (pas de radius), `hover:border-primary` avec `transition-colors`. Aucune ombre.
+- **Listes** : puces rondes 6px en couleur accent + texte a cote (pas de bullets HTML).
+- **Blocs indentes** : `border-l-2 border-border pl-6`, hover vers `border-primary`.
+- **Citations** : `border-l-2 border-primary pl-6`, texte en serif italic, attribution en small + em dash.
+- **Images** : plein cadre `object-cover` avec overlay sombre semi-transparent, `rounded-sm`, legende centree en dessous.
+- **Hero** : 85vh, image fond avec gradient fade vers le background, contenu aligne en bas.
+- **Zero effets decoratifs** : pas d'ombres, pas d'animations, pas de gradients (sauf hero), pas de border-radius, pas de blobs/formes abstraites.
+- **Ton** : editorial, memorial, museal. Solennel et depouille.
