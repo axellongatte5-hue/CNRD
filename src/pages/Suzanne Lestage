@@ -1,0 +1,325 @@
+import { MapPin, Calendar, Award, AlertTriangle, Users, FileText, Heart, Shield } from 'lucide-react';
+
+export default function SuzanneLestage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="bg-white border-b border-gray-200 px-8 py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Award className="w-5 h-5 text-amber-600" />
+            <span className="font-semibold text-gray-800">Mémoire de la Déportation</span>
+          </div>
+          <div className="flex gap-8 items-center">
+            <a href="#biographie" className="text-gray-600 hover:text-gray-900 text-sm">Biographie</a>
+            <a href="#deportation" className="text-gray-600 hover:text-gray-900 text-sm">Déportation</a>
+            <a href="#parcours" className="text-gray-600 hover:text-gray-900 text-sm">Parcours</a>
+            <a href="#heritage" className="text-gray-600 hover:text-gray-900 text-sm">Héritage</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="bg-slate-900 text-white py-20 px-8">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-5xl font-bold mb-4">Suzanne Lestage</h1>
+            <p className="text-amber-400 text-xl mb-6">1906 - 1995</p>
+            <p className="text-gray-300 text-lg mb-6">Déportée Nacht und Nebel, survivante de Ravensbrück et Mauthausen</p>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-2 text-sm">
+                <MapPin className="w-4 h-4 text-amber-400" />
+                <span>Narbonne, Aude, France</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Calendar className="w-4 h-4 text-amber-400" />
+                <span>3 février 1906</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <FileText className="w-4 h-4 text-amber-400" />
+                <span>Matricule n°2123</span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <div className="flex justify-center mb-4">
+              <div className="w-24 h-24 bg-slate-700 rounded-full flex items-center justify-center">
+                <Users className="w-12 h-12 text-slate-500" />
+              </div>
+            </div>
+            <p className="text-center text-gray-300 italic">
+              &quot;Nacht und Nebel&quot; - Disparue dans la nuit et le brouillard, elle a survécu pour témoigner...
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Biographie Section */}
+      <div id="biographie" className="max-w-5xl mx-auto px-8 py-16">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Qui était Suzanne Lestage ?</h2>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-amber-50 p-8 rounded-lg">
+            <h3 className="font-bold text-gray-800 text-xl mb-4 flex items-center gap-2">
+              <Heart className="w-5 h-5 text-amber-600" />
+              Identité
+            </h3>
+            <ul className="space-y-3 text-gray-700">
+              <li><strong>Nom complet :</strong> Suzanne Marie Jeanne Gastonne Lestage</li>
+              <li><strong>Née le :</strong> 3 février 1906 à Narbonne (Aude)</li>
+              <li><strong>Père :</strong> Gaston Lestage</li>
+              <li><strong>Profession :</strong> Couturière</li>
+              <li><strong>Décès :</strong> 15 janvier 1995 à Rieux-Volvestre (Haute-Garonne)</li>
+              <li><strong>Âge au décès :</strong> 88 ans</li>
+            </ul>
+          </div>
+          
+          <div className="bg-red-50 p-8 rounded-lg">
+            <h3 className="font-bold text-gray-800 text-xl mb-4 flex items-center gap-2">
+              <Shield className="w-5 h-5 text-red-600" />
+              Statut de Déportation
+            </h3>
+            <div className="space-y-3 text-gray-700">
+              <p><strong>Classification :</strong> Nacht und Nebel (NN)</p>
+              <p><strong>Matricule :</strong> 2123</p>
+              <p className="text-sm bg-white p-3 rounded border-l-4 border-red-500">
+                Le décret &quot;Nacht und Nebel&quot; du 7 décembre 1941, signé par le maréchal Keitel, 
+                ordonnait la déportation de tous les ennemis du Troisième Reich (saboteurs, résistants, opposants) 
+                afin qu&apos;ils disparaissent dans le secret total et l&apos;anonymat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Timeline Section */}
+      <div id="parcours" className="bg-gray-50 py-16 px-8">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Chronologie du Parcours</h2>
+
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-amber-400 via-red-500 to-green-500"></div>
+
+            <div className="space-y-12">
+              {/* 1906 */}
+              <div className="flex items-center gap-8">
+                <div className="w-1/2 text-right">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Naissance</h3>
+                  <p className="text-sm text-gray-600">3 février 1906 à Narbonne, Aude</p>
+                  <p className="text-xs text-amber-600 mt-1">Fille de Gaston Lestage</p>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-4 h-4 bg-amber-400 rounded-full border-4 border-white shadow"></div>
+                </div>
+                <div className="w-1/2 text-amber-600 font-bold text-xl">1906</div>
+              </div>
+
+              {/* Février 1944 - Arrestation */}
+              <div className="flex items-center gap-8">
+                <div className="w-1/2 text-right text-red-600 font-bold text-xl">17 Fév 1944</div>
+                <div className="relative z-10">
+                  <div className="w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow"></div>
+                </div>
+                <div className="w-1/2 bg-red-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Déportation depuis Fresnes</h3>
+                  <p className="text-sm text-red-600">Prison de Fresnes, proche de Paris</p>
+                  <p className="text-xs text-red-600 mt-1">Classée &quot;Nacht und Nebel&quot;</p>
+                </div>
+              </div>
+
+              {/* Lauban */}
+              <div className="flex items-center gap-8">
+                <div className="w-1/2 text-right bg-orange-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Prison de Lauban</h3>
+                  <p className="text-sm text-orange-600">Pologne (près de Breslau)</p>
+                  <p className="text-xs text-orange-600 mt-1">Prison de prévention pour les déportés NN</p>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow"></div>
+                </div>
+                <div className="w-1/2 text-orange-600 font-bold text-xl">Fév 1944</div>
+              </div>
+
+              {/* Ravensbrück */}
+              <div className="flex items-center gap-8">
+                <div className="w-1/2 text-right text-red-600 font-bold text-xl">14 Oct 1944</div>
+                <div className="relative z-10">
+                  <div className="w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow"></div>
+                </div>
+                <div className="w-1/2 bg-red-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Arrivée à Ravensbrück</h3>
+                  <p className="text-sm text-red-600">En provenance de Breslau</p>
+                  <p className="text-xs text-red-600 mt-1">Camp de concentration pour femmes - 6 mois de détention</p>
+                </div>
+              </div>
+
+              {/* Mauthausen */}
+              <div className="flex items-center gap-8">
+                <div className="w-1/2 text-right bg-red-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Évacuation vers Mauthausen</h3>
+                  <p className="text-sm text-red-600">Départ le 2 mars, arrivée le 7 mars 1945</p>
+                  <p className="text-xs text-red-600 mt-1">Une des rares femmes à Mauthausen</p>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow"></div>
+                </div>
+                <div className="w-1/2 text-red-600 font-bold text-xl">Mars 1945</div>
+              </div>
+
+              {/* Libération */}
+              <div className="flex items-center gap-8">
+                <div className="w-1/2 text-right text-green-600 font-bold text-xl">22 Avr 1945</div>
+                <div className="relative z-10">
+                  <div className="w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow"></div>
+                </div>
+                <div className="w-1/2 bg-green-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Libération</h3>
+                  <p className="text-sm text-green-600">Libérée par la Croix-Rouge</p>
+                  <p className="text-xs text-green-600 mt-1">Rapatriée à Annecy le 25 avril 1945</p>
+                </div>
+              </div>
+
+              {/* Décès */}
+              <div className="flex items-center gap-8">
+                <div className="w-1/2 text-right bg-gray-100 p-4 rounded-lg">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Décès</h3>
+                  <p className="text-sm text-gray-600">15 janvier 1995 à Rieux-Volvestre</p>
+                  <p className="text-xs text-gray-600 mt-1">Haute-Garonne, à l&apos;âge de 88 ans</p>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-4 h-4 bg-gray-400 rounded-full border-4 border-white shadow"></div>
+                </div>
+                <div className="w-1/2 text-gray-600 font-bold text-xl">1995</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Deportation Details */}
+      <div id="deportation" className="py-16 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Les Lieux de Détention</h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-slate-900 text-white p-6 rounded-lg">
+              <h3 className="text-amber-400 font-bold text-lg mb-3">Fresnes</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Prison située près de Paris. Point de départ de la déportation le 17 février 1944.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 text-white p-6 rounded-lg">
+              <h3 className="text-amber-400 font-bold text-lg mb-3">Aachen (Aix-la-Chapelle)</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Prison pour hommes et femmes. Premier lieu de déportation des femmes françaises &quot;NN&quot;, 
+                en attente du jugement à Cologne.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 text-white p-6 rounded-lg">
+              <h3 className="text-amber-400 font-bold text-lg mb-3">Lauban (Luban)</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Situé à l&apos;ouest de Breslau en Pologne. Prison de prévention pour les &quot;NN&quot; 
+                avant le passage devant le tribunal de Breslau.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 text-white p-6 rounded-lg">
+              <h3 className="text-amber-400 font-bold text-lg mb-3">Breslau (Wroclaw)</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Capitale de la Silésie où siège le tribunal chargé des affaires &quot;NN&quot;. 
+                Comprend deux prisons : Freiburgstrasse et Kletschkaustrasse.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 text-white p-6 rounded-lg">
+              <h3 className="text-amber-400 font-bold text-lg mb-3">Ravensbrück</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Camp de concentration pour femmes. Arrivée le 14 octobre 1944 en provenance de Breslau. 
+                Détention de 6 mois.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 text-white p-6 rounded-lg">
+              <h3 className="text-amber-400 font-bold text-lg mb-3">Mauthausen</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Évacuée de Ravensbrück le 2 mars, arrivée le 7 mars 1945. 
+                Libérée le 22 avril 1945 par la Croix-Rouge.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Citation */}
+      <div className="bg-slate-900 text-white py-12 px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xl italic mb-4">
+            &quot;Nacht und Nebel&quot; - Ces déportés devaient disparaître dans la nuit et le brouillard, 
+            sans laisser de traces. Mais Suzanne Lestage a survécu pour témoigner.
+          </p>
+          <p className="text-sm text-amber-400">
+            Une des rares femmes détenues à Mauthausen
+          </p>
+        </div>
+      </div>
+
+      {/* Heritage Section */}
+      <div id="heritage" className="py-16 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Mémoire et Héritage</h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-lg">
+              <div className="flex items-center gap-3 mb-3">
+                <Award className="w-6 h-6 text-amber-600" />
+                <h3 className="font-bold text-gray-800">Survivante</h3>
+              </div>
+              <p className="text-sm text-gray-700">
+                Après avoir survécu à plusieurs camps de concentration, Suzanne Lestage a été rapatriée 
+                en France le 25 avril 1945 et a vécu jusqu&apos;à 88 ans.
+              </p>
+            </div>
+
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+              <div className="flex items-center gap-3 mb-3">
+                <FileText className="w-6 h-6 text-blue-600" />
+                <h3 className="font-bold text-gray-800">Archives Arolsen</h3>
+              </div>
+              <p className="text-sm text-gray-700">
+                Son parcours est documenté dans les archives Arolsen, centre international de 
+                documentation sur les persécutions nazies.
+              </p>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
+              <div className="flex items-center gap-3 mb-3">
+                <Heart className="w-6 h-6 text-green-600" />
+                <h3 className="font-bold text-gray-800">Monument Mauthausen</h3>
+              </div>
+              <p className="text-sm text-gray-700">
+                Son nom figure au monument de Mauthausen, en hommage aux victimes et survivants 
+                de ce camp de concentration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-8 px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Award className="w-5 h-5 text-amber-400" />
+            <span className="font-semibold">Mémoire de la Déportation</span>
+          </div>
+          <p className="text-gray-400 text-sm mb-1">
+            En mémoire de Suzanne Marie Jeanne Gastonne Lestage et de tous les déportés.
+          </p>
+          <p className="text-gray-500 text-xs">1906 - 1995 • Que leur sacrifice ne soit jamais oublié</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
