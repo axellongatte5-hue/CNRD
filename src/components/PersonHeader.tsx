@@ -15,7 +15,7 @@ export default function PersonHeader({ sections, personName }: PersonHeaderProps
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 80; // Hauteur du header fixe
+      const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
