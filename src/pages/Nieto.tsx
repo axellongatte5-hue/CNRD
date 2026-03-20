@@ -1,27 +1,18 @@
-import { MapPin, Calendar, Award, AlertTriangle, Users, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { MapPin, Calendar, Award, AlertTriangle, Users } from 'lucide-react';
+import PersonHeader from '../components/PersonHeader';
+
+const nietoSections = [
+  { id: 'biographie', label: 'Biographie' },
+  { id: 'chronologie', label: 'Chronologie' },
+  { id: 'resistance', label: 'Résistance' },
+  { id: 'deportation', label: 'Déportation' },
+  { id: 'heritage', label: 'Héritage' },
+];
 
 function Nieto() {
   return (
-    <div className="min-h-screen bg-white">
-      <nav className="bg-white border-b border-gray-200 px-8 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Award className="w-5 h-5 text-amber-600" />
-            <span className="font-semibold text-gray-800">Mémoire de la Déportation</span>
-          </Link>
-          <div className="flex gap-8 items-center">
-            <a href="#biographie" className="text-gray-600 hover:text-gray-900 text-sm">Biographie</a>
-            <a href="#resistance" className="text-gray-600 hover:text-gray-900 text-sm">Résistance</a>
-            <a href="#deportation" className="text-gray-600 hover:text-gray-900 text-sm">Déportation</a>
-            <a href="#heritage" className="text-gray-600 hover:text-gray-900 text-sm">Héritage</a>
-            <Link to="/" className="flex items-center gap-1 text-amber-600 hover:text-amber-700 text-sm font-semibold">
-              <ArrowLeft className="w-4 h-4" />
-              Retour
-            </Link>
-          </div>
-        </div>
-      </nav>
+    <div className=\"min-h-screen bg-white\">
+      <PersonHeader sections={nietoSections} />
 
       <div className="bg-slate-900 text-white py-20 px-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
