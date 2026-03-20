@@ -1,6 +1,6 @@
-"use client";
+\"use client\";
 
-import { motion } from "framer-motion";
+import { motion } from \"framer-motion\";
 import {
   FileText,
   User,
@@ -17,8 +17,19 @@ import {
   ChevronRight,
   Map,
   ArrowRight,
-} from "lucide-react";
-import React from "react";
+} from \"lucide-react\";
+import React from \"react\";
+import PersonHeader from \"../components/PersonHeader\";
+
+const bouteilleSections = [
+  { id: \"identite\", label: \"Profil\" },
+  { id: \"fragilite\", label: \"Fragilité\" },
+  { id: \"resistance\", label: \"Résistance\" },
+  { id: \"chronologie\", label: \"Chronologie\" },
+  { id: \"buchenwald\", label: \"Buchenwald\" },
+  { id: \"mythomanie\", label: \"Mythomanie\" },
+  { id: \"conclusion\", label: \"Conclusion\" },
+];
 
 const Section = ({
   title,
