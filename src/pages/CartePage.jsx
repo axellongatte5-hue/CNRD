@@ -286,12 +286,14 @@ export default function CartePage() {
 
       {/* Map */}
       <div className=\"flex-1\">
-        <MapContainer
+        MapContainer
           center={[48.8566, 5.0]}
           zoom={5}
           className=\"h-full w-full\"
           style={{ background: '#1e293b' }}
+          zoomControl={false}
         >
+          <ZoomControl position=\"topright\" />
           <TileLayer
             attribution='&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>'
             url=\"https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png\"
