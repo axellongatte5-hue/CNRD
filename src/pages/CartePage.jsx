@@ -331,12 +331,13 @@ export default function CartePage() {
             </Marker>
           ))}
 
-          /* Person paths - only show when person is selected */}
-          {showPaths && selectedPerson && deportees.map((person) => {
+          /* Person paths - show all as dashed when no selection, only selected when clicked */}
+          {showPaths && deportees.map((person) => {
             const isSelected = selectedPerson?.id === person.id;
             const pathCoords = person.path.map(p => [p.lat, p.lng]);
             
-            if (!isSelected) return null;
+            // Si un personnage est sélectionné, n'afficher que son parcours
+            if (selectedPerson && !isSelected) return null;
             
             return (
               <Polyline
@@ -345,13 +346,13 @@ export default function CartePage() {
                 pathOptions={{
                   color: person.color,
                   weight: isSelected ? 4 : 2,
-                  opacity: isSelected ? 1 : 0.5,
+                  opacity: isSelected ? 1 : 0.6,
                   dashArray: isSelected ? null : '5, 10',
                 }}
               />
             );
           })}
-
+        
            {/* Person markers - only show when person is selected */}
           {showPersons && selectedPerson && deportees.map((person) => {
             const isSelected = selectedPerson?.id === person.id;
