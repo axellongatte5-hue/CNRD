@@ -83,10 +83,11 @@ export default function Home() {
     { value: "1955", unit: "", label: "rapport de la Sûreté nationale" },
   ];
 
-  return (
-    <div className="min-h-screen bg-[#eceae4] text-[#2c2c2b] overflow-x-hidden selection:bg-[#F5CB5C] selection:text-[#2c2c2b]">
+  
+    <div className=\"min-h-screen bg-[#eceae4] text-[#2c2c2b] overflow-x-hidden selection:bg-[#F5CB5C] selection:text-[#2c2c2b]\">
+      <PersonHeader sections={bouteilleSections} />
 
-      <main className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-20 md:py-28">
+      <main className=\"relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-24 pb-20 md:pt-28 md:pb-28\">
 
         {/* HEADER - Full width */}
         <header className="mb-16">
