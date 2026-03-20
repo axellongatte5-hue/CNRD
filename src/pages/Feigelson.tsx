@@ -150,8 +150,8 @@ function Feigelson() {
           </div>
         </section>
 
-        <section className="mb-16">
-          <div className="bg-red-50 border-l-4 border-red-600 p-8 rounded">
+        <section id=\"temoignage\" className=\"mb-16\">
+          <div className=\"bg-red-50 border-l-4 border-red-600 p-8 rounded\">
             <h3 className="text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
               <AlertTriangle className="w-6 h-6" />
               Témoignage direct
