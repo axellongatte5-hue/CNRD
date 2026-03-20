@@ -121,10 +121,10 @@ function Feigelson() {
               </div>
             ))}
           </div>
-        </section>
+        /section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Une entrée précoce dans la Résistance</h2>
+        <section id=\"resistance\" className=\"mb-16\">
+          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Une entrée précoce dans la Résistance</h2>
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded mb-6">
             <p className="text-gray-800 leading-relaxed">
               Raphaël Feigelson naît le 17 février 1926 à Paris dans une famille juive française. À seulement 14 ans, il refuse la défaite de 1940 et s'engage immédiatement dans la Résistance aux côtés de ses parents. Il devient rapidement chef militaire régional des Forces Unies de la Jeunesse Patriotique (F.U.J.P.), puis officier des Forces Françaises de l'Intérieur (F.F.I.).
