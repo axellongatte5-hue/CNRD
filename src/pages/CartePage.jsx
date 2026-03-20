@@ -329,12 +329,12 @@ export default function CartePage() {
             </Marker>
           ))}
 
-          {/* Person paths */}
-          {showPaths && deportees.map((person) => {
+          /* Person paths - only show when person is selected */}
+          {showPaths && selectedPerson && deportees.map((person) => {
             const isSelected = selectedPerson?.id === person.id;
             const pathCoords = person.path.map(p => [p.lat, p.lng]);
             
-            if (!isSelected && selectedPerson) return null;
+            if (!isSelected) return null;
             
             return (
               <Polyline
