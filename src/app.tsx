@@ -31,7 +31,9 @@ function App() {
         <Route path=\"/\" element={<Layout><HomePage /></Layout>} />
         <Route path=\"/personnages\" element={<Layout><PersonnagesPage /></Layout>} />
         <Route path=\"/camps\" element={<Layout><CampsPage /></Layout>} />
-        <Route path=\"/carte\" element={<Layout><CartePage /></Layout>} />
+        
+        {/* Carte sans footer */}
+        <Route path=\"/carte\" element={<CartePage />} />
         
         {/* Pages de personnages */}
         <Route path=\"/personnage/feigelson\" element={<Feigelson />} />
