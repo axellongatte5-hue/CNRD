@@ -449,6 +449,7 @@ export default function CartePage() {
           </div>
         </div>
       </div>
+      </div>
     </div>
   );
 }
