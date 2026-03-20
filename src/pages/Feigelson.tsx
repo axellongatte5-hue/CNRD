@@ -104,8 +104,8 @@ function Feigelson() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-8 py-12">
-        <section className="mb-16">
+      <div className=\"max-w-4xl mx-auto px-8 py-12\">
+        <section id=\"parcours\" className=\"mb-16\">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Parcours</h2>
           <div className="space-y-8">
             {timelineEvents.map((event, idx) => (
