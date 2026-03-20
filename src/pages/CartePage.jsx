@@ -1,8 +1,8 @@
-"import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap, ZoomControl } from 'react-leaflet';
 import L from 'leaflet';
-import { Users, MapPin, X, Filter, Eye, EyeOff } from 'lucide-react';
+import { Users, MapPin, X, Filter, Eye, EyeOff, Award, Home, Map } from 'lucide-react';
 import { deportees, camps } from '../data/deportees';
 import 'leaflet/dist/leaflet.css';
 
