@@ -1,44 +1,26 @@
-"use client"
+\"use client\"
 
 import { MapPin, Calendar, Award, AlertTriangle, Users, BookOpen, FileText, Quote } from 'lucide-react';
+import PersonHeader from '../components/PersonHeader';
+
+const rollandSections = [
+  { id: 'hero', label: 'Présentation' },
+  { id: 'biographie', label: 'Biographie' },
+  { id: 'deportation', label: 'Déportation' },
+  { id: 'temoignages', label: 'Témoignages' },
+  { id: 'sources', label: 'Sources' },
+];
 
 export default function Rolland() {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#ffffff' }}>
-      {/* Navigation */}
-      <nav style={{ 
-        backgroundColor: '#ffffff', 
-        borderBottom: '1px solid #e5e7eb', 
-        padding: '1rem 2rem' 
-      }}>
-        <div style={{ 
-          maxWidth: '80rem', 
-          margin: '0 auto', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'space-between' 
-        }}>
-          <a href="/" style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            gap: '0.5rem', 
-            textDecoration: 'none',
-            transition: 'opacity 0.2s'
-          }}>
-            <Award style={{ width: '1.25rem', height: '1.25rem', color: '#d97706' }} />
-            <span style={{ fontWeight: '600', color: '#1f2937' }}>Mémoire de la Déportation</span>
-          </a>
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-            <a href="#biographie" style={{ color: '#4b5563', fontSize: '0.875rem', textDecoration: 'none' }}>Biographie</a>
-            <a href="#deportation" style={{ color: '#4b5563', fontSize: '0.875rem', textDecoration: 'none' }}>Déportation</a>
-            <a href="#temoignages" style={{ color: '#4b5563', fontSize: '0.875rem', textDecoration: 'none' }}>Témoignages</a>
-            <a href="#sources" style={{ color: '#4b5563', fontSize: '0.875rem', textDecoration: 'none' }}>Sources</a>
-          </div>
-        </div>
-      </nav>
+      <PersonHeader sections={rollandSections} />
+      
+      {/* Spacer pour le header fixe */}
+      <div style={{ height: '4rem' }} />
 
       {/* Hero Section */}
-      <div style={{ 
+      <div id=\"hero\" style={{ 
         backgroundColor: '#0f172a', 
         color: '#ffffff', 
         padding: '5rem 2rem' 
