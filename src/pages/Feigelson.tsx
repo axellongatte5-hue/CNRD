@@ -132,8 +132,8 @@ function Feigelson() {
           </div>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Les étapes de la déportation</h2>
+        <section id=\"deportation\" className=\"mb-16\">
+          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Les étapes de la déportation</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {deportationStages.map((stage, idx) => (
               <div
