@@ -180,8 +180,8 @@ function Feigelson() {
           </div>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Évasion et libération</h2>
+        <section id=\"liberation\" className=\"mb-16\">
+          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Évasion et libération</h2>
           <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
             <p className="text-gray-800 leading-relaxed mb-4">
               Le 22 janvier 1945, Raphaël Feigelson parvient à s'évader d'Auschwitz. Il rejoint l'Armée soviétique, avec laquelle il participe à la libération du camp et empêche sa destruction totale par les SS en fuite.
