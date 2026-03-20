@@ -262,7 +262,9 @@ function Nieto() {
         </div>
       </div>
 
-      <footer className="bg-slate-900 text-white py-8 px-8">
+      <footer {/* Spacer pour le header fixe */}
+      <div className=\"h-16\" />
+      <div id=\"biographie\" className=\"bg-slate-900 text-white py-20 px-8\">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Award className="w-5 h-5 text-amber-400" />
