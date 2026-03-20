@@ -84,21 +84,13 @@ function Feigelson() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <nav className="bg-white border-b border-gray-200 px-8 py-4 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Award className="w-5 h-5 text-amber-600" />
-            <span className="font-semibold text-gray-800">Mémoire de la Déportation</span>
-          </Link>
-          <Link to="/" className="flex items-center gap-1 text-gray-600 hover:text-gray-900 text-sm font-semibold">
-            <ArrowLeft className="w-4 h-4" />
-            Retour
-          </Link>
-        </div>
-      </nav>
+    <div className=\"min-h-screen bg-white\">
+      <PersonHeader sections={feigelsonSections} />
+      
+      {/* Spacer pour le header fixe */}
+      <div className=\"h-16\" />
 
-      <div className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 px-8">
+      <div id=\"hero\" className=\"bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 px-8\">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-32 h-32 mx-auto mb-8 bg-gray-700 rounded-lg flex items-center justify-center">
             <Users className="w-16 h-16 text-gray-500" />
