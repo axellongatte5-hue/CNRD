@@ -1,5 +1,15 @@
-import { Award, ArrowLeft, Users, AlertTriangle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Award, Users, AlertTriangle } from 'lucide-react';
+import PersonHeader from '../components/PersonHeader';
+
+const feigelsonSections = [
+  { id: 'hero', label: 'Présentation' },
+  { id: 'parcours', label: 'Parcours' },
+  { id: 'resistance', label: 'Résistance' },
+  { id: 'deportation', label: 'Déportation' },
+  { id: 'temoignage', label: 'Témoignage' },
+  { id: 'liberation', label: 'Libération' },
+  { id: 'apres-guerre', label: 'Après-guerre' },
+];
 
 function Feigelson() {
   const timelineEvents = [
