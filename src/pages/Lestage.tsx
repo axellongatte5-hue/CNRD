@@ -1,26 +1,24 @@
 import { MapPin, Calendar, Award, AlertTriangle, Users, FileText, Heart, Shield } from 'lucide-react';
+import PersonHeader from '../components/PersonHeader';
+
+const lestageSections = [
+  { id: 'hero', label: 'Présentation' },
+  { id: 'biographie', label: 'Biographie' },
+  { id: 'deportation', label: 'Déportation' },
+  { id: 'parcours', label: 'Parcours' },
+  { id: 'heritage', label: 'Héritage' },
+];
 
 export default function SuzanneLestage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200 px-8 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-amber-600" />
-            <span className="font-semibold text-gray-800">Mémoire de la Déportation</span>
-          </div>
-          <div className="flex gap-8 items-center">
-            <a href="#biographie" className="text-gray-600 hover:text-gray-900 text-sm">Biographie</a>
-            <a href="#deportation" className="text-gray-600 hover:text-gray-900 text-sm">Déportation</a>
-            <a href="#parcours" className="text-gray-600 hover:text-gray-900 text-sm">Parcours</a>
-            <a href="#heritage" className="text-gray-600 hover:text-gray-900 text-sm">Héritage</a>
-          </div>
-        </div>
-      </nav>
+    <div className=\"min-h-screen bg-white\">
+      <PersonHeader sections={lestageSections} />
+      
+      {/* Spacer pour le header fixe */}
+      <div className=\"h-16\" />
 
       {/* Hero Section */}
-      <div className="bg-slate-900 text-white py-20 px-8">
+      <div id=\"hero\" className=\"bg-slate-900 text-white py-20 px-8\">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl font-bold mb-4">Suzanne Lestage</h1>
