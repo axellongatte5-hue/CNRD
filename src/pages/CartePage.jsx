@@ -350,11 +350,11 @@ export default function CartePage() {
             );
           })}
 
-          {/* Person markers */}
-          {showPersons && deportees.map((person) => {
+           {/* Person markers - only show when person is selected */}
+          {showPersons && selectedPerson && deportees.map((person) => {
             const isSelected = selectedPerson?.id === person.id;
             
-            if (!isSelected && selectedPerson) return null;
+            if (!isSelected) return null;
 
             return person.path.map((point, idx) => (
               <Marker
