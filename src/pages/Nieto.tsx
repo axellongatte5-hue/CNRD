@@ -14,6 +14,10 @@ function Nieto() {
     <div className=\"min-h-screen bg-white\">
       <PersonHeader sections={nietoSections} />
 
+      {/* Spacer pour le header fixe */}
+      <div className=\"h-16\" />
+
+      <div id=\"biographie\" className=\"bg-slate-900 text-white py-20 px-8\">
       <div className="bg-slate-900 text-white py-20 px-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
