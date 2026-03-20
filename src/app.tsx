@@ -1,23 +1,27 @@
-"import \"@/index.css\";
+"import \"./index.css\";
 import { BrowserRouter, Routes, Route } from \"react-router-dom\";
-import Layout from \"@/components/Layout\";
-import HomePage from \"@/pages/HomePage\";
-import PersonnagesPage from \"@/pages/PersonnagesPage\";
-import CampsPage from \"@/pages/CampsPage\";
-import CartePage from \"@/pages/CartePage\";
+import Layout from \"./components/Layout\";
+import HomePage from \"./pages/Home\";
+import PersonnagesPage from \"./pages/PersonnagesPage\";
+import CampsPage from \"./pages/CampsPage\";
+import CartePage from \"./pages/CartePage\";
 
-// Pages originales des personnages
-import Feigelson from \"@/pages/Feigelson\";
-import Nieto from \"@/pages/Nieto\";
-import Bouteille from \"@/pages/Bouteille\";
+// Pages des personnages
+import Feigelson from \"./pages/Feigelson\";
+import Nieto from \"./pages/Nieto\";
+import Bouteille from \"./pages/Bouteille\";
+import Seguy from \"./pages/Seguy\";
+import Lestage from \"./pages/Lestage\";
+import Rolland from \"./pages/Rolland\";
 
-// Pages originales des camps
-import Drancy from \"@/pages/Drancy\";
-import Buchenwald from \"@/pages/buchenwald\";
-import Mauthausen from \"@/pages/mauthausen\";
-import Ravensbruck from \"@/pages/Ravensbruck\";
-import Neuengamme from \"@/pages/neuengamme\";
-import Compiegne from \"@/pages/Campiegne\";
+// Pages des camps
+import Auschwitz from \"./pages/Auschwitz\";
+import Drancy from \"./pages/Drancy\";
+import Buchenwald from \"./pages/buchenwald\";
+import Mauthausen from \"./pages/mauthausen\";
+import Ravensbruck from \"./pages/Ravensbruck\";
+import Neuengamme from \"./pages/neuengamme\";
+import Compiegne from \"./pages/Campiegne\";
 
 function App() {
   return (
@@ -29,12 +33,16 @@ function App() {
         <Route path=\"/camps\" element={<Layout><CampsPage /></Layout>} />
         <Route path=\"/carte\" element={<Layout><CartePage /></Layout>} />
         
-        {/* Pages de personnages avec leur UI originale */}
+        {/* Pages de personnages */}
         <Route path=\"/personnage/feigelson\" element={<Feigelson />} />
         <Route path=\"/personnage/nieto\" element={<Nieto />} />
         <Route path=\"/personnage/bouteille\" element={<Bouteille />} />
+        <Route path=\"/personnage/seguy\" element={<Seguy />} />
+        <Route path=\"/personnage/lestage\" element={<Lestage />} />
+        <Route path=\"/personnage/rolland\" element={<Rolland />} />
         
-        {/* Pages de camps avec leur UI originale */}
+        {/* Pages de camps */}
+        <Route path=\"/camp/auschwitz\" element={<Auschwitz />} />
         <Route path=\"/camp/drancy\" element={<Drancy />} />
         <Route path=\"/camp/buchenwald\" element={<Buchenwald />} />
         <Route path=\"/camp/mauthausen\" element={<Mauthausen />} />
