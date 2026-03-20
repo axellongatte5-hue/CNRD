@@ -13,6 +13,7 @@ import Bouteille from \"./pages/Bouteille\";
 import Seguy from \"./pages/Seguy\";
 import Lestage from \"./pages/Lestage\";
 import Rolland from \"./pages/Rolland\";
+import LesAbs from \"./pages/les-abs\";
 
 // Pages des camps
 import Auschwitz from \"./pages/Auschwitz\";
@@ -42,6 +43,7 @@ function App() {
         <Route path=\"/personnage/seguy\" element={<Seguy />} />
         <Route path=\"/personnage/lestage\" element={<Lestage />} />
         <Route path=\"/personnage/rolland\" element={<Rolland />} />
+        <Route path=\"/personnage/les-abs\" element={<LesAbs />} />
         
         {/* Pages de camps */}
         <Route path=\"/camp/auschwitz\" element={<Auschwitz />} />
