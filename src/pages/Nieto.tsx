@@ -44,7 +44,7 @@ function Nieto() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-8 py-16">
+      div id=\"chronologie\" className=\"max-w-5xl mx-auto px-8 py-16\">
         <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Chronologie</h2>
 
         <div className="relative">
