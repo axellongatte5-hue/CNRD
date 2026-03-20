@@ -1,27 +1,25 @@
 import { MapPin, Calendar, Award, AlertTriangle, Users, BookOpen, Quote, ExternalLink } from 'lucide-react';
+import PersonHeader from '../components/PersonHeader';
+
+const seguySections = [
+  { id: 'hero', label: 'Présentation' },
+  { id: 'biographie', label: 'Biographie' },
+  { id: 'resistance', label: 'Résistance' },
+  { id: 'deportation', label: 'Déportation' },
+  { id: 'temoignage', label: 'Témoignage' },
+  { id: 'sources', label: 'Sources' },
+];
 
 export default function Seguy() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200 px-8 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-amber-600" />
-            <span className="font-semibold text-gray-800">Mémoire de la Déportation</span>
-          </div>
-          <div className="flex gap-8 items-center">
-            <a href="#biographie" className="text-gray-600 hover:text-gray-900 text-sm">Biographie</a>
-            <a href="#resistance" className="text-gray-600 hover:text-gray-900 text-sm">Résistance</a>
-            <a href="#deportation" className="text-gray-600 hover:text-gray-900 text-sm">Déportation</a>
-            <a href="#temoignage" className="text-gray-600 hover:text-gray-900 text-sm">Témoignage</a>
-            <a href="#sources" className="text-gray-600 hover:text-gray-900 text-sm">Sources</a>
-          </div>
-        </div>
-      </nav>
+    <div className=\"min-h-screen bg-white\">
+      <PersonHeader sections={seguySections} />
+      
+      {/* Spacer pour le header fixe */}
+      <div className=\"h-16\" />
 
       {/* Hero Section */}
-      <div className="bg-slate-900 text-white py-20 px-8">
+      <div id=\"hero\" className=\"bg-slate-900 text-white py-20 px-8\">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl font-bold mb-4">Georges Séguy</h1>
