@@ -193,10 +193,10 @@ function Feigelson() {
               Rescapé en avril 1945 à seulement 19 ans, il rentre à Paris.
             </p>
           </div>
-        </section>
+        /section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Après la guerre : une vie de transmission</h2>
+        <section id=\"apres-guerre\" className=\"mb-16\">
+          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Après la guerre : une vie de transmission</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {postWarWork.map((work, idx) => (
               <div
