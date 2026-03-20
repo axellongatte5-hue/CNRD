@@ -118,7 +118,40 @@ export default function CartePage() {
   }, [selectedPerson, selectedCamp]);
 
   return (
-    <div className=\"h-[calc(100vh-64px)] flex relative\" data-testid=\"carte-page\">
+    <div className=\"h-screen flex flex-col bg-slate-900\">
+      {/* Navigation */}
+      <nav className=\"h-16 bg-slate-900/95 backdrop-blur-md border-b border-slate-700 flex-shrink-0\">
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full\">
+          <div className=\"flex items-center justify-between h-full\">
+            <Link to=\"/\" className=\"flex items-center gap-3 hover:opacity-80 transition-opacity\">
+              <Award className=\"w-6 h-6 text-amber-500\" />
+              <span className=\"font-semibold text-lg text-white hidden sm:block\">Mémoire de la Déportation</span>
+              <span className=\"font-semibold text-lg text-white sm:hidden\">CNRD</span>
+            </Link>
+            <div className=\"flex items-center gap-1\">
+              <Link to=\"/\" className=\"flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all\">
+                <Home className=\"w-4 h-4\" />
+                Accueil
+              </Link>
+              <Link to=\"/personnages\" className=\"flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all\">
+                <Users className=\"w-4 h-4\" />
+                Personnages
+              </Link>
+              <Link to=\"/camps\" className=\"flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all\">
+                <MapPin className=\"w-4 h-4\" />
+                Camps
+              </Link>
+              <Link to=\"/carte\" className=\"flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-amber-500/20 text-amber-400 transition-all\">
+                <Map className=\"w-4 h-4\" />
+                Carte
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Main content */}
+      <div className=\"flex-1 flex relative\" data-testid=\"carte-page\">
       {/* Sidebar */}
       <div className={`absolute top-0 left-0 h-full z-[1000] transition-transform duration-300 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
