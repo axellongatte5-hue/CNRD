@@ -2,7 +2,7 @@
 import { Link, useSearchParams } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { ArrowLeft, Users, MapPin, X, Filter, Eye, EyeOff } from 'lucide-react';
+import { Users, MapPin, X, Filter, Eye, EyeOff } from 'lucide-react';
 import { deportees, camps } from '../data/deportees';
 import 'leaflet/dist/leaflet.css';
 
@@ -118,7 +118,7 @@ export default function CartePage() {
   }, [selectedPerson, selectedCamp]);
 
   return (
-    <div className=\"h-[calc(100vh-64px)] flex relative\">
+    <div className=\"h-[calc(100vh-64px)] flex relative\" data-testid=\"carte-page\">
       {/* Sidebar */}
       <div className={`absolute top-0 left-0 h-full z-[1000] transition-transform duration-300 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
