@@ -264,6 +264,8 @@ function Nieto() {
 
       <footer {/* Spacer pour le header fixe */}
       <div className=\"h-16\" />
+      {/* Spacer pour le header fixe */}
+      <div className=\"h-16\" />
       <div id=\"biographie\" className=\"bg-slate-900 text-white py-20 px-8\">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
