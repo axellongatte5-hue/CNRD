@@ -1,23 +1,22 @@
 import { MapPin, Calendar, Award, AlertTriangle, Users, Heart } from 'lucide-react';
+import PersonHeader from '../components/PersonHeader';
+
+const lesAbsSections = [
+  { id: 'hero', label: 'Présentation' },
+  { id: 'biographie', label: 'Jeanne Verdier' },
+  { id: 'cassou', label: 'Jean Cassou' },
+  { id: 'timeline', label: 'Contexte Historique' },
+];
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <nav className="bg-white border-b border-gray-200 px-8 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-amber-600" />
-            <span className="font-semibold text-gray-800">Mémoire de la Déportation</span>
-          </div>
-          <div className="flex gap-8 items-center">
-            <a href="#biographie" className="text-gray-600 hover:text-gray-900 text-sm">Jeanne Verdier</a>
-            <a href="#cassou" className="text-gray-600 hover:text-gray-900 text-sm">Jean Cassou</a>
-            <a href="#timeline" className="text-gray-600 hover:text-gray-900 text-sm">Chronologie</a>
-          </div>
-        </div>
-      </nav>
+    <div className=\"min-h-screen bg-white\">
+      <PersonHeader sections={lesAbsSections} />
+      
+      {/* Spacer pour le header fixe */}
+      <div className=\"h-16\" />
 
-      <div className="bg-slate-900 text-white py-20 px-8">
+      <div id=\"hero\" className=\"bg-slate-900 text-white py-20 px-8\">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl font-bold mb-4">Jeanne & Jean</h1>
