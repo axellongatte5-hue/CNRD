@@ -1,4 +1,4 @@
-"@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -98,10 +98,6 @@ body {
   background: #334155 !important;
 }
 
-.leaflet-control-zoom a:hover {
-  background: #334155 !important;
-}
-
 .leaflet-control-attribution {
   background: rgba(15, 23, 42, 0.8) !important;
   color: #64748b !important;
@@ -190,4 +186,3 @@ body {
 .font-serif {
   font-family: 'Playfair Display', 'Georgia', serif;
 }
-"
