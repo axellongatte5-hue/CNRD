@@ -1,6 +1,5 @@
-\"use client\";
 
-import { motion } from \"framer-motion\";
+import { motion } from "framer-motion";
 import {
   FileText,
   User,
@@ -17,18 +16,18 @@ import {
   ChevronRight,
   Map,
   ArrowRight,
-} from \"lucide-react\";
-import React from \"react\";
-import PersonHeader from \"../components/PersonHeader\";
+} from "lucide-react";
+import React from "react";
+import PersonHeader from "../components/PersonHeader";
 
 const bouteilleSections = [
-  { id: \"identite\", label: \"Profil\" },
-  { id: \"fragilite\", label: \"Fragilité\" },
-  { id: \"resistance\", label: \"Résistance\" },
-  { id: \"chronologie\", label: \"Chronologie\" },
-  { id: \"buchenwald\", label: \"Buchenwald\" },
-  { id: \"mythomanie\", label: \"Mythomanie\" },
-  { id: \"conclusion\", label: \"Conclusion\" },
+  { id: "identite", label: "Profil" },
+  { id: "fragilite", label: "Fragilité" },
+  { id: "resistance", label: "Résistance" },
+  { id: "chronologie", label: "Chronologie" },
+  { id: "buchenwald", label: "Buchenwald" },
+  { id: "mythomanie", label: "Mythomanie" },
+  { id: "conclusion", label: "Conclusion" },
 ];
 
 const Section = ({
@@ -84,10 +83,10 @@ export default function Home() {
   ];
 
   return (
-    <div className=\"min-h-screen bg-[#eceae4] text-[#2c2c2b] overflow-x-hidden selection:bg-[#F5CB5C] selection:text-[#2c2c2b]\">
+    <div className="min-h-screen bg-[#eceae4] text-[#2c2c2b] overflow-x-hidden selection:bg-[#F5CB5C] selection:text-[#2c2c2b]">
       <PersonHeader sections={bouteilleSections} />
 
-      <main className=\"relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-24 pb-20 md:pt-28 md:pb-28\">
+      <main className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-24 pb-20 md:pt-28 md:pb-28">
 
         {/* HEADER - Full width */}
         <header className="mb-16">
