@@ -267,513 +267,150 @@ export default function MauthausenPage() {
               ,{" "}
               <span className="font-semibold text-foreground">resistants</span>,{" "}
               <span className="font-semibold text-foreground">Juifs</span>,{" "}
-              <span className="font-semibold text-foreground">intellectuels</span>,{" "}
-              <span className="font-semibold text-foreground">
-                prisonniers de guerre
-              </span>
-              ,{" "}
-              <span className="font-semibold text-foreground">
-                republicains espagnols
-              </span>{" "}
-              et bien d{"'"}autres groupes que le regime nazi voulait eliminer
-              ou exploiter jusqu{"'"}a la mort.
-            </p>
-          </div>
-        </div>
-      </section>
+              <span className="font-semibold text-foreground">intimport CampPageLayout from '../components/CampPageLayout';
 
-      {/* ══════ TIMELINE ══════ */}
-      <section className="mx-auto max-w-4xl px-6 py-20 md:py-28">
-        <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-          Chronologie
-        </p>
-        <h2 className="mt-3 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-          Les dates cles de Mauthausen
-        </h2>
-        <div className="mt-4 h-px w-16 bg-primary" />
+const mauthausenData = {
+  dates: "1938 — 1945",
+  title: "Mauthausen",
+  subtitle: "Camp de catégorie III, le plus brutal du système concentrationnaire nazi, en Autriche.",
+  
+  introTitle: "L'escalier de la mort",
+  introText: [
+    "Mauthausen fut classé par les SS comme camp de catégorie III, réservé aux détenus considérés comme « irrécupérables ». C'était le camp le plus dur du système nazi.",
+    "Construit près d'une carrière de granit, le camp est tristement célèbre pour son « escalier de la mort » : 186 marches que les détenus devaient gravir en portant des blocs de pierre de 25 à 50 kg.",
+  ],
+  
+  timeline: [
+    {
+      date: "Août 1938",
+      title: "Création du camp",
+      description: "Après l'Anschluss, les premiers détenus arrivent pour construire le camp près de la carrière de Wiener-Graben.",
+    },
+    {
+      date: "1939",
+      title: "Camp de catégorie III",
+      description: "Mauthausen est classé camp d'extermination par le travail. Les conditions y sont les plus dures du système nazi.",
+    },
+    {
+      date: "1943",
+      title: "Développement industriel",
+      description: "Les tunnels souterrains de Gusen sont creusés pour la production d'armement. Des milliers de détenus y mourront.",
+    },
+    {
+      date: "Mai 1945",
+      title: "Libération",
+      description: "Le 5 mai, les troupes américaines libèrent le camp. Ils découvrent des scènes d'horreur indescriptibles.",
+    },
+  ],
+  
+  structureTitle: "Un système de mort",
+  structureSubtitle: "Organisation",
+  structureText: [
+    "Mauthausen contrôlait un vaste réseau de sous-camps à travers l'Autriche. Le complexe de Gusen était presque aussi meurtrier que le camp principal.",
+  ],
+  structureBlocks: [
+    {
+      title: "Le camp principal",
+      text: "Situé sur un plateau dominant le Danube, entouré de murs de granit. L'entrée fortifiée et les tours de guet en faisaient une forteresse.",
+    },
+    {
+      title: "La carrière de Wiener-Graben",
+      text: "Les détenus extrayaient le granit dans des conditions mortelles. L'escalier de la mort reliait la carrière au camp.",
+    },
+    {
+      title: "Les tunnels de Gusen",
+      text: "Vastes galeries souterraines où des milliers de détenus travaillaient et mouraient pour l'industrie de guerre nazie.",
+    },
+  ],
+  
+  processTitle: "L'extermination",
+  processSubtitle: "Méthodes",
+  processText: [
+    "À Mauthausen, les SS développèrent des méthodes particulièrement cruelles pour éliminer les détenus, souvent présentées comme des « accidents ».",
+  ],
+  processList: [
+    "Précipitation depuis le haut de la carrière (le « mur des parachutistes »).",
+    "Épuisement dans les escaliers sous le poids des blocs de granit.",
+    "Chambre à gaz et camions à gaz.",
+    "Exécutions par balles et pendaisons.",
+    "Expériences médicales mortelles.",
+    "Noyades dans les bassins du camp.",
+  ],
+  
+  conditionsTitle: "La terreur quotidienne",
+  conditionsSubtitle: "Conditions",
+  conditionsCards: [
+    {
+      title: "Le travail de la carrière",
+      subtitle: "L'escalier de la mort",
+      text: "186 marches irrégulières à gravir en portant des blocs de granit. Une chute entraînait souvent la mort de plusieurs détenus.",
+    },
+    {
+      title: "Le froid",
+      subtitle: "L'hiver autrichien",
+      text: "Les hivers rigoureux à plus de 400 mètres d'altitude tuaient les détenus affaiblis par malnutrition.",
+    },
+    {
+      title: "Les SS de Mauthausen",
+      subtitle: "Sadisme organisé",
+      text: "Les gardes SS de Mauthausen étaient réputés pour leur cruauté exceptionnelle, même selon les standards nazis.",
+    },
+    {
+      title: "Les « Muselmanners »",
+      subtitle: "Les condamnés",
+      text: "Les détenus arrivés au stade d'épuisement total étaient systématiquement éliminés.",
+    },
+  ],
+  
+  stats: [
+    { value: "190 000", label: "Détenus", description: "Passés par le camp" },
+    { value: "90 000", label: "Morts", description: "Dans le complexe" },
+    { value: "47%", label: "Mortalité", description: "Taux effroyable" },
+  ],
+  statsSecondary: [
+    { value: "49", label: "Sous-camps" },
+    { value: "186", label: "Marches" },
+    { value: "30+", label: "Nationalités" },
+    { value: "7", label: "Années" },
+  ],
+  
+  deportes: [
+    {
+      nom: "Francisco Boix",
+      date: "1941",
+      statut: "Survécu",
+      details: "Photographe espagnol qui réussit à sauver et cacher des milliers de photos documentant les atrocités. Témoin clé à Nuremberg.",
+    },
+    {
+      nom: "Simon Wiesenthal",
+      date: "1945",
+      statut: "Survécu",
+      details: "Transféré à Mauthausen en janvier 1945. Devint après-guerre le plus célèbre chasseur de nazis.",
+    },
+  ],
+  
+  liberationTitle: "La libération",
+  liberationText: [
+    "Le 5 mai 1945, les troupes américaines de la 11e division blindée libèrent Mauthausen. Ils découvrent environ 16 000 survivants dans un état de délabrement extrême.",
+    "Les photographies prises par les libérateurs constituent un témoignage accablant des crimes nazis. Certaines furent utilisées lors des procès de Nuremberg.",
+    "Le camp de Gusen avait été libéré deux jours plus tôt. Au total, près de 40 000 détenus furent libérés dans le complexe de Mauthausen.",
+  ],
+  
+  memorialQuote: "Passant, va dire à Sparte que nous sommes morts ici en obéissant à ses lois.",
+  memorialAuthor: "Inscription sur le monument espagnol de Mauthausen",
+  memorialStat: "90 000",
+  memorialStatLabel: "victimes à Mauthausen",
+  
+  otherCamps: [
+    { name: "Auschwitz", country: "Pologne", path: "/camp/auschwitz" },
+    { name: "Buchenwald", country: "Allemagne", path: "/camp/buchenwald" },
+    { name: "Ravensbrück", country: "Allemagne", path: "/camp/ravensbruck" },
+    { name: "Neuengamme", country: "Allemagne", path: "/camp/neuengamme" },
+    { name: "Drancy", country: "France", path: "/camp/drancy" },
+    { name: "Compiègne", country: "France", path: "/camp/compiegne" },
+  ],
+};
 
-        <div className="relative mt-16">
-          <div className="absolute left-4 top-0 bottom-0 w-px bg-border md:left-1/2 md:-translate-x-px" />
-          <div className="flex flex-col gap-12">
-            {timelineEvents.map((event, index) => (
-              <div
-                key={index}
-                className={`relative flex flex-col gap-4 pl-12 md:w-1/2 md:pl-0 ${
-                  index % 2 === 0
-                    ? "md:pr-12 md:text-right md:self-start"
-                    : "md:pl-12 md:self-end"
-                }`}
-              >
-                <div
-                  className={`absolute top-1 left-2.5 h-3 w-3 rounded-full border-2 border-primary bg-background md:top-1 ${
-                    index % 2 === 0
-                      ? "md:left-auto md:-right-1.5"
-                      : "md:-left-1.5"
-                  }`}
-                />
-                <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-                  {event.date}
-                </p>
-                <h3 className="font-serif text-xl font-bold text-foreground">
-                  {event.title}
-                </h3>
-                <p className="leading-relaxed text-muted-foreground">
-                  {event.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════ CAMP STRUCTURE ══════ */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="mx-auto max-w-5xl px-6">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-            Structure du camp
-          </p>
-          <h2 className="mt-3 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-            L{"'"}escalier de la mort et les carrieres
-          </h2>
-          <div className="mt-4 h-px w-16 bg-primary" />
-
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Mauthausen etait construit a proximite des carrieres de granit de{" "}
-            <span className="font-semibold text-foreground">Wiener Graben</span>
-            . Le travail dans ces carrieres, et notamment dans le tristement
-            celebre{" "}
-            <span className="font-semibold text-foreground">
-              escalier de la mort
-            </span>
-            , etait concu comme un instrument d{"'"}
-            <span className="font-semibold text-foreground">
-              extermination par le travail
-            </span>
-            .
-          </p>
-
-          {/* Image de l'escalier */}
-          <div className="mt-12">
-            <div className="relative aspect-[21/9] w-full overflow-hidden rounded-sm">
-              <Image
-                src="/images/mauthausen-stairs.jpg"
-                alt="L'escalier de la mort de Mauthausen - 186 marches vers l'enfer"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-background/20" />
-            </div>
-            <p className="mt-4 text-center text-sm text-muted-foreground">
-              L{"'"}escalier de la mort (Todesstiege) &mdash; 186 marches reliant
-              la carriere au camp
-            </p>
-          </div>
-
-          <div className="mt-16 flex flex-col gap-12">
-            {campSections.map((section, index) => (
-              <div
-                key={index}
-                className="group border-l-2 border-border py-6 pl-8 transition-colors hover:border-primary"
-              >
-                <div className="flex flex-col gap-4">
-                  <div>
-                    <h3 className="font-serif text-2xl font-bold text-foreground">
-                      {section.title}
-                    </h3>
-                    <p className="mt-1 text-sm font-medium uppercase tracking-widest text-primary">
-                      {section.subtitle}
-                    </p>
-                    <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
-                      {section.description}
-                    </p>
-                  </div>
-                </div>
-                <ul className="mt-6 flex flex-col gap-3">
-                  {section.details.map((detail, i) => (
-                    <li key={i} className="flex gap-3 text-muted-foreground">
-                      <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                      <span className="leading-relaxed">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════ CONDITIONS ══════ */}
-      <section className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-        <div className="flex flex-col gap-12 md:flex-row md:gap-16">
-          <div className="md:w-1/3">
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-              Conditions de vie
-            </p>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-              L{"'"}enfer sur terre
-            </h2>
-            <div className="mt-4 h-px w-16 bg-primary" />
-            <p className="mt-6 leading-relaxed text-muted-foreground">
-              Mauthausen etait repute, meme parmi les autres camps, pour la
-              cruaute exceptionnelle de ses conditions. Le travail dans les
-              carrieres, le froid autrichien, la violence des gardes et la
-              famine organisee faisaient de chaque jour un combat pour la
-              survie.
-            </p>
-          </div>
-
-          <div className="md:w-2/3">
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-sm">
-              <Image
-                src="/images/mauthausen-quarry.jpg"
-                alt="La carriere de granit de Wiener Graben a Mauthausen"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-background/20" />
-            </div>
-            <p className="mt-4 text-center text-sm text-muted-foreground">
-              La carriere de Wiener Graben &mdash; lieu de travail force et d{"'"}execution
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          {conditions.map((condition, index) => (
-            <div
-              key={index}
-              className="border border-border bg-card p-8 transition-colors hover:border-primary"
-            >
-              <h3 className="font-serif text-xl font-bold text-foreground">
-                {condition.title}
-              </h3>
-              <p className="mt-1 text-xs font-medium uppercase tracking-widest text-primary">
-                {condition.subtitle}
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                {condition.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ══════ STATISTICS ══════ */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-              En chiffres
-            </p>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-              L{"'"}ampleur du crime
-            </h2>
-            <div className="mx-auto mt-4 h-px w-16 bg-primary" />
-          </div>
-
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {statistics.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="font-serif text-4xl font-bold text-primary md:text-5xl">
-                  {stat.number}
-                </p>
-                <p className="mt-2 text-sm font-semibold uppercase tracking-widest text-foreground">
-                  {stat.label}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {stat.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mx-auto mt-16 max-w-3xl">
-            <h3 className="text-center font-serif text-xl font-bold text-foreground">
-              Nationalites des detenus
-            </h3>
-            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {detailedStats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="border-l-2 border-border pl-4 transition-colors hover:border-primary"
-                >
-                  <p className="font-semibold text-foreground">{stat.number}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    {stat.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════ RESISTANCE ══════ */}
-      <section className="mx-auto max-w-4xl px-6 py-20 md:py-28">
-        <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-          Actes de resistance
-        </p>
-        <h2 className="mt-3 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-          Resister a Mauthausen
-        </h2>
-        <div className="mt-4 h-px w-16 bg-primary" />
-
-        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Dans cet univers de violence absolue, des actes de resistance, meme
-          infimes, temoignaient de la dignite indestructible de l{"'"}etre humain.
-          Solidarite, sabotage, preservation de la memoire : autant de formes de
-          combat contre la barbarie.
-        </p>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {resistanceActs.map((act, index) => (
-            <div
-              key={index}
-              className="border-l-2 border-border pl-6 transition-colors hover:border-primary"
-            >
-              <h3 className="font-serif text-xl font-bold text-foreground">
-                {act.title}
-              </h3>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                {act.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ══════ DEPORTES ══════ */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-6">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-            Temoignages
-          </p>
-          <h2 className="mt-3 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-            Des destins brises
-          </h2>
-          <div className="mt-4 h-px w-16 bg-primary" />
-
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Derriere les chiffres, des vies. Chaque nom represente une personne
-            arrachee a sa famille, a son pays, a son avenir. Voici quelques-uns
-            de ceux qui ont ete deportes a Mauthausen.
-          </p>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {deportes.map((deporte, index) => (
-              <div
-                key={index}
-                className="border border-border bg-card p-8 transition-colors hover:border-primary"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="font-serif text-2xl font-bold text-foreground">
-                      {deporte.name}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Arrive le {deporte.arrivalDate}
-                    </p>
-                  </div>
-                  <span className="rounded-sm bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    {deporte.status}
-                  </span>
-                </div>
-                <p className="mt-6 leading-relaxed text-muted-foreground">
-                  {deporte.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════ LIBERATION ══════ */}
-      <section className="mx-auto max-w-4xl px-6 py-20 md:py-28">
-        <div className="flex flex-col gap-12 md:flex-row md:gap-16">
-          <div className="md:w-1/3">
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-              5 mai 1945
-            </p>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-              La liberation
-            </h2>
-            <div className="mt-4 h-px w-16 bg-primary" />
-          </div>
-          <div className="md:w-2/3">
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Le{" "}
-              <span className="font-semibold text-foreground">5 mai 1945</span>,
-              les troupes americaines de la{" "}
-              <span className="font-semibold text-foreground">
-                11e division blindee
-              </span>{" "}
-              atteignent Mauthausen. Ils decouvrent un spectacle d{"'"}horreur
-              que les mots peinent a decrire : des dizaines de milliers de
-              survivants squelettiques, des montagnes de cadavres, les preuves
-              d{"'"}un crime sans precedent.
-            </p>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Dans les jours precedents, les SS avaient tente de faire
-              disparaitre les preuves et d{"'"}evacuer certains detenus. Mais
-              l{"'"}effondrement du Reich les avait empeches de mener a bien
-              leur sinistre projet. Les survivants purent enfin temoigner.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-16">
-          <h3 className="font-serif text-xl font-bold text-foreground">
-            Ce que les liberateurs decouvrirent
-          </h3>
-          <ul className="mt-6 flex flex-col gap-4">
-            {liberationFacts.map((fact, index) => (
-              <li key={index} className="flex gap-3 text-muted-foreground">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                <span className="leading-relaxed">{fact}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-16 border-l-2 border-primary py-4 pl-6">
-          <blockquote className="font-serif text-xl italic leading-relaxed text-foreground">
-            &ldquo;Si l{"'"}echo de leur voix faiblit, nous perirons.&rdquo;
-          </blockquote>
-          <p className="mt-4 text-sm text-muted-foreground">
-            &mdash; Paul Eluard, poete francais
-          </p>
-        </div>
-      </section>
-
-      {/* ══════ MEMORIAL ══════ */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-            Lieu de memoire
-          </p>
-          <h2 className="mt-3 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-            Ne jamais oublier
-          </h2>
-          <div className="mx-auto mt-4 h-px w-16 bg-primary" />
-
-          <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-            Mauthausen est aujourd{"'"}hui un{" "}
-            <span className="font-semibold text-foreground">
-              memorial
-            </span>{" "}
-            visite par des centaines de milliers de personnes chaque annee. Le
-            site preserve la memoire des{" "}
-            <span className="font-semibold text-foreground">
-              90 000 victimes
-            </span>{" "}
-            et rappelle ou peut mener la haine, le racisme et le totalitarisme.
-          </p>
-
-          <div className="mt-12 border-l-2 border-primary py-4 pl-6 text-left">
-            <blockquote className="font-serif text-xl italic leading-relaxed text-foreground">
-              &ldquo;L{"'"}oubli serait un triomphe definitif de l{"'"}ennemi.&rdquo;
-            </blockquote>
-            <p className="mt-4 text-sm text-muted-foreground">
-              &mdash; Primo Levi, ecrivain et survivant d{"'"}Auschwitz
-            </p>
-          </div>
-
-          <p className="mt-12 font-serif text-2xl font-bold text-foreground">
-            Plus jamais ca.
-          </p>
-        </div>
-      </section>
-
-      {/* ══════ NAVIGATION VERS AUTRES CAMPS ══════ */}
-      <section className="border-t border-border bg-background py-16">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-              Autres lieux de memoire
-            </p>
-            <h2 className="mt-4 font-serif text-2xl font-bold text-foreground md:text-3xl">
-              Decouvrir les autres camps
-            </h2>
-            <div className="mx-auto mt-4 h-px w-16 bg-primary" />
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <a
-              href="/"
-              className="group border border-border bg-card p-8 transition-colors hover:border-primary"
-            >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-                Pologne &middot; 1940-1945
-              </p>
-              <h3 className="mt-2 font-serif text-xl font-bold text-foreground">
-                Auschwitz-Birkenau
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Plus de 1,1 million de victimes. Symbole mondial de la Shoah.
-              </p>
-              <p className="mt-4 text-sm font-medium text-primary group-hover:underline">
-                Voir la page &rarr;
-              </p>
-            </a>
-
-            <a
-              href="/buchenwald"
-              className="group border border-border bg-card p-8 transition-colors hover:border-primary"
-            >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-                Allemagne &middot; 1937-1945
-              </p>
-              <h3 className="mt-2 font-serif text-xl font-bold text-foreground">
-                Buchenwald
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Pres de Weimar. Plus de 56 000 victimes. Auto-liberation des detenus.
-              </p>
-              <p className="mt-4 text-sm font-medium text-primary group-hover:underline">
-                Voir la page &rarr;
-              </p>
-            </a>
-
-            <a
-              href="/neuengamme"
-              className="group border border-border bg-card p-8 transition-colors hover:border-primary"
-            >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-                Allemagne &middot; 1938-1945
-              </p>
-              <h3 className="mt-2 font-serif text-xl font-bold text-foreground">
-                Neuengamme
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Pres de Hambourg. 106 000 detenus. Tragedie de la baie de Lubeck.
-              </p>
-              <p className="mt-4 text-sm font-medium text-primary group-hover:underline">
-                Voir la page &rarr;
-              </p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════ FOOTER ══════ */}
-      <footer className="border-t border-border bg-secondary">
-        <div className="mx-auto max-w-4xl px-6 py-12">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <p className="font-serif text-lg font-bold text-foreground">
-              Concours National de la Resistance et de la Deportation
-            </p>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              Ce site a ete realise dans le cadre du Concours de la Resistance.
-              <br />
-              En memoire de toutes les victimes.
-            </p>
-            <div className="mt-4 h-px w-16 bg-primary" />
-            <p className="text-xs text-muted-foreground">
-              &copy; 2025 &mdash; Devoir de Memoire
-            </p>
-          </div>
-        </div>
-      </footer>
-    </main>
-  )
+export default function Mauthausen() {
+  return <CampPageLayout {...mauthausenData} />;
 }
