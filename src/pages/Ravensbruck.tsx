@@ -1,4 +1,4 @@
-import Image from "next/image"
+// Image import removed - using standard img tags
 
 export default function RavensbruckPage() {
   return (
@@ -50,14 +50,14 @@ export default function RavensbruckPage() {
                 pres du lac Schwedt dans le Mecklembourg, le camp fut construit en 1938-1939
                 par 500 detenus transferes de Sachsenhausen.
               </p>
-              <p className=\"mt-6 text-lg leading-relaxed text-muted-foreground\">
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
                 Les premières prisonnières, environ 900 femmes, arrivèrent en mai 1939,
                 transférées depuis le camp de Lichtenburg en Saxe. Le camp était conçu
                 pour détenir des femmes considérées comme «indésirables»
                 par le régime nazi : opposantes politiques, résistantes, Témoins de Jéhovah,
                 «asociales», Roms, Juives et prisonnières de guerre.
               </p>
-              <p className=\"mt-6 text-lg leading-relaxed text-muted-foreground\">
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
                 Un camp annexe pour hommes fut créé en avril 1941, et un camp pour
                 adolescentes, l'Uckermark, ouvrit en juin 1942. Ravensbrück devint
                 ainsi un complexe concentrationnaire majeur avec plus de 70 Kommandos
@@ -196,6 +196,7 @@ export default function RavensbruckPage() {
                 Le camp principal
               </h3>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                Le camp principal pour femmes comprenait 32 baraques d{"'"}habitation,
                 des ateliers de travail, un bunker disciplinaire (le « Zellenbau »)
                 et une infirmerie tristement celebre pour les experimentations medicales.
               </p>
@@ -233,7 +234,7 @@ export default function RavensbruckPage() {
               </h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 Ce camp pour adolescentes, ouvert en juin 1942, enfermait des jeunes
-                filles considerees comme {"\""}delinquantes{"\""}. En 1945, il devint
+                filles considerees comme « délinquantes ». En 1945, il devint
                 un camp d{"'"}extermination pour les detenues jugees inaptes au travail.
               </p>
             </div>
@@ -270,7 +271,7 @@ export default function RavensbruckPage() {
                 experiences medicales d{"'"}une cruaute inouie, violant tous les
                 principes de l{"'"}ethique medicale. Ces experimentations furent
                 menees principalement sur des detenues polonaises, surnommees
-                les {"\""}Lapins{"\""}  ({"\""}<em>Kaninchen</em>{"\""}).
+                les « Lapins »  (« Kaninchen »).
               </p>
 
               <div className="mt-8 space-y-6">
@@ -304,15 +305,15 @@ export default function RavensbruckPage() {
                   <p className="mt-2 leading-relaxed text-muted-foreground">
                     Des centaines de femmes Roms et d{"'"}autres groupes furent
                     sterilisees de force, dans le cadre des politiques eugenistes
-                    nazies visant a {"\""}purifier{"\""}  la race.
+                    nazies visant a « purifier »  la race.
                   </p>
                 </div>
               </div>
 
               <div className="mt-8 border-l-2 border-primary py-4 pl-6">
                 <p className="font-serif text-xl italic leading-relaxed text-foreground">
-                  {"\""} Nous avons ete traitees comme des cobayes, pas comme des
-                  etres humains. Mais nous avons survecu pour temoigner. {"\""} 
+                  " Nous avons ete traitees comme des cobayes, pas comme des
+                  etres humains. Mais nous avons survecu pour temoigner. " 
                 </p>
                 <p className="mt-4 text-sm text-muted-foreground">
                   &mdash; Temoignage d{"'"}une survivante polonaise
@@ -348,7 +349,7 @@ export default function RavensbruckPage() {
               },
               {
                 title: "Selections",
-                desc: "Les SS organisaient regulierement des \"selections\" : les detenues jugees trop faibles pour travailler etaient isolees puis executees ou envoyees a la chambre a gaz.",
+                desc: "Les SS organisaient regulierement des « sélections » : les detenues jugees trop faibles pour travailler etaient isolees puis executees ou envoyees a la chambre a gaz.",
               },
               {
                 title: "Violence quotidienne",
@@ -503,7 +504,7 @@ export default function RavensbruckPage() {
               <div className="mt-8 space-y-6">
                 <div className="border-l-2 border-border pl-6 transition-colors hover:border-primary">
                   <h3 className="font-serif text-lg font-bold text-foreground">
-                    Protection des {"\""}Lapins{"\""} 
+                    Protection des « Lapins » 
                   </h3>
                   <p className="mt-2 leading-relaxed text-muted-foreground">
                     Les detenues organiserent la protection des victimes des
@@ -679,7 +680,7 @@ export default function RavensbruckPage() {
                     En avril 1945, le comte Folke Bernadotte negocia avec Himmler
                     l{"'"}evacuation de milliers de detenues scandinaves et
                     d{"'"}autres nationalites par la Croix-Rouge suedoise.
-                    Ces {"\""}bus blancs{"\""}  sauverent environ 7 500 femmes.
+                    Ces « bus blancs »  sauverent environ 7 500 femmes.
                   </p>
                 </div>
 
@@ -738,9 +739,9 @@ export default function RavensbruckPage() {
 
           <div className="mx-auto mt-12 max-w-2xl border-l-2 border-primary py-4 pl-6 text-left">
             <p className="font-serif text-xl italic leading-relaxed text-foreground">
-              {"\""} A Ravensbruck, j{"'"}ai vu ce dont les etres humains sont
+              " A Ravensbruck, j{"'"}ai vu ce dont les etres humains sont
               capables dans le mal absolu. Mais j{"'"}ai aussi vu ce dont les
-              femmes sont capables dans la solidarite et le courage. {"\""} 
+              femmes sont capables dans la solidarite et le courage. " 
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               &mdash; Germaine Tillion, ethnologue et resistante, survivante de Ravensbruck
@@ -749,9 +750,9 @@ export default function RavensbruckPage() {
 
           <div className="mx-auto mt-12 max-w-2xl border-l-2 border-primary py-4 pl-6 text-left">
             <p className="font-serif text-xl italic leading-relaxed text-foreground">
-              {"\""} Ravensbruck represente la memoire specifique des femmes
+              " Ravensbruck represente la memoire specifique des femmes
               dans la deportation. Leur souffrance, leur resistance, leur
-              dignite meritent d{"'"}etre transmises aux generations futures. {"\""} 
+              dignite meritent d{"'"}etre transmises aux generations futures. " 
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               &mdash; Anise Postel-Vinay, resistante et survivante
