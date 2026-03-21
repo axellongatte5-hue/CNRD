@@ -60,7 +60,7 @@ const campSections = [
     description:
       "Le camp principal de Buchenwald s'etendait sur 40 hectares sur les pentes de l'Ettersberg. Il comprenait les baraquements des detenus, les batiments administratifs SS, les ateliers, l'infirmerie et les installations de torture et d'execution.",
     details: [
-      "Le portail d'entree portait l'inscription cynique \"Jedem das Seine\" (\"A chacun son du\"), visible depuis l'interieur du camp comme un rappel permanent de l'ideologie nazie.",
+      "Le portail d'entrée portait l'inscription cynique «Jedem das Seine» (À chacun son dû), visible depuis l'intérieur du camp comme un rappel permanent de l'idéologie nazie.",
       "L'Appellplatz (place d'appel) pouvait contenir des milliers de detenus pour des appels interminables, parfois de plusieurs heures, par tous les temps.",
       "Le crematorium, construit en 1940, pouvait incinerer jusqu'a 400 corps par jour. Un ascenseur amenait les cadavres depuis la cave ou avaient lieu les executions.",
       "Le bloc 46 servait de laboratoire pour des experiences medicales sur les detenus, notamment des tests de vaccins contre le typhus.",
