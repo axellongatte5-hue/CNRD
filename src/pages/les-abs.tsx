@@ -10,13 +10,13 @@ const lesAbsSections = [
 
 function App() {
   return (
-    <div className=\"min-h-screen bg-white\">
+    <div className="min-h-screen bg-white">
       <PersonHeader sections={lesAbsSections} />
       
       {/* Spacer pour le header fixe */}
-      <div className=\"h-16\" />
+      <div className="h-16" />
 
-      <div id=\"hero\" className=\"bg-slate-900 text-white py-20 px-8\">
+      <div id="hero" className="bg-slate-900 text-white py-20 px-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl font-bold mb-4">Jeanne & Jean</h1>
