@@ -1,4 +1,6 @@
 
+// Image import removed - using standard img tags
+
 export default function DrancyPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -149,8 +151,8 @@ export default function DrancyPage() {
               </p>
               <div className="mt-8 border-l-2 border-primary py-4 pl-6">
                 <p className="font-serif text-xl italic leading-relaxed text-foreground">
-                  \"Ces enfants, arrachés à leurs mères, ont été déportés seuls,
-                  sans personne pour les accompagner dans leur dernier voyage.\"
+                  "Ces enfants, arrachés à leurs mères, ont été déportés seuls,
+                  sans personne pour les accompagner dans leur dernier voyage."
                 </p>
                 <p className="mt-4 text-sm text-muted-foreground">
                   &mdash; Serge Klarsfeld, historien
@@ -478,9 +480,9 @@ export default function DrancyPage() {
 
           <div className="mt-12 border-l-2 border-primary py-4 pl-6">
             <p className="font-serif text-xl italic leading-relaxed text-foreground">
-              \"Le convoi 77 représente la dernière tentative désespérée des nazis
+              "Le convoi 77 représente la dernière tentative désespérée des nazis
               d'anéantir les Juifs de France avant la Libération. Ces 1 300 personnes
-              furent déportées alors même que les Alliés approchaient de Paris.\"
+              furent déportées alors même que les Alliés approchaient de Paris."
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               &mdash; Serge Klarsfeld
@@ -580,14 +582,14 @@ export default function DrancyPage() {
           </h2>
           <div className="mx-auto mt-4 h-px w-16 bg-primary" />
 
-          <div className=\"mt-12 border-l-2 border-primary py-4 pl-6 text-left\">
-            <p className=\"font-serif text-xl italic leading-relaxed text-foreground\">
-              \"La France, patrie des Lumières et des Droits de l'Homme, terre
+          <div className="mt-12 border-l-2 border-primary py-4 pl-6 text-left">
+            <p className="font-serif text-xl italic leading-relaxed text-foreground">
+              "La France, patrie des Lumières et des Droits de l'Homme, terre
               d'accueil et d'asile, la France, ce jour-là, accomplissait
               l'irréparable. Manquant à sa parole, elle livrait ses protégés
-              à leurs bourreaux.\"
+              à leurs bourreaux."
             </p>
-            <p className=\"mt-4 text-sm text-muted-foreground\">
+            <p className="mt-4 text-sm text-muted-foreground">
               — Jacques Chirac, 16 juillet 1995, discours du Vel d'Hiv
             </p>
           </div>
@@ -596,14 +598,14 @@ export default function DrancyPage() {
             <p className="font-serif text-xl italic leading-relaxed text-foreground">
               Drancy fut l'antichambre de la mort pour des dizaines de milliers
               de Juifs de France. Ce lieu nous rappelle que la barbarie peut surgir
-              au cœur même de notre civilisation.\"
+              au cœur même de notre civilisation."
             </p>
-            <p className=\"mt-4 text-sm text-muted-foreground\">
+            <p className="mt-4 text-sm text-muted-foreground">
               — Simone Veil
             </p>
           </div>
 
-          <p className=\"mt-12 text-lg leading-relaxed text-muted-foreground\">
+          <p className="mt-12 text-lg leading-relaxed text-muted-foreground">
             Drancy reste le symbole de la participation de l'État français
             à la Shoah. Le travail de mémoire mené depuis des décennies, notamment
             par Serge et Beate Klarsfeld, permet de ne jamais oublier les noms
