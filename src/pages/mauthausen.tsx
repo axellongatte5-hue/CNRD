@@ -127,6 +127,10 @@ const mauthausenData = {
     "Le camp de Gusen avait été libéré deux jours plus tôt. Au total, près de 40 000 détenus furent libérés dans le complexe de Mauthausen.",
   ],
   
+  memorialQuote: "Passant, va dire à Sparte que nous sommes morts ici en obéissant à ses lois.",
+  memorialAuthor: "Inscription sur le monument espagnol de Mauthausen",
+  memorialStat: "90 000",
+  memorialStatLabel: "victimes à Mauthausen",
   
   otherCamps: [
     { name: "Auschwitz", country: "Pologne", path: "/camp/auschwitz" },
@@ -140,8 +144,4 @@ const mauthausenData = {
 
 export default function Mauthausen() {
   return <CampPageLayout {...mauthausenData} />;
-  memorialQuote: "Passant, va dire à Sparte que nous sommes morts ici en obéissant à ses lois.",
-  memorialAuthor: "Inscription sur le monument espagnol de Mauthausen",
-  memorialStat: "90 000",
-  memorialStatLabel: "victimes à Mauthausen",
 }
