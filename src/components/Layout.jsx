@@ -46,7 +46,7 @@ export default function Layout({ children }) {
               ))}
             </div>
 
-            {/* Mobile menu button */}
+{/* Mobile menu button */}
             <button
               className=\"md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800\"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
