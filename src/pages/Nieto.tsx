@@ -266,20 +266,16 @@ function Nieto() {
         </div>
       </div>
 
-      <footer {/* Spacer pour le header fixe */}
-      <div className=\"h-16\" />
-      {/* Spacer pour le header fixe */}
-      <div className=\"h-16\" />
-      <div id=\"biographie\" className=\"bg-slate-900 text-white py-20 px-8\">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <Award className="w-5 h-5 text-amber-400" />
-            <span className="font-semibold">Mémoire de la Déportation</span>
+      <footer className=\"bg-slate-900 text-white py-8 px-8\">
+        <div className=\"max-w-6xl mx-auto text-center\">
+          <div className=\"flex items-center justify-center gap-2 mb-2\">
+            <Award className=\"w-5 h-5 text-amber-400\" />
+            <span className=\"font-semibold\">Mémoire de la Déportation</span>
           </div>
-          <p className="text-gray-400 text-sm mb-1">
+          <p className=\"text-gray-400 text-sm mb-1\">
             En mémoire de Jaime Nieto López et de tous les résistants oubliés.
           </p>
-          <p className="text-gray-500 text-xs">1913 - 1951 • Que leur sacrifice ne soit jamais oublié</p>
+          <p className=\"text-gray-500 text-xs\">1913 - 1951 • Que leur sacrifice ne soit jamais oublié</p>
         </div>
       </footer>
     </div>
