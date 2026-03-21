@@ -1,3 +1,5 @@
+// Image import removed - using standard img tags
+
 /* ─── Data ─── */
 
 const timelineEvents = [
@@ -79,10 +81,10 @@ const campSections = [
     ],
   },
   {
-    title: "Le \"Petit Camp\"",
+    title: "Le « Petit Camp »",
     subtitle: "L'antichambre de la mort",
     description:
-      "Le \"Petit Camp\" (Kleines Lager), cree en 1942, etait une section de quarantaine qui devint un veritable mouroir. Les nouveaux arrivants et les detenus les plus faibles y etaient parques dans des conditions encore plus terribles que dans le camp principal.",
+      "Le « Petit Camp » (Kleines Lager), cree en 1942, etait une section de quarantaine qui devint un veritable mouroir. Les nouveaux arrivants et les detenus les plus faibles y etaient parques dans des conditions encore plus terribles que dans le camp principal.",
     details: [
       "Les baraquements du Petit Camp, prevus pour 50 personnes, en contenaient souvent plus de 1 000.",
       "Les detenus dormaient sur des chatieres de bois a cinq niveaux, souvent a plusieurs par niveau.",
@@ -98,13 +100,13 @@ const conditions = [
     title: "La faim",
     subtitle: "Famine organisee",
     description:
-      "Les rations alimentaires etaient volontairement insuffisantes : une soupe claire le matin, une autre le soir, un morceau de pain. Les detenus recevaient environ 1 000 calories par jour (moitie du minimum vital). Le vol de nourriture etait puni de mort, pourtant la faim poussait beaucoup a prendre ce risque. Les \"Muselmanners\" (squelettiques) etaient voues a une mort certaine.",
+      "Les rations alimentaires etaient volontairement insuffisantes : une soupe claire le matin, une autre le soir, un morceau de pain. Les detenus recevaient environ 1 000 calories par jour (moitie du minimum vital). Le vol de nourriture etait puni de mort, pourtant la faim poussait beaucoup a prendre ce risque. Les « Muselmanners » (squelettiques) etaient voues a une mort certaine.",
   },
   {
     title: "Le travail force",
     subtitle: "Extermination par le labeur",
     description:
-      "Les journees commencaient a 4h30 et duraient 12 heures minimum. Les detenus travaillaient dans les carrieres de pierre, les ateliers d'armement, la construction. La politique de \"Vernichtung durch Arbeit\" (extermination par le travail) visait a epuiser les prisonniers jusqu'a la mort tout en tirant profit de leur labeur. Ceux qui s'effondraient etaient battus ou abattus.",
+      "Les journees commencaient a 4h30 et duraient 12 heures minimum. Les detenus travaillaient dans les carrieres de pierre, les ateliers d'armement, la construction. La politique de « Vernichtung durch Arbeit » (extermination par le travail) visait a epuiser les prisonniers jusqu'a la mort tout en tirant profit de leur labeur. Ceux qui s'effondraient etaient battus ou abattus.",
   },
   {
     title: "La violence",
@@ -122,7 +124,7 @@ const conditions = [
     title: "La deshumanisation",
     subtitle: "Destruction de l'identite",
     description:
-      "Des l'arrivee, les detenus etaient depouilles de tout : vetements, objets personnels, cheveux, dignite. Leur nom etait remplace par un numero. Ils portaient l'uniforme raye et un triangle de couleur : rouge pour les politiques, vert pour les criminels, rose pour les homosexuels, noir pour les \"asociaux\", violet pour les Temoins de Jehovah, jaune pour les Juifs (souvent superpose a un autre triangle formant l'etoile de David).",
+      "Des l'arrivee, les detenus etaient depouilles de tout : vetements, objets personnels, cheveux, dignite. Leur nom etait remplace par un numero. Ils portaient l'uniforme raye et un triangle de couleur : rouge pour les politiques, vert pour les criminels, rose pour les homosexuels, noir pour les « asociaux », violet pour les Temoins de Jehovah, jaune pour les Juifs (souvent superpose a un autre triangle formant l'etoile de David).",
   },
 ]
 
