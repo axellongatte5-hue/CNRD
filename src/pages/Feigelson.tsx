@@ -1,4 +1,56 @@
-rivain et militant', desc: 'Lutte contre toutes les formes de discrimination' },
+"import { Link } from 'react-router-dom';
+import { Users, AlertTriangle } from 'lucide-react';
+
+function Feigelson() {
+  const timelineEvents = [
+    { year: '1926', event: 'Naissance à Paris (6ᵉ arrondissement)' },
+    { year: '1940', event: 'Entrée en Résistance à 14 ans' },
+    { year: '1944', event: 'Arrestation à Toulouse (14 mai)' },
+    { year: '1944', event: 'Déportation à Auschwitz (convoi 77, 31 juillet)' },
+    { year: '1945', event: 'Évasion et libération (22 janvier)' },
+    { year: '1948-1950', event: 'Fondateur des Cahiers du cinéma et de l'AGIR' },
+    { year: '2021', event: 'Décès à Paris, à 95 ans' },
+  ];
+
+  const deportationStages = [
+    {
+      title: 'Arrestation et torture',
+      content: 'Arrêté à Toulouse le 14 mai 1944. Torturé par la Milice et la Gestapo : coups, électrocution, brûlures.',
+    },
+    {
+      title: 'Camps de transit',
+      content: 'Internés à Compiègne, puis Drancy. Conditions inhumaines. Attente de la déportation.',
+    },
+    {
+      title: 'Transport vers Auschwitz',
+      content: 'Wagon à bestiaux, 60 personnes par wagon, 4 jours, sans eau ni nourriture. Mort et folie pendant le trajet.',
+    },
+    {
+      title: 'Sélection et arrivée',
+      content: '80 % des déportés envoyés directement aux chambres à gaz. Raphaël devient matricule B-3747.',
+    },
+    {
+      title: 'Déshumanisation',
+      content: 'Rasé, tatoué. Vêtements ôtés. Perte d'identité systématique. Travail forcé à l'extérieur du camp.',
+    },
+    {
+      title: 'Vie au camp',
+      content: 'Cruauté permanente des SS. Violences arbitraires. Témoignage de l'extermination de 20 000 hongrois en une journée.',
+    },
+  ];
+
+  const keyNumbers = [
+    { number: '14', label: 'ans à l'entrée en Résistance' },
+    { number: '1944', label: 'année d'arrestation et déportation' },
+    { number: '80%', label: 'des déportés exterminés à l'arrivée' },
+    { number: '19', label: 'ans à la libération du camp' },
+  ];
+
+  const postWarWork = [
+    { year: '1948', title: 'Co-fondateur des Cahiers du cinéma', desc: 'Engagé dans la transmission culturelle' },
+    { year: '1949', title: 'Président du Club du 27 janvier 1945', desc: 'Mémoire et transmission' },
+    { year: '1950', title: 'Fondateur de l'AGIR', desc: 'Association générale des Israélites de la Résistance' },
+    { year: '1950+', title: 'Écrivain et militant', desc: 'Lutte contre toutes les formes de discrimination' },
   ];
 
   return (
