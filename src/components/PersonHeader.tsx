@@ -61,7 +61,7 @@ export default function PersonHeader({ sections, personName }: PersonHeaderProps
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className=\"px-3 py-2 text-sm text-slate-400 hover:text-amber-400 hover:bg-slate-800/50 rounded-md transition-all whitespace-nowrap\"
+                className=\"px-3 py-1.5 text-sm font-medium text-slate-400 hover:text-amber-400 hover:bg-slate-800 rounded-lg transition-all whitespace-nowrap\"
                 data-testid={`nav-section-${section.id}`}
               >
                 {section.label}
