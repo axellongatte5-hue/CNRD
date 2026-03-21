@@ -9,6 +9,9 @@ export const deportees = [
     photo: "",
     summary: "Résistant à 14 ans, déporté à Auschwitz, rescapé et témoin",
     description: "Raphaël Feigelson naît le 17 février 1926 à Paris dans une famille juive française. À seulement 14 ans, il refuse la défaite de 1940 et s'engage immédiatement dans la Résistance.",
+    color: \"#dc2626\",
+    campId: \"auschwitz\",
+    fate: \"Évadé d'Auschwitz le 22 janvier 1945\",
     path: [
       {
         id: "feigelson-toulouse",
