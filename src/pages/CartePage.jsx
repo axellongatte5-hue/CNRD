@@ -364,7 +364,7 @@ export default function CartePage() {
             </Marker>
           ))}
 
-          /* Person paths - show all as dashed when no selection, only selected when clicked */}
+          {/* Person paths - show all as dashed when no selection, only selected when clicked */}
           {showPaths && deportees.map((person) => {
             const isSelected = selectedPerson?.id === person.id;
             const pathCoords = person.path.map(p => [p.lat, p.lng]);
