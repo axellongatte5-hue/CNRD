@@ -85,7 +85,7 @@ export default function RoyallieuPage() {
 
             {[
               { year: "Juin 1940", text: "L'armee allemande requisitionne les casernes de Royallieu apres l'armistice." },
-              { year: "Juin 1941", text: "Le camp devient officiellement le Frontstalag 122, camp d'internement pour les \"ennemis du Reich\"." },
+                            { year: \"Juin 1941\", text: \"Le camp devient officiellement le Frontstalag 122, camp d'internement pour les «ennemis du Reich».\" },
               { year: "Decembre 1941", text: "Creation d'un camp special pour les Juifs, separe du reste du camp." },
               { year: "27 mars 1942", text: "Depart du premier convoi de deportation de Juifs de France vers Auschwitz (convoi 1)." },
               { year: "6 juillet 1942", text: "Depart du convoi des \"45 000\" : 1 175 resistants communistes vers Auschwitz." },
