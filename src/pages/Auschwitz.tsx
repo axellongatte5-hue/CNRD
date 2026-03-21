@@ -1,4 +1,4 @@
-// Image import removed - using standard img tags
+/ Image import removed - using standard img tags
 
 /* ─── Data ─── */
 
