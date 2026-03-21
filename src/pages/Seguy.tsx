@@ -15,7 +15,7 @@ export default function Seguy() {
     { number: '16', label: 'ans lors de son arrestation' },
     { number: '1944', label: 'année de déportation' },
     { number: '15', label: 'ans de secrétariat à la CGT' },
-    { number: '55', label: 'ans au moment de son décès' },
+    { number: '89', label: 'ans au moment de son décès' },
   ];
 
   return (
@@ -26,6 +26,7 @@ export default function Seguy() {
           <Link 
             to=\"/personnages\" 
             className=\"inline-flex items-center gap-2 text-slate-400 hover:text-amber-400 transition-colors mb-8\"
+            data-testid=\"back-to-characters-btn\"
           >
             <span>←</span>
             <span className=\"text-sm\">Retour aux personnages</span>
@@ -34,7 +35,7 @@ export default function Seguy() {
           <div className=\"grid md:grid-cols-2 gap-12 items-center\">
             <div>
               <p className=\"text-sm font-medium uppercase tracking-[0.3em] text-amber-400 mb-4\">
-                1927 — 1982
+                1927 — 2016
               </p>
               <h1 className=\"font-serif text-5xl font-bold leading-tight tracking-tight md:text-6xl text-white\">
                 Georges Séguy
@@ -260,4 +261,3 @@ export default function Seguy() {
     </div>
   );
 }
-"
