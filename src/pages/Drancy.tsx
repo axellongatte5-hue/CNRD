@@ -595,18 +595,19 @@ export default function DrancyPage() {
 
           <div className="mt-12 border-l-2 border-primary py-4 pl-6 text-left">
             <p className="font-serif text-xl italic leading-relaxed text-foreground">
-              {"\""}Drancy fut l{"'"}antichambre de la mort pour des dizaines de milliers
+              Drancy fut l'antichambre de la mort pour des dizaines de milliers
               de Juifs de France. Ce lieu nous rappelle que la barbarie peut surgir
-              au coeur meme de notre civilisation.{"\""}
+              au cœur même de notre civilisation.\"
             </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              &mdash; Simone Veil
+            <p className=\"mt-4 text-sm text-muted-foreground\">
+              — Simone Veil
             </p>
           </div>
 
-          <p className="mt-12 text-lg leading-relaxed text-muted-foreground">
-            Drancy reste le symbole de la participation de l{"'"}Etat francais
-            a la Shoah. Le travail de memoire mene depuis des decennies, notamment
+          <p className=\"mt-12 text-lg leading-relaxed text-muted-foreground\">
+            Drancy reste le symbole de la participation de l'État français
+            à la Shoah. Le travail de mémoire mené depuis des décennies, notamment
+            par Serge et Beate Klarsfeld, permet de ne jamais oublier les noms
             par Serge et Beate Klarsfeld, permet de ne jamais oublier les noms
             et les visages des 76 000 Juifs deportes de France, dont pres de
             70 000 transitèrent par Drancy.
