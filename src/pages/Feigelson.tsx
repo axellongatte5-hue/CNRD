@@ -61,6 +61,7 @@ function Feigelson() {
           <Link 
             to=\"/personnages\" 
             className=\"inline-flex items-center gap-2 text-slate-400 hover:text-amber-400 transition-colors mb-8\"
+            data-testid=\"back-to-characters-btn\"
           >
             <span>←</span>
             <span className=\"text-sm\">Retour aux personnages</span>
@@ -294,4 +295,3 @@ function Feigelson() {
 }
 
 export default Feigelson;
-"
