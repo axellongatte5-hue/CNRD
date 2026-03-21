@@ -121,7 +121,7 @@ function Feigelson() {
               </div>
             ))}
           </div>
-        /section>
+        </section>
 
         <section id=\"resistance\" className=\"mb-16\">
           <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Une entrée précoce dans la Résistance</h2>
