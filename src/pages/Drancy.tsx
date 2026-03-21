@@ -150,8 +150,8 @@ export default function DrancyPage() {
               </p>
               <div className="mt-8 border-l-2 border-primary py-4 pl-6">
                 <p className="font-serif text-xl italic leading-relaxed text-foreground">
-                  {"\""}Ces enfants, arraches a leurs meres, ont ete deportes seuls,
-                  sans personne pour les accompagner dans leur dernier voyage.{"\""}
+                  \"Ces enfants, arrachés à leurs mères, ont été déportés seuls,
+                  sans personne pour les accompagner dans leur dernier voyage.\"
                 </p>
                 <p className="mt-4 text-sm text-muted-foreground">
                   &mdash; Serge Klarsfeld, historien
