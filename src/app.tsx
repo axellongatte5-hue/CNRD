@@ -44,6 +44,7 @@ function App() {
         <Route path="/personnage/seguy" element={<Seguy />} />
         <Route path="/personnage/lestage" element={<Lestage />} />
         <Route path="/personnage/rolland" element={<Rolland />} />
+        <Route path="/personnage/angele-rouzaud" element={<AngeleRouzaud />} />
         <Route path="/personnage/les-abs" element={<LesAbs />} />
         
         {/* Pages de camps */}
