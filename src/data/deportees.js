@@ -13,6 +13,7 @@ export const deportees = [
     campId: \"auschwitz\",
     fate: \"Évadé d'Auschwitz le 22 janvier 1945\",
     path: [
+  
       {
         id: "feigelson-toulouse",
         label: "Arrestation",
