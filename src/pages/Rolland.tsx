@@ -1,5 +1,3 @@
-\"use client\"
-
 import { MapPin, Calendar, Award, AlertTriangle, Users, BookOpen, FileText, Quote } from 'lucide-react';
 import PersonHeader from '../components/PersonHeader';
 
@@ -20,7 +18,7 @@ export default function Rolland() {
       <div style={{ height: '4rem' }} />
 
       {/* Hero Section */}
-      <div id=\"hero\" style={{ 
+      <div id="hero" style={{ 
         backgroundColor: '#0f172a', 
         color: '#ffffff', 
         padding: '5rem 2rem' 
