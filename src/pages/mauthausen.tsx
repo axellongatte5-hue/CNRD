@@ -16,10 +16,10 @@ const timelineEvents = [
       "Le camp est construit a cote des carrieres de granit de Wiener Graben, exploitees par la societe SS DEST (Deutsche Erd- und Steinwerke). Le travail dans les carrieres devient rapidement un outil d'extermination : les detenus sont forces de porter des blocs de pierre de 50 kg dans l'escalier de la mort.",
   },
   {
-    date: "1939",
-    title: "Classification \"Categorie III\"",
+    date: \"1939\",
+    title: \"Classification «Catégorie III»\",
     description:
-      "Les nazis classent Mauthausen comme camp de \"categorie III\", la plus severe, reserve aux prisonniers consideres comme \"irreducables\" et \"irrecuperables\". Cette classification implique les conditions de detention les plus brutales et la plus faible esperance de vie de tout le systeme concentrationnaire.",
+      "Les nazis classent Mauthausen comme camp de «catégorie III», la plus sévère, réservé aux prisonniers considérés comme «irréductibles» et «irrécupérables». Cette classification implique les conditions de détention les plus brutales et la plus faible espérance de vie de tout le système concentrationnaire.",
   },
   {
     date: "1940",
