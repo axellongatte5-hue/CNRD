@@ -1,4 +1,4 @@
-"import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Users } from 'lucide-react';
 
 function Nieto() {
