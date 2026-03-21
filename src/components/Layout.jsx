@@ -1,4 +1,4 @@
-"import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Award, Home, Users, MapPin, Menu, X, Map } from 'lucide-react';
 import { useState } from 'react';
 
@@ -16,20 +16,20 @@ export default function Layout({ children }) {
   ];
 
   return (
-    <div className=\"min-h-screen bg-slate-900 text-slate-100\">
+    <div className="min-h-screen bg-slate-900 text-slate-100">
       {/* Navigation */}
-      <nav className=\"fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700\">
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">
-          <div className=\"flex items-center justify-between h-16\">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to=\"/\" className=\"flex items-center gap-3 hover:opacity-80 transition-opacity\">
-              <Award className=\"w-6 h-6 text-amber-500\" />
-              <span className=\"font-semibold text-lg hidden sm:block\">Mémoire de la Déportation</span>
-              <span className=\"font-semibold text-lg sm:hidden\">CNRD</span>
+            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <Award className="w-6 h-6 text-amber-500" />
+              <span className="font-semibold text-lg hidden sm:block">Mémoire de la Déportation</span>
+              <span className="font-semibold text-lg sm:hidden">CNRD</span>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className=\"hidden md:flex items-center gap-1\">
+            <div className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -40,7 +40,7 @@ export default function Layout({ children }) {
                       : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
                   }`}
                 >
-                  <link.icon className=\"w-4 h-4\" />
+                  <link.icon className="w-4 h-4" />
                   {link.label}
                 </Link>
               ))}
@@ -48,18 +48,18 @@ export default function Layout({ children }) {
 
             {/* Mobile menu button */}
             <button
-              className=\"md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800\"
+              className="md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className=\"md:hidden bg-slate-900/98 border-b border-slate-700\">
-            <div className=\"px-4 py-3 space-y-1\">
+          <div className="md:hidden bg-slate-900/98 border-b border-slate-700">
+            <div className="px-4 py-3 space-y-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -71,7 +71,7 @@ export default function Layout({ children }) {
                       : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
                   }`}
                 >
-                  <link.icon className=\"w-5 h-5\" />
+                  <link.icon className="w-5 h-5" />
                   {link.label}
                 </Link>
               ))}
@@ -81,21 +81,21 @@ export default function Layout({ children }) {
       </nav>
 
       {/* Main Content */}
-      <main className=\"pt-16\">
+      <main className="pt-16">
         {children}
       </main>
 
       {/* Footer */}
-      <footer className=\"bg-slate-950 border-t border-slate-800 py-8 px-4\">
-        <div className=\"max-w-7xl mx-auto text-center\">
-          <div className=\"flex items-center justify-center gap-2 mb-3\">
-            <Award className=\"w-5 h-5 text-amber-500\" />
-            <span className=\"font-semibold\">Mémoire de la Déportation</span>
+      <footer className="bg-slate-950 border-t border-slate-800 py-8 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <Award className="w-5 h-5 text-amber-500" />
+            <span className="font-semibold">Mémoire de la Déportation</span>
           </div>
-          <p className=\"text-slate-500 text-sm\">
+          <p className="text-slate-500 text-sm">
             Projet CNRD — En mémoire de tous les résistants et déportés
           </p>
-          <p className=\"text-slate-600 text-xs mt-2\">
+          <p className="text-slate-600 text-xs mt-2">
             © 2025 — Devoir de Mémoire
           </p>
         </div>
@@ -103,4 +103,3 @@ export default function Layout({ children }) {
     </div>
   );
 }
-"
