@@ -1,4 +1,4 @@
-"import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { MapPin, Users } from 'lucide-react';
 
 export default function Lestage() {
