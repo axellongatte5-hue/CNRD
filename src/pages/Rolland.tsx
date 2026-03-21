@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Award, AlertTriangle, Users, BookOpen, FileText, Quote } from 'lucide-react';
 import PersonHeader from '../components/PersonHeader';
 
@@ -10,436 +11,366 @@ const rollandSections = [
 ];
 
 export default function Rolland() {
+  const timelineEvents = [
+    { year: '1913', event: 'Naissance', detail: '31 août à Crozon (Finistère). Marin-pêcheur breton.' },
+    { year: '30 juin 1944', event: 'Arrestation', detail: 'Rafle à Crozon. Réquisitionné pour le STO dans le Finistère.' },
+    { year: '28 juillet 1944', event: 'Déportation vers Neuengamme', detail: 'Départ de Compiègne. Matricule n°40419.' },
+    { year: '1944', event: 'Kommandos', detail: 'Salzgitter (travail forcé) et Husum-Schwesing (tranchées anti-chars).' },
+    { year: 'Mars 1945', event: 'Transfert à Buchenwald', detail: 'Lors de l'évacuation du camp. Neuf mois de détention.' },
+    { year: '12 avril 1945', event: 'Libération', detail: 'À Hanovre, par la Résistance clandestine et groupes d'intervention.' },
+  ];
+
+  const campsTraverses = [
+    'Compiègne (transit)',
+    'Neuengamme (camp principal)',
+    'Salzgitter (Kommando)',
+    'Husum-Schwesing (Kommando)',
+    'Buchenwald',
+  ];
+
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#ffffff' }}>
+    <div className=\"min-h-screen bg-slate-900\">
       <PersonHeader sections={rollandSections} />
       
       {/* Spacer pour le header fixe */}
-      <div style={{ height: '4rem' }} />
+      <div className=\"h-16\" />
 
       {/* Hero Section */}
-      <div id="hero" style={{ 
-        backgroundColor: '#0f172a', 
-        color: '#ffffff', 
-        padding: '5rem 2rem' 
-      }}>
-        <div style={{ 
-          maxWidth: '80rem', 
-          margin: '0 auto', 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(2, 1fr)', 
-          gap: '3rem', 
-          alignItems: 'center' 
-        }}>
-          <div>
-            <h1 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '1rem' }}>Yves Rolland</h1>
-            <p style={{ color: '#fbbf24', fontSize: '1.25rem', marginBottom: '1.5rem' }}>1913 - Libéré en 1945</p>
-            <p style={{ color: '#d1d5db', fontSize: '1.125rem', marginBottom: '1.5rem' }}>Déporté à Neuengamme et Buchenwald, marin-pêcheur breton</p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem' }}>
-                <MapPin style={{ width: '1rem', height: '1rem', color: '#fbbf24' }} />
-                <span>Crozon, Finistère, Bretagne</span>
+      <section id=\"hero\" className=\"pt-8 pb-16 md:pt-12 md:pb-24 bg-gradient-to-b from-slate-800 to-slate-900\">
+        <div className=\"mx-auto max-w-4xl px-6\">
+          <Link 
+            to=\"/personnages\" 
+            className=\"inline-flex items-center gap-2 text-slate-400 hover:text-amber-400 transition-colors mb-8\"
+            data-testid=\"back-to-characters-btn\"
+          >
+            <span>←</span>
+            <span className=\"text-sm\">Retour aux personnages</span>
+          </Link>
+
+          <div className=\"grid md:grid-cols-2 gap-12 items-center\">
+            <div>
+              <p className=\"text-sm font-medium uppercase tracking-[0.3em] text-amber-400 mb-4\">
+                1913 — Libéré en 1945
+              </p>
+              <h1 className=\"font-serif text-5xl font-bold leading-tight tracking-tight md:text-6xl text-white\">
+                Yves Rolland
+              </h1>
+              <p className=\"mt-4 text-lg text-slate-300\">Déporté à Neuengamme et Buchenwald, marin-pêcheur breton</p>
+              <div className=\"mt-6 flex flex-col gap-3\">
+                <div className=\"flex items-center gap-2 text-sm text-slate-400\">
+                  <MapPin className=\"w-4 h-4 text-amber-400\" />
+                  <span>Crozon, Finistère, Bretagne</span>
+                </div>
+                <div className=\"flex items-center gap-2 text-sm text-slate-400\">
+                  <Calendar className=\"w-4 h-4 text-amber-400\" />
+                  <span>31 août 1913</span>
+                </div>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem' }}>
-                <Calendar style={{ width: '1rem', height: '1rem', color: '#fbbf24' }} />
-                <span>31 août 1913</span>
+              <div className=\"mt-8 h-px w-24 bg-amber-500\" />
+            </div>
+            <div className=\"bg-slate-800 p-8 border border-slate-700 rounded-lg\">
+              <div className=\"flex justify-center mb-6\">
+                <div className=\"w-24 h-24 bg-slate-700 rounded-full flex items-center justify-center border border-slate-600\">
+                  <Users className=\"w-12 h-12 text-slate-500\" />
+                </div>
               </div>
+              <blockquote className=\"border-l-2 border-amber-500 pl-4\">
+                <p className=\"text-slate-300 italic\">
+                  \"Nous voulons tenir le serment que nous avons fait à la libération lors de la commémoration des 151 000 morts à Buchenwald...\"
+                </p>
+              </blockquote>
             </div>
           </div>
-          <div style={{ 
-            backgroundColor: '#1e293b', 
-            padding: '2rem', 
-            borderRadius: '0.5rem' 
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-              <div style={{ 
-                width: '6rem', 
-                height: '6rem', 
-                backgroundColor: '#334155', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center' 
-              }}>
-                <Users style={{ width: '3rem', height: '3rem', color: '#64748b' }} />
-              </div>
+        </div>
+      </section>
+
+      {/* SÉPARATION VISUELLE */}
+      <div className=\"relative\">
+        <div className=\"absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent\" />
+        <div className=\"bg-slate-900 py-8\">
+          <div className=\"mx-auto flex justify-center\">
+            <div className=\"flex items-center gap-4\">
+              <div className=\"h-px w-12 bg-slate-700\" />
+              <div className=\"h-2 w-2 rotate-45 border border-amber-500/50\" />
+              <div className=\"h-px w-12 bg-slate-700\" />
             </div>
-            <p style={{ textAlign: 'center', color: '#d1d5db', fontStyle: 'italic' }}>
-              "Nous voulons tenir le serment que nous avons fait à la libération lors de la commémoration des 151 000 morts à Buchenwald..."
-            </p>
           </div>
         </div>
       </div>
 
       {/* Chronologie */}
-      <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '4rem 2rem' }}>
-        <h2 style={{ 
-          fontSize: '1.875rem', 
-          fontWeight: '700', 
-          textAlign: 'center', 
-          marginBottom: '4rem', 
-          color: '#1f2937' 
-        }}>Chronologie</h2>
+      <section id=\"biographie\" className=\"bg-slate-800 py-20\">
+        <div className=\"mx-auto max-w-4xl px-6\">
+          <p className=\"text-sm font-medium uppercase tracking-[0.3em] text-amber-400\">
+            Parcours
+          </p>
+          <h2 className=\"mt-3 font-serif text-3xl font-bold text-white md:text-4xl\">
+            Chronologie
+          </h2>
+          <div className=\"mt-4 h-px w-16 bg-amber-500\" />
 
-        <div style={{ position: 'relative' }}>
-          <div style={{ 
-            position: 'absolute', 
-            left: '50%', 
-            transform: 'translateX(-50%)', 
-            height: '100%', 
-            width: '0.25rem', 
-            background: 'linear-gradient(to bottom, #fbbf24, #ef4444, #22c55e)' 
-          }}></div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-            {/* 1913 */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <div style={{ width: '50%', textAlign: 'right' }}>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem' }}>Naissance</h3>
-                <p style={{ fontSize: '0.875rem', color: '#4b5563' }}>31 août 1913 à Crozon (Finistère)</p>
-                <p style={{ fontSize: '0.75rem', color: '#2563eb', marginTop: '0.25rem' }}>Marin-pêcheur breton</p>
-              </div>
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <div style={{ 
-                  width: '1rem', 
-                  height: '1rem', 
-                  backgroundColor: '#fbbf24', 
-                  borderRadius: '50%', 
-                  border: '4px solid white', 
-                  boxShadow: '0 1px 3px rgba(0,0,0,0.12)' 
-                }}></div>
-              </div>
-              <div style={{ width: '50%', color: '#d97706', fontWeight: '700', fontSize: '1.25rem' }}>1913</div>
-            </div>
-
-            {/* 1944 - Rafle */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <div style={{ width: '50%', textAlign: 'right', color: '#dc2626', fontWeight: '700', fontSize: '1.25rem' }}>30 juin 1944</div>
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <div style={{ 
-                  width: '1rem', 
-                  height: '1rem', 
-                  backgroundColor: '#ef4444', 
-                  borderRadius: '50%', 
-                  border: '4px solid white', 
-                  boxShadow: '0 1px 3px rgba(0,0,0,0.12)' 
-                }}></div>
-              </div>
-              <div style={{ width: '50%', backgroundColor: '#fef2f2', padding: '1rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem' }}>Arrestation</h3>
-                <p style={{ fontSize: '0.875rem', color: '#dc2626' }}>Rafle à Crozon</p>
-                <p style={{ fontSize: '0.75rem', color: '#dc2626', marginTop: '0.25rem' }}>Réquisitionné pour le STO dans le Finistère</p>
-              </div>
-            </div>
-
-            {/* 1944 - Déportation */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <div style={{ width: '50%', textAlign: 'right', backgroundColor: '#fef2f2', padding: '1rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem' }}>Déportation vers Neuengamme</h3>
-                <p style={{ fontSize: '0.875rem', color: '#dc2626' }}>Départ de Compiègne</p>
-                <p style={{ fontSize: '0.75rem', color: '#dc2626', marginTop: '0.25rem' }}>Matricule n°40419</p>
-              </div>
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <div style={{ 
-                  width: '1rem', 
-                  height: '1rem', 
-                  backgroundColor: '#ef4444', 
-                  borderRadius: '50%', 
-                  border: '4px solid white', 
-                  boxShadow: '0 1px 3px rgba(0,0,0,0.12)' 
-                }}></div>
-              </div>
-              <div style={{ width: '50%', color: '#dc2626', fontWeight: '700', fontSize: '1.25rem' }}>28 juillet 1944</div>
-            </div>
-
-            {/* Kommandos */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <div style={{ width: '50%', textAlign: 'right', color: '#dc2626', fontWeight: '700', fontSize: '1.25rem' }}>1944</div>
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <div style={{ 
-                  width: '1rem', 
-                  height: '1rem', 
-                  backgroundColor: '#ef4444', 
-                  borderRadius: '50%', 
-                  border: '4px solid white', 
-                  boxShadow: '0 1px 3px rgba(0,0,0,0.12)' 
-                }}></div>
-              </div>
-              <div style={{ width: '50%', backgroundColor: '#fef2f2', padding: '1rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem' }}>Kommandos</h3>
-                <p style={{ fontSize: '0.875rem', color: '#dc2626' }}>Salzgitter (travail forcé)</p>
-                <p style={{ fontSize: '0.75rem', color: '#dc2626', marginTop: '0.25rem' }}>Husum-Schwesing (tranchées anti-chars)</p>
-              </div>
-            </div>
-
-            {/* Buchenwald */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <div style={{ width: '50%', textAlign: 'right', backgroundColor: '#fef2f2', padding: '1rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem' }}>Transfert à Buchenwald</h3>
-                <p style={{ fontSize: '0.875rem', color: '#dc2626' }}>Lors de l'évacuation du camp</p>
-                <p style={{ fontSize: '0.75rem', color: '#dc2626', marginTop: '0.25rem' }}>Neuf mois de détention</p>
-              </div>
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <div style={{ 
-                  width: '1rem', 
-                  height: '1rem', 
-                  backgroundColor: '#ef4444', 
-                  borderRadius: '50%', 
-                  border: '4px solid white', 
-                  boxShadow: '0 1px 3px rgba(0,0,0,0.12)' 
-                }}></div>
-              </div>
-              <div style={{ width: '50%', color: '#dc2626', fontWeight: '700', fontSize: '1.25rem' }}>Mars 1945</div>
-            </div>
-
-            {/* Libération */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <div style={{ width: '50%', textAlign: 'right', color: '#16a34a', fontWeight: '700', fontSize: '1.25rem' }}>12 avril 1945</div>
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <div style={{ 
-                  width: '1rem', 
-                  height: '1rem', 
-                  backgroundColor: '#22c55e', 
-                  borderRadius: '50%', 
-                  border: '4px solid white', 
-                  boxShadow: '0 1px 3px rgba(0,0,0,0.12)' 
-                }}></div>
-              </div>
-              <div style={{ width: '50%', backgroundColor: '#f0fdf4', padding: '1rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#1f2937', marginBottom: '0.5rem' }}>Libération</h3>
-                <p style={{ fontSize: '0.875rem', color: '#16a34a' }}>À Hanovre</p>
-                <p style={{ fontSize: '0.75rem', color: '#16a34a', marginTop: '0.25rem' }}>Par la Résistance clandestine et groupes d'intervention</p>
-              </div>
+          <div className=\"mt-12 relative\">
+            <div className=\"absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-amber-500 via-red-500 to-green-500 md:left-1/2 md:-translate-x-px\" />
+            
+            <div className=\"flex flex-col gap-12\">
+              {timelineEvents.map((event, index) => (
+                <div
+                  key={index}
+                  className={`relative flex flex-col gap-4 pl-12 md:w-1/2 md:pl-0 ${
+                    index % 2 === 0
+                      ? \"md:pr-12 md:text-right md:self-start\"
+                      : \"md:pl-12 md:self-end\"
+                  }`}
+                >
+                  <div
+                    className={`absolute top-1 left-2.5 h-3 w-3 rounded-full border-2 ${
+                      index < 2 ? 'border-amber-500' : index < 5 ? 'border-red-500' : 'border-green-500'
+                    } bg-slate-900 md:top-1 ${
+                      index % 2 === 0
+                        ? \"md:left-auto md:-right-1.5\"
+                        : \"md:-left-1.5\"
+                    }`}
+                  />
+                  <p className={`text-sm font-semibold uppercase tracking-widest ${
+                    index < 2 ? 'text-amber-400' : index < 5 ? 'text-red-400' : 'text-green-400'
+                  }`}>
+                    {event.year}
+                  </p>
+                  <h3 className=\"font-serif text-xl font-bold text-white\">
+                    {event.event}
+                  </h3>
+                  <p className=\"leading-relaxed text-slate-300\">
+                    {event.detail}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Section Déportation */}
-      <div id="deportation" style={{ backgroundColor: '#f9fafb', padding: '4rem 2rem' }}>
-        <div style={{ maxWidth: '72rem', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '1.875rem', fontWeight: '700', textAlign: 'center', marginBottom: '3rem', color: '#1f2937' }}>Le Parcours de Déportation</h2>
+      <section id=\"deportation\" className=\"mx-auto max-w-4xl px-6 py-20\">
+        <p className=\"text-sm font-medium uppercase tracking-[0.3em] text-amber-400\">
+          L'épreuve
+        </p>
+        <h2 className=\"mt-3 font-serif text-3xl font-bold text-white md:text-4xl\">
+          Le Parcours de Déportation
+        </h2>
+        <div className=\"mt-4 h-px w-16 bg-amber-500\" />
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
-            <div style={{ gridColumn: 'span 2', backgroundColor: '#ffffff', padding: '2rem', borderRadius: '0.5rem', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#1f2937', marginBottom: '1rem' }}>Neuengamme et ses Kommandos</h3>
-              <p style={{ color: '#374151', lineHeight: '1.75', marginBottom: '1rem' }}>
-                Yves Rolland est déporté le 28 juillet 1944 de Compiègne vers le camp de concentration de Neuengamme, où il reçoit le matricule 40419. 
-                Le camp de Neuengamme, situé près de Hambourg, était l'un des plus grands camps de concentration nazis en Allemagne.
-              </p>
-              <p style={{ color: '#374151', lineHeight: '1.75', marginBottom: '1rem' }}>
-                Il est affecté à plusieurs Kommandos, notamment <strong>Salzgitter</strong>, un camp de travailleurs civils situé au sud de Brunswick, 
-                où les détenus travaillaient pour les entreprises H. Göring à la fabrication d'armement.
-              </p>
-              <p style={{ color: '#374151', lineHeight: '1.75' }}>
-                Il passe également par <strong>Husum-Schwesing</strong>, un Kommando du Schleswig-Holstein près de la Mer du Nord, 
-                fonctionnant de septembre à décembre 1944 pour creuser des tranchées anti-chars dans la zone côtière marécageuse. 
-                Plus de 1500 détenus y travaillaient dans des conditions inhumaines.
-              </p>
+        <div className=\"mt-12 grid md:grid-cols-3 gap-8\">
+          <div className=\"md:col-span-2 border border-slate-700 bg-slate-800 p-8\">
+            <h3 className=\"text-amber-400 font-serif font-bold text-xl mb-6\">Neuengamme et ses Kommandos</h3>
+            <p className=\"text-slate-300 leading-relaxed mb-4\">
+              Yves Rolland est déporté le 28 juillet 1944 de Compiègne vers le camp de concentration de Neuengamme, où il reçoit le matricule 40419. Le camp de Neuengamme, situé près de Hambourg, était l'un des plus grands camps de concentration nazis en Allemagne.
+            </p>
+            <p className=\"text-slate-300 leading-relaxed mb-4\">
+              Il est affecté à plusieurs Kommandos, notamment <strong className=\"text-white\">Salzgitter</strong>, un camp de travailleurs civils situé au sud de Brunswick, où les détenus travaillaient pour les entreprises H. Göring à la fabrication d'armement.
+            </p>
+            <p className=\"text-slate-300 leading-relaxed\">
+              Il passe également par <strong className=\"text-white\">Husum-Schwesing</strong>, un Kommando du Schleswig-Holstein près de la Mer du Nord, fonctionnant de septembre à décembre 1944 pour creuser des tranchées anti-chars dans la zone côtière marécageuse. Plus de 1500 détenus y travaillaient dans des conditions inhumaines.
+            </p>
+          </div>
+
+          <div className=\"space-y-6\">
+            <div className=\"border border-slate-700 bg-slate-800 p-6\">
+              <h3 className=\"font-serif text-lg font-bold text-white mb-4 flex items-center gap-2\">
+                <MapPin className=\"w-5 h-5 text-amber-400\" />
+                Camps traversés
+              </h3>
+              <ul className=\"space-y-2\">
+                {campsTraverses.map((camp, i) => (
+                  <li key={i} className=\"flex gap-2 text-slate-300 text-sm\">
+                    <span className=\"text-amber-500\">•</span>
+                    {camp}
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div style={{ backgroundColor: '#fef3c7', padding: '1.5rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontWeight: '700', color: '#1f2937', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <MapPin style={{ width: '1.25rem', height: '1.25rem', color: '#d97706' }} />
-                  Camps traversés
-                </h3>
-                <ul style={{ fontSize: '0.875rem', color: '#374151' }}>
-                  <li style={{ marginBottom: '0.5rem' }}>• Compiègne (transit)</li>
-                  <li style={{ marginBottom: '0.5rem' }}>• Neuengamme (camp principal)</li>
-                  <li style={{ marginBottom: '0.5rem' }}>• Salzgitter (Kommando)</li>
-                  <li style={{ marginBottom: '0.5rem' }}>• Husum-Schwesing (Kommando)</li>
-                  <li>• Buchenwald</li>
-                </ul>
-              </div>
-
-              <div style={{ backgroundColor: '#dbeafe', padding: '1.5rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontWeight: '700', color: '#1f2937', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <FileText style={{ width: '1.25rem', height: '1.25rem', color: '#2563eb' }} />
-                  Matricule
-                </h3>
-                <p style={{ fontSize: '2rem', fontWeight: '700', color: '#1e40af' }}>40419</p>
-                <p style={{ fontSize: '0.875rem', color: '#374151' }}>Camp de Neuengamme</p>
-              </div>
+            <div className=\"border border-slate-700 bg-slate-800 p-6 text-center\">
+              <h3 className=\"font-serif text-lg font-bold text-white mb-4 flex items-center justify-center gap-2\">
+                <FileText className=\"w-5 h-5 text-amber-400\" />
+                Matricule
+              </h3>
+              <p className=\"text-4xl font-bold text-amber-400\">40419</p>
+              <p className=\"text-sm text-slate-400 mt-2\">Camp de Neuengamme</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Section Buchenwald */}
-      <div style={{ padding: '4rem 2rem' }}>
-        <div style={{ maxWidth: '72rem', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '1.875rem', fontWeight: '700', textAlign: 'center', marginBottom: '3rem', color: '#1f2937' }}>Buchenwald</h2>
+      <section className=\"bg-slate-800 py-20\">
+        <div className=\"mx-auto max-w-4xl px-6\">
+          <p className=\"text-sm font-medium uppercase tracking-[0.3em] text-amber-400\">
+            Détention
+          </p>
+          <h2 className=\"mt-3 font-serif text-3xl font-bold text-white md:text-4xl\">
+            Buchenwald
+          </h2>
+          <div className=\"mt-4 h-px w-16 bg-amber-500\" />
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
-            <div style={{ backgroundColor: '#0f172a', color: '#ffffff', padding: '2rem', borderRadius: '0.5rem' }}>
-              <h3 style={{ color: '#fbbf24', fontWeight: '700', fontSize: '1.25rem', marginBottom: '1rem' }}>Le Camp de Buchenwald</h3>
-              <p style={{ color: '#d1d5db', lineHeight: '1.75', marginBottom: '1rem' }}>
-                Yves Rolland est transféré à Buchenwald en mars 1945 lors de l'évacuation du camp de Neuengamme. 
-                Il y passe neuf mois avant d'être libéré le 12 avril 1945 à Hanovre.
+          <div className=\"mt-12 grid md:grid-cols-2 gap-8\">
+            <div className=\"border border-slate-700 bg-slate-900 p-8\">
+              <h3 className=\"text-amber-400 font-serif font-bold text-xl mb-6\">Le Camp de Buchenwald</h3>
+              <p className=\"text-slate-300 leading-relaxed mb-4\">
+                Yves Rolland est transféré à Buchenwald en mars 1945 lors de l'évacuation du camp de Neuengamme. Il y passe neuf mois avant d'être libéré le 12 avril 1945 à Hanovre.
               </p>
-              <p style={{ color: '#d1d5db', lineHeight: '1.75' }}>
-                À Buchenwald, il existait ce que les détenus appelaient le "petit camp" et le "grand camp". 
-                Le petit camp recevait tous les nouveaux arrivants pour une sorte de quarantaine, 
-                tandis que le grand camp recevait ceux qui avaient déjà effectué un certain séjour.
+              <p className=\"text-slate-300 leading-relaxed\">
+                À Buchenwald, il existait ce que les détenus appelaient le \"petit camp\" et le \"grand camp\". Le petit camp recevait tous les nouveaux arrivants pour une sorte de quarantaine, tandis que le grand camp recevait ceux qui avaient déjà effectué un certain séjour.
               </p>
             </div>
 
-            <div style={{ backgroundColor: '#fef3c7', padding: '2rem', borderRadius: '0.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-              <div style={{ 
-                width: '5rem', 
-                height: '5rem', 
-                backgroundColor: '#d97706', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                marginBottom: '1.5rem' 
-              }}>
-                <Award style={{ width: '2.5rem', height: '2.5rem', color: '#ffffff' }} />
+            <div className=\"border border-slate-700 bg-slate-800 p-8 flex flex-col justify-center items-center text-center\">
+              <div className=\"w-20 h-20 bg-amber-500/20 rounded-full flex items-center justify-center mb-6 border border-amber-500/50\">
+                <Award className=\"w-10 h-10 text-amber-400\" />
               </div>
-              <h3 style={{ fontWeight: '700', color: '#1f2937', fontSize: '1.25rem', marginBottom: '1rem' }}>Le Serment de Buchenwald</h3>
-              <p style={{ color: '#374151', textAlign: 'center' }}>
-                À la libération du camp, les survivants ont prêté serment lors de la commémoration des 151 000 morts, 
-                s'engageant à témoigner et à poursuivre les responsables de ces crimes.
+              <h3 className=\"font-serif font-bold text-white text-xl mb-4\">Le Serment de Buchenwald</h3>
+              <p className=\"text-slate-300\">
+                À la libération du camp, les survivants ont prêté serment lors de la commémoration des 151 000 morts, s'engageant à témoigner et à poursuivre les responsables de ces crimes.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Citation */}
-      <div style={{ backgroundColor: '#0f172a', color: '#ffffff', padding: '3rem 2rem' }}>
-        <div style={{ maxWidth: '56rem', margin: '0 auto', textAlign: 'center' }}>
-          <Quote style={{ width: '3rem', height: '3rem', color: '#fbbf24', margin: '0 auto 1.5rem' }} />
-          <p style={{ fontSize: '1.25rem', fontStyle: 'italic', marginBottom: '1rem', lineHeight: '1.75' }}>
-            "Des convois entiers, des milliers de personnes sont envoyés dans des chambres à gaz, à Buchenwald, 
-            on les assassinait, on les fusillait, on les laissait mourir de froid en les laissant stationner 
-            durant des heures exposés à tous les vents par -15 ou -20 degrés."
-          </p>
-          <p style={{ fontSize: '0.875rem', color: '#fbbf24' }}>
-            - Témoignage sur les conditions à Buchenwald
+      <section className=\"mx-auto max-w-4xl px-6 py-20\">
+        <div className=\"border border-slate-700 bg-slate-800 p-12 text-center\">
+          <Quote className=\"w-12 h-12 text-amber-500 mx-auto mb-6\" />
+          <blockquote className=\"font-serif text-xl italic text-white leading-relaxed mb-4\">
+            \"Des convois entiers, des milliers de personnes sont envoyés dans des chambres à gaz, à Buchenwald, on les assassinait, on les fusillait, on les laissait mourir de froid en les laissant stationner durant des heures exposés à tous les vents par -15 ou -20 degrés.\"
+          </blockquote>
+          <p className=\"text-sm text-amber-400\">
+            — Témoignage sur les conditions à Buchenwald
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Témoignages */}
-      <div id="temoignages" style={{ padding: '4rem 2rem' }}>
-        <div style={{ maxWidth: '72rem', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '1.875rem', fontWeight: '700', textAlign: 'center', marginBottom: '3rem', color: '#1f2937' }}>Témoignages sur la Déportation</h2>
+      <section id=\"temoignages\" className=\"bg-slate-800 py-20\">
+        <div className=\"mx-auto max-w-4xl px-6\">
+          <p className=\"text-sm font-medium uppercase tracking-[0.3em] text-amber-400\">
+            Mémoire
+          </p>
+          <h2 className=\"mt-3 font-serif text-3xl font-bold text-white md:text-4xl\">
+            Témoignages sur la Déportation
+          </h2>
+          <div className=\"mt-4 h-px w-16 bg-amber-500\" />
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
-            <div style={{ backgroundColor: '#fef2f2', borderLeft: '4px solid #ef4444', padding: '1.5rem', borderRadius: '0.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                <AlertTriangle style={{ width: '1.5rem', height: '1.5rem', color: '#dc2626' }} />
-                <h3 style={{ fontWeight: '700', color: '#1f2937' }}>Le Travail Forcé</h3>
+          <div className=\"mt-12 grid md:grid-cols-2 gap-6\">
+            <div className=\"border-l-2 border-red-500 bg-slate-900 p-6\">
+              <div className=\"flex items-center gap-3 mb-3\">
+                <AlertTriangle className=\"w-6 h-6 text-red-400\" />
+                <h3 className=\"font-bold text-white\">Le Travail Forcé</h3>
               </div>
-              <p style={{ fontSize: '0.875rem', color: '#374151', fontStyle: 'italic' }}>
-                "La deuxième période d'extermination est celle qui fut conditionnée par des raisons de guerre, 
-                le besoin sans cesse accru de matériel humain pour la production de guerre allemande. 
-                C'est celle de l'extermination par le travail forcé dans les usines d'armement, 
-                dans les usines souterraines, pour la fabrication des fameuses armes secrètes: V1, V2, V3."
+              <p className=\"text-sm text-slate-300 italic\">
+                \"La deuxième période d'extermination est celle qui fut conditionnée par des raisons de guerre, le besoin sans cesse accru de matériel humain pour la production de guerre allemande. C'est celle de l'extermination par le travail forcé dans les usines d'armement, dans les usines souterraines, pour la fabrication des fameuses armes secrètes: V1, V2, V3.\"
               </p>
             </div>
 
-            <div style={{ backgroundColor: '#fff7ed', borderLeft: '4px solid #f97316', padding: '1.5rem', borderRadius: '0.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                <Users style={{ width: '1.5rem', height: '1.5rem', color: '#ea580c' }} />
-                <h3 style={{ fontWeight: '700', color: '#1f2937' }}>L'Arrivée au Camp</h3>
+            <div className=\"border-l-2 border-amber-500 bg-slate-900 p-6\">
+              <div className=\"flex items-center gap-3 mb-3\">
+                <Users className=\"w-6 h-6 text-amber-400\" />
+                <h3 className=\"font-bold text-white\">L'Arrivée au Camp</h3>
               </div>
-              <p style={{ fontSize: '0.875rem', color: '#374151', fontStyle: 'italic' }}>
-                "Un convoi de 2 000 Polonais arrive à Buchenwald. On les parque sur la place d'appel. 
-                Ils doivent immédiatement se tenir au garde à vous, immobiles des heures durant. 
-                Ils n'avaient pas mangé depuis quelques jours et on les laisse ainsi debouts 
-                une douzaine d'heures par -15 degrés."
+              <p className=\"text-sm text-slate-300 italic\">
+                \"Un convoi de 2 000 Polonais arrive à Buchenwald. On les parque sur la place d'appel. Ils doivent immédiatement se tenir au garde à vous, immobiles des heures durant. Ils n'avaient pas mangé depuis quelques jours et on les laisse ainsi debouts une douzaine d'heures par -15 degrés.\"
               </p>
             </div>
 
-            <div style={{ backgroundColor: '#f0fdf4', borderLeft: '4px solid #22c55e', padding: '1.5rem', borderRadius: '0.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                <BookOpen style={{ width: '1.5rem', height: '1.5rem', color: '#16a34a' }} />
-                <h3 style={{ fontWeight: '700', color: '#1f2937' }}>Le Devoir de Mémoire</h3>
+            <div className=\"border-l-2 border-green-500 bg-slate-900 p-6\">
+              <div className=\"flex items-center gap-3 mb-3\">
+                <BookOpen className=\"w-6 h-6 text-green-400\" />
+                <h3 className=\"font-bold text-white\">Le Devoir de Mémoire</h3>
               </div>
-              <p style={{ fontSize: '0.875rem', color: '#374151', fontStyle: 'italic' }}>
-                "Ce n'est pas de gaieté de cœur que nous le faisons ni par plaisir sadique, 
-                nous ne le faisons pas non plus pour nous ériger en martyre ou en héros, 
-                nous le faisons par devoir. Nous voulons tenir le serment que nous avons fait 
-                à la libération lors de la commémoration des 151 000 morts à Buchenwald."
+              <p className=\"text-sm text-slate-300 italic\">
+                \"Ce n'est pas de gaieté de cœur que nous le faisons ni par plaisir sadique, nous ne le faisons pas non plus pour nous ériger en martyre ou en héros, nous le faisons par devoir. Nous voulons tenir le serment que nous avons fait à la libération lors de la commémoration des 151 000 morts à Buchenwald.\"
               </p>
             </div>
 
-            <div style={{ backgroundColor: '#f5f3ff', borderLeft: '4px solid #8b5cf6', padding: '1.5rem', borderRadius: '0.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                <FileText style={{ width: '1.5rem', height: '1.5rem', color: '#7c3aed' }} />
-                <h3 style={{ fontWeight: '700', color: '#1f2937' }}>La Mortalité</h3>
+            <div className=\"border-l-2 border-purple-500 bg-slate-900 p-6\">
+              <div className=\"flex items-center gap-3 mb-3\">
+                <FileText className=\"w-6 h-6 text-purple-400\" />
+                <h3 className=\"font-bold text-white\">La Mortalité</h3>
               </div>
-              <p style={{ fontSize: '0.875rem', color: '#374151', fontStyle: 'italic' }}>
-                "Du 1er janvier au 28 janvier pour un effectif de 69 400 internés il y eut 1 614 morts. 
-                Du 29 janvier au 25 février sur un effectif de 96 400 internés il y eut 3 700 morts. 
-                Ce qui fait une moyenne de 175 morts par jour environ."
+              <p className=\"text-sm text-slate-300 italic\">
+                \"Du 1er janvier au 28 janvier pour un effectif de 69 400 internés il y eut 1 614 morts. Du 29 janvier au 25 février sur un effectif de 96 400 internés il y eut 3 700 morts. Ce qui fait une moyenne de 175 morts par jour environ.\"
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Sources */}
-      <div id="sources" style={{ backgroundColor: '#f9fafb', padding: '4rem 2rem' }}>
-        <div style={{ maxWidth: '72rem', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '1.875rem', fontWeight: '700', textAlign: 'center', marginBottom: '3rem', color: '#1f2937' }}>Sources et Archives</h2>
+      <section id=\"sources\" className=\"mx-auto max-w-4xl px-6 py-20\">
+        <p className=\"text-sm font-medium uppercase tracking-[0.3em] text-amber-400\">
+          Documentation
+        </p>
+        <h2 className=\"mt-3 font-serif text-3xl font-bold text-white md:text-4xl\">
+          Sources et Archives
+        </h2>
+        <div className=\"mt-4 h-px w-16 bg-amber-500\" />
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
-            <div style={{ backgroundColor: '#ffffff', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontWeight: '700', color: '#1f2937', marginBottom: '0.75rem' }}>Archives Arolsen</h3>
-              <p style={{ fontSize: '0.875rem', color: '#4b5563', marginBottom: '0.75rem' }}>
-                Ausweis (laissez-passer) pour marin-pêcheur avec photo d'identité.
-              </p>
-              <a 
-                href="https://collections.arolsen-archives.org/de/search/person/74524548?s=Yves%20Rolland&t=222899&p=1" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{ fontSize: '0.75rem', color: '#2563eb', textDecoration: 'underline' }}
-              >
-                Consulter les archives →
-              </a>
-            </div>
+        <div className=\"mt-12 grid md:grid-cols-3 gap-6\">
+          <div className=\"border border-slate-700 bg-slate-800 p-6\">
+            <h3 className=\"font-bold text-white mb-3\">Archives Arolsen</h3>
+            <p className=\"text-sm text-slate-400 mb-3\">
+              Ausweis (laissez-passer) pour marin-pêcheur avec photo d'identité.
+            </p>
+            <a 
+              href=\"https://collections.arolsen-archives.org/de/search/person/74524548?s=Yves%20Rolland&t=222899&p=1\" 
+              target=\"_blank\" 
+              rel=\"noopener noreferrer\"
+              className=\"text-xs text-amber-400 hover:text-amber-300 underline\"
+            >
+              Consulter les archives →
+            </a>
+          </div>
 
-            <div style={{ backgroundColor: '#ffffff', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontWeight: '700', color: '#1f2937', marginBottom: '0.75rem' }}>Livre Mémorial</h3>
-              <p style={{ fontSize: '0.875rem', color: '#4b5563', marginBottom: '0.75rem' }}>
-                Fondation pour la Mémoire de la Déportation, 2006.
-              </p>
-              <a 
-                href="http://www.bddm.org/liv/details.php?id=I.250.#ROLLAND" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{ fontSize: '0.75rem', color: '#2563eb', textDecoration: 'underline' }}
-              >
-                Consulter le livre mémorial →
-              </a>
-            </div>
+          <div className=\"border border-slate-700 bg-slate-800 p-6\">
+            <h3 className=\"font-bold text-white mb-3\">Livre Mémorial</h3>
+            <p className=\"text-sm text-slate-400 mb-3\">
+              Fondation pour la Mémoire de la Déportation, 2006.
+            </p>
+            <a 
+              href=\"http://www.bddm.org/liv/details.php?id=I.250.#ROLLAND\" 
+              target=\"_blank\" 
+              rel=\"noopener noreferrer\"
+              className=\"text-xs text-amber-400 hover:text-amber-300 underline\"
+            >
+              Consulter le livre mémorial →
+            </a>
+          </div>
 
-            <div style={{ backgroundColor: '#ffffff', padding: '1.5rem', borderRadius: '0.5rem', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontWeight: '700', color: '#1f2937', marginBottom: '0.75rem' }}>Bibliographie</h3>
-              <p style={{ fontSize: '0.875rem', color: '#4b5563' }}>
-                Lalieu, Olivier, <em>La zone grise ? La Résistance française à Buchenwald</em>, Paris, Tallandier, 2005.
-              </p>
-            </div>
+          <div className=\"border border-slate-700 bg-slate-800 p-6\">
+            <h3 className=\"font-bold text-white mb-3\">Bibliographie</h3>
+            <p className=\"text-sm text-slate-400\">
+              Lalieu, Olivier, <em>La zone grise ? La Résistance française à Buchenwald</em>, Paris, Tallandier, 2005.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: '#0f172a', color: '#ffffff', padding: '2rem' }}>
-        <div style={{ maxWidth: '72rem', margin: '0 auto', textAlign: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-            <Award style={{ width: '1.25rem', height: '1.25rem', color: '#fbbf24' }} />
-            <span style={{ fontWeight: '600' }}>Mémoire de la Déportation</span>
+      <footer className=\"border-t border-slate-700 bg-slate-950\">
+        <div className=\"mx-auto max-w-4xl px-6 py-12\">
+          <div className=\"flex flex-col items-center gap-4 text-center\">
+            <div className=\"flex items-center gap-2\">
+              <Award className=\"w-5 h-5 text-amber-400\" />
+              <span className=\"font-semibold text-white\">Mémoire de la Déportation</span>
+            </div>
+            <p className=\"text-sm text-slate-400\">
+              En mémoire de Yves Rolland et de tous les déportés.
+            </p>
+            <p className=\"text-xs text-slate-500\">Né le 31 août 1913 à Crozon • Libéré le 12 avril 1945</p>
+            <div className=\"mt-4 h-px w-16 bg-amber-500\" />
+            <p className=\"text-xs text-slate-600\">
+              © 2025 — Devoir de Mémoire
+            </p>
           </div>
-          <p style={{ color: '#9ca3af', fontSize: '0.875rem', marginBottom: '0.25rem' }}>
-            En mémoire de Yves Rolland et de tous les déportés.
-          </p>
-          <p style={{ color: '#6b7280', fontSize: '0.75rem' }}>Né le 31 août 1913 à Crozon • Libéré le 12 avril 1945</p>
         </div>
       </footer>
     </div>
