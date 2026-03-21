@@ -319,7 +319,7 @@ export default function CartePage() {
 
       {/* Map */}
       <div className=\"flex-1\">
-        MapContainer
+        <MapContainer
           center={[48.8566, 5.0]}
           zoom={5}
           className=\"h-full w-full\"
