@@ -1,4 +1,4 @@
-/ Image import removed - using standard img tags
+// Image import removed - using standard img tags
 
 /* ─── Data ─── */
 
@@ -31,13 +31,13 @@ const timelineEvents = [
     date: "Janvier 1942",
     title: "Conference de Wannsee",
     description:
-      "La conference de Wannsee, le 20 janvier 1942, organise la mise en oeuvre de la \"Solution finale\". Auschwitz est designe comme le principal centre d'extermination des Juifs d'Europe.",
+      "La conference de Wannsee, le 20 janvier 1942, organise la mise en oeuvre de la « Solution finale ». Auschwitz est designe comme le principal centre d'extermination des Juifs d'Europe.",
   },
   {
     date: "1942 - 1944",
     title: "Deportations massives",
     description:
-      "Des convois arrivent de toute l'Europe : France, Pays-Bas, Belgique, Hongrie, Grece, Italie, Norvege... A l'arrivee, les SS effectuent une \"selection\" : ceux juges inaptes au travail sont envoyes directement aux chambres a gaz.",
+      "Des convois arrivent de toute l'Europe : France, Pays-Bas, Belgique, Hongrie, Grece, Italie, Norvege... A l'arrivee, les SS effectuent une « selection » : ceux juges inaptes au travail sont envoyes directement aux chambres a gaz.",
   },
   {
     date: "Mai - juillet 1944",
@@ -80,10 +80,10 @@ const camps = [
       "Le premier camp, etabli en juin 1940 dans d'anciennes casernes militaires polonaises, servait initialement de camp de concentration pour les prisonniers politiques polonais. Il est devenu le centre administratif de tout le complexe concentrationnaire.",
     details: [
       "Pouvait contenir jusqu'a 20 000 detenus.",
-      "Le bloc 11, surnomme \"le bloc de la mort\", abritait les cellules de punition et le mur des executions ou des milliers de prisonniers furent fusilles.",
+      "Le bloc 11, surnomme « le bloc de la mort », abritait les cellules de punition et le mur des executions ou des milliers de prisonniers furent fusilles.",
       "C'est dans les sous-sols de ce bloc que les premiers essais de gazage au Zyklon B ont eu lieu en septembre 1941.",
       "Le crematorium I, equipe d'une chambre a gaz, pouvait incinerer 340 corps par jour.",
-      "L'inscription cynique \"Arbeit macht frei\" (\"Le travail rend libre\") surmontait le portail d'entree.",
+      "L'inscription cynique « Arbeit macht frei » (« Le travail rend libre ») surmontait le portail d'entree.",
     ],
   },
   {
@@ -95,8 +95,8 @@ const camps = [
     details: [
       "Le camp s'etendait sur 170 hectares et comprenait plus de 300 baraquements en bois et en brique.",
       "Quatre grands crematoriums (II, III, IV et V) etaient equipes de chambres a gaz pouvant tuer jusqu'a 6 000 personnes par jour.",
-      "La \"rampe de selection\" (Judenrampe puis Bahnrampe a partir de mai 1944) etait le lieu ou les deportes etaient tries : ceux juges \"inaptes\" (environ 75%) etaient envoyes directement a la mort.",
-      "Le \"Kanada\" etait le nom donne aux entrepots ou les biens voles aux deportes etaient tries et stockes.",
+      "La « rampe de selection » (Judenrampe puis Bahnrampe a partir de mai 1944) etait le lieu ou les deportes etaient tries : ceux juges « inaptes » (environ 75%) etaient envoyes directement a la mort.",
+      "Le « Kanada » etait le nom donne aux entrepots ou les biens voles aux deportes etaient tries et stockes.",
       "Le camp des familles de Theresienstadt et le camp des familles tsiganes existaient temporairement avant que leurs occupants ne soient envoyes aux chambres a gaz.",
     ],
   },
@@ -109,8 +109,8 @@ const camps = [
     details: [
       "IG Farben, l'un des plus grands groupes industriels allemands, a investi plus de 700 millions de Reichsmarks dans l'usine.",
       "L'esperance de vie moyenne d'un detenu a Monowitz etait d'environ 3 mois.",
-      "Les detenus juges trop faibles pour travailler etaient regulierement \"selectionnes\" et envoyes aux chambres a gaz de Birkenau.",
-      "Le prix Nobel de litterature Primo Levi a ete detenu a Monowitz. Son temoignage \"Si c'est un homme\" est devenu un texte fondamental de la litterature de la Shoah.",
+      "Les detenus juges trop faibles pour travailler etaient regulierement « sélectionnés » et envoyes aux chambres a gaz de Birkenau.",
+      "Le prix Nobel de litterature Primo Levi a ete detenu a Monowitz. Son temoignage « Si c'est un homme » est devenu un texte fondamental de la litterature de la Shoah.",
       "Environ 40 sous-camps supplementaires dependaient du complexe d'Auschwitz, fournissant du travail force a diverses industries allemandes.",
     ],
   },
