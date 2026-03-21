@@ -14,6 +14,7 @@ import Seguy from "./pages/Seguy";
 import Lestage from "./pages/Lestage";
 import Rolland from "./pages/Rolland";
 import LesAbs from "./pages/les-abs";
+import AngeleRouzaud from "./pages/angele-rouzaud";
 
 // Pages des camps
 import Auschwitz from "./pages/Auschwitz";
