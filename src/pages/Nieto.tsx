@@ -1,4 +1,46 @@
+"import { Link } from 'react-router-dom';
+import { MapPin, Calendar, Users } from 'lucide-react';
 
+function Nieto() {
+  const timelineEvents = [
+    { year: '1913', event: 'Naissance à Albacete, Espagne', detail: 'Membre du Partido Comunista de España (PCE)' },
+    { year: '1933', event: 'Arrivée en France', detail: 'Après la défaite, identifié par Franco' },
+    { year: '1941-42', event: 'Résistance', detail: 'Engagement dans l'Union Nacional Española (UNE)' },
+    { year: '1942', event: 'Arrestation', detail: 'Septembre à Toulouse, sous le faux nom de José Matéos Martinez' },
+    { year: '1944', event: 'Déportation', detail: '31 juillet vers Buchenwald, matricule n°69237' },
+    { year: '1945', event: 'Libération', detail: 'Retour à Toulouse, Serment de Buchenwald' },
+    { year: '1951', event: 'Disparition', detail: 'Opération Bolero-Paprika' },
+  ];
+
+  const organisations = [
+    'Partido Comunista de España (PCE)',
+    'Unión Nacional Española (UNE)',
+    'Agrupación de Guerrilleros Españoles (AGE)',
+  ];
+
+  const zones = ['Toulouse (Base)', 'Aude', 'Haute-Garonne', 'Ariège', 'Cantal'];
+
+  return (
+    <div className=\"min-h-screen bg-slate-900\">
+      {/* HERO */}
+      <section className=\"pt-8 pb-16 md:pt-12 md:pb-24 bg-gradient-to-b from-slate-800 to-slate-900\">
+        <div className=\"mx-auto max-w-4xl px-6\">
+          <Link 
+            to=\"/personnages\" 
+            className=\"inline-flex items-center gap-2 text-slate-400 hover:text-amber-400 transition-colors mb-8\"
+          >
+            <span>←</span>
+            <span className=\"text-sm\">Retour aux personnages</span>
+          </Link>
+          
+          <div className=\"grid md:grid-cols-2 gap-12 items-center\">
+            <div>
+              <p className=\"text-sm font-medium uppercase tracking-[0.3em] text-amber-400 mb-4\">
+                1913 — 1951
+              </p>
+              <h1 className=\"font-serif text-5xl font-bold leading-tight tracking-tight md:text-6xl text-white\">
+                Jaime Nieto López
+              </h1>
               <p className=\"mt-4 text-lg text-slate-300\">Résistant espagnol, déporté à Buchenwald</p>
               <div className=\"mt-6 flex flex-col gap-3\">
                 <div className=\"flex items-center gap-2 text-sm text-slate-400\">
