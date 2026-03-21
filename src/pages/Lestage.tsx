@@ -33,6 +33,41 @@ export default function SuzanneLestage() {
                 <Calendar className="w-4 h-4 text-amber-400" />
                 <span>3 février 1906</span>
               </div>
+              <div className="flex items-center gap-2 text-sm">import { MapPin, Calendar, Award, AlertTriangle, Users, FileText, Heart, Shield } from 'lucide-react';
+import PersonHeader from '../components/PersonHeader';
+
+const lestageSections = [
+  { id: 'hero', label: 'Présentation' },
+  { id: 'biographie', label: 'Biographie' },
+  { id: 'deportation', label: 'Déportation' },
+  { id: 'parcours', label: 'Parcours' },
+  { id: 'heritage', label: 'Héritage' },
+];
+
+export default function SuzanneLestage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <PersonHeader sections={lestageSections} />
+      
+      {/* Spacer pour le header fixe */}
+      <div className="h-16" />
+
+      {/* Hero Section */}
+      <div id="hero" className="bg-slate-900 text-white py-20 px-8">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-5xl font-bold mb-4">Suzanne Lestage</h1>
+            <p className="text-amber-400 text-xl mb-6">1906 - 1995</p>
+            <p className="text-gray-300 text-lg mb-6">Déportée Nacht und Nebel, survivante de Ravensbrück et Mauthausen</p>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-2 text-sm">
+                <MapPin className="w-4 h-4 text-amber-400" />
+                <span>Narbonne, Aude, France</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Calendar className="w-4 h-4 text-amber-400" />
+                <span>3 février 1906</span>
+              </div>
               <div className="flex items-center gap-2 text-sm">
                 <FileText className="w-4 h-4 text-amber-400" />
                 <span>Matricule n°2123</span>
