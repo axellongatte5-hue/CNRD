@@ -581,15 +581,15 @@ export default function DrancyPage() {
           </h2>
           <div className="mx-auto mt-4 h-px w-16 bg-primary" />
 
-          <div className="mt-12 border-l-2 border-primary py-4 pl-6 text-left">
-            <p className="font-serif text-xl italic leading-relaxed text-foreground">
-              {"\""}La France, patrie des Lumieres et des Droits de l{"'"}Homme, terre
-              d{"'"}accueil et d{"'"}asile, la France, ce jour-la, accomplissait
-              l{"'"}irreparable. Manquant a sa parole, elle livrait ses proteges
-              a leurs bourreaux.{"\""}
+          <div className=\"mt-12 border-l-2 border-primary py-4 pl-6 text-left\">
+            <p className=\"font-serif text-xl italic leading-relaxed text-foreground\">
+              \"La France, patrie des Lumières et des Droits de l'Homme, terre
+              d'accueil et d'asile, la France, ce jour-là, accomplissait
+              l'irréparable. Manquant à sa parole, elle livrait ses protégés
+              à leurs bourreaux.\"
             </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              &mdash; Jacques Chirac, 16 juillet 1995, discours du Vel{"'"}d{"'"}Hiv
+            <p className=\"mt-4 text-sm text-muted-foreground\">
+              — Jacques Chirac, 16 juillet 1995, discours du Vel d'Hiv
             </p>
           </div>
 
