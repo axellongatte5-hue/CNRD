@@ -1,4 +1,26 @@
-import { Link } from 'react-router-dom';
+      className="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-xl p-5 transition-all duration-300"
+      data-testid={`camp-page-card-${camp.id}`}
+    >
+      <div className="flex items-start justify-between mb-3">
+        <div
+          className="w-3 h-3 rounded-full"
+          style={{ backgroundColor: camp.color }}
+        />
+        <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
+      </div>
+      <h3 className="text-lg font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">
+        {camp.name}
+      </h3>
+      <p className="text-sm text-slate-500 mb-2">
+        {camp.country} • {camp.dates}
+      </p>
+      <p className="text-xs text-slate-400 mb-3 line-clamp-2">
+        {camp.description}
+      </p>
+      <p className="text-xs font-medium text-red-400">
+        {camp.victims} victimes
+      </p>
+    </Link>import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowLeft, MapPin } from 'lucide-react';
 import { camps } from '../data/deportees';
 
@@ -99,28 +121,6 @@ function CampCard({ camp }) {
   return (
     <Link
       to={`/camp/${camp.id}`}
-      className="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-xl p-5 transition-all duration-300"
-      data-testid={`camp-page-card-${camp.id}`}
-    >
-      <div className="flex items-start justify-between mb-3">
-        <div
-          className="w-3 h-3 rounded-full"
-          style={{ backgroundColor: camp.color }}
-        />
-        <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
-      </div>
-      <h3 className="text-lg font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">
-        {camp.name}
-      </h3>
-      <p className="text-sm text-slate-500 mb-2">
-        {camp.country} • {camp.dates}
-      </p>
-      <p className="text-xs text-slate-400 mb-3 line-clamp-2">
-        {camp.description}
-      </p>
-      <p className="text-xs font-medium text-red-400">
-        {camp.victims} victimes
-      </p>
-    </Link>
+
   );
 }
