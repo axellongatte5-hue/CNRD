@@ -196,8 +196,7 @@ export default function RavensbruckPage() {
                 Le camp principal
               </h3>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                Le camp principal pour femmes comprenait 32 baraques d{"'"}habitation,
-                des ateliers de travail, un bunker disciplinaire (le {"\""}Zellenbau{"\""})
+                des ateliers de travail, un bunker disciplinaire (le « Zellenbau »)
                 et une infirmerie tristement celebre pour les experimentations medicales.
               </p>
               <ul className="mt-6 space-y-3">
