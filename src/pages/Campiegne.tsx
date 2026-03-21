@@ -552,161 +552,149 @@ export default function RoyallieuPage() {
               </h2>
               <div className="mt-4 h-px w-16 bg-primary" />
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Inaugure en 2008, le Memorial de l{"'"}internement et de la deportation occupe
-                trois batiments preserves de l{"'"}ancien camp. Il retrace l{"'"}histoire du camp
-                et rend hommage aux victimes a travers des expositions permanentes, des archives
-                et des temoignages.
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                Le site est un lieu d{"'"}education et de transmission de la memoire, accueillant
-                chaque annee des milliers de visiteurs, notamment des scolaires, pour que l{"'"}histoire
-                ne soit jamais oubliee.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+                Inaugure en 2008, le Memorial de l{"'"}internement et de import CampPageLayout from '../components/CampPageLayout';
 
-      {/* ══════ DEVOIR DE MEMOIRE ══════ */}
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-            Ne jamais oublier
-          </p>
-          <h2 className="mt-4 text-balance font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Devoir de memoire
-          </h2>
-          <div className="mx-auto mt-4 h-px w-16 bg-primary" />
+const compiegneData = {
+  dates: "1941 — 1944",
+  title: "Compiègne",
+  subtitle: "Camp de Royallieu. Principal camp de transit en France pour les résistants et les prisonniers politiques.",
+  
+  introTitle: "L'antichambre de la déportation",
+  introText: [
+    "Le camp de Royallieu, à Compiègne, fut le principal centre de transit pour les résistants, prisonniers politiques et otages destinés à la déportation vers les camps nazis.",
+    "Contrairement à Drancy réservé aux Juifs, Compiègne était le point de départ des convois de déportés politiques vers Buchenwald, Mauthausen, Dachau et d'autres camps de concentration.",
+  ],
+  
+  timeline: [
+    {
+      date: "Juin 1941",
+      title: "Ouverture du camp",
+      description: "L'ancienne caserne de Royallieu devient le Frontstalag 122, camp d'internement allemand.",
+    },
+    {
+      date: "Décembre 1941",
+      title: "Premiers otages fusillés",
+      description: "95 otages internés à Compiègne sont fusillés au Mont-Valérien en représailles à des attentats.",
+    },
+    {
+      date: "Juillet 1942",
+      title: "Premier convoi vers Auschwitz",
+      description: "Le convoi du 6 juillet emporte 1 175 détenus vers Auschwitz. Seuls 119 survivront.",
+    },
+    {
+      date: "Août 1944",
+      title: "Dernier convoi",
+      description: "Le 17 août, le dernier convoi quitte Compiègne. Le camp est libéré quelques jours plus tard.",
+    },
+  ],
+  
+  structureTitle: "Le camp de Royallieu",
+  structureSubtitle: "Organisation",
+  structureText: [
+    "Installé dans une ancienne caserne militaire, le camp était divisé en plusieurs sections selon les catégories de détenus.",
+  ],
+  structureBlocks: [
+    {
+      title: "Le camp A",
+      text: "Réservé aux prisonniers politiques français, résistants et otages. C'était le plus important des camps.",
+    },
+    {
+      title: "Le camp B",
+      text: "Destiné aux ressortissants britanniques et américains, traités selon les conventions de Genève.",
+    },
+    {
+      title: "Le camp C",
+      text: "Pour les Juifs avant leur transfert vers Drancy. Des femmes et enfants y furent également internés.",
+    },
+  ],
+  
+  processTitle: "Les convois",
+  processSubtitle: "Vers les camps nazis",
+  processText: [
+    "De Compiègne partirent des dizaines de convois vers les camps de concentration allemands. Les détenus ignoraient leur destination.",
+  ],
+  processList: [
+    "Environ 54 000 personnes furent déportées depuis Compiègne.",
+    "Les convois partaient généralement de nuit, dans le secret.",
+    "Les détenus voyageaient dans des wagons à bestiaux pendant plusieurs jours.",
+    "Beaucoup mouraient pendant le transport, de soif, de faim ou d'asphyxie.",
+    "Les destinations principales étaient Buchenwald, Mauthausen, Dachau et Auschwitz.",
+  ],
+  
+  conditionsTitle: "L'internement",
+  conditionsSubtitle: "La vie au camp",
+  conditionsCards: [
+    {
+      title: "L'attente",
+      subtitle: "L'angoisse des listes",
+      text: "Les internés vivaient dans l'attente terrifiante de leur nom sur les listes de déportation.",
+    },
+    {
+      title: "Les otages",
+      subtitle: "Exécutions de représailles",
+      text: "Des centaines d'otages furent fusillés en représailles aux actions de la Résistance.",
+    },
+    {
+      title: "La solidarité",
+      subtitle: "Résistance intérieure",
+      text: "Les résistants organisèrent des réseaux d'entraide et maintinrent le moral malgré les conditions.",
+    },
+    {
+      title: "Les évasions",
+      subtitle: "Tentatives désespérées",
+      text: "Quelques évasions réussirent, notamment grâce à des complicités extérieures et des tunnels.",
+    },
+  ],
+  
+  stats: [
+    { value: "54 000", label: "Déportés", description: "Depuis Compiègne" },
+    { value: "50 000", label: "Internés", description: "Passés par le camp" },
+    { value: "1 000", label: "Fusillés", description: "Otages exécutés" },
+  ],
+  statsSecondary: [
+    { value: "3", label: "Années" },
+    { value: "100+", label: "Convois" },
+    { value: "40%", label: "Non-retour" },
+    { value: "28", label: "Nationalités" },
+  ],
+  
+  deportes: [
+    {
+      nom: "Charlotte Delbo",
+      date: "Janvier 1943",
+      statut: "Survécu",
+      details: "Résistante et écrivaine, déportée à Auschwitz puis Ravensbrück. Son œuvre témoigne de l'expérience concentrationnaire.",
+    },
+    {
+      nom: "Robert Desnos",
+      date: "Mars 1944",
+      statut: "Décédé",
+      details: "Poète surréaliste et résistant. Déporté à Buchenwald puis Theresienstadt où il mourut du typhus.",
+    },
+  ],
+  
+  liberationTitle: "La libération",
+  liberationText: [
+    "Le dernier convoi quitta Compiègne le 17 août 1944, emportant 1 250 détenus vers Buchenwald. Le camp fut libéré quelques jours plus tard.",
+    "À la libération, le camp était presque vide. Les Allemands avaient accéléré les déportations dans les dernières semaines.",
+    "Aujourd'hui, le Mémorial de l'Internement et de la Déportation de Compiègne occupe les lieux et perpétue la mémoire des victimes.",
+  ],
+  
+  memorialQuote: "Nous partons vers l'inconnu. Gardez confiance. Nous reviendrons.",
+  memorialAuthor: "Message d'un déporté de Compiègne, 1944",
+  memorialStat: "54 000",
+  memorialStatLabel: "déportés depuis Compiègne",
+  
+  otherCamps: [
+    { name: "Drancy", country: "France", path: "/camp/drancy" },
+    { name: "Auschwitz", country: "Pologne", path: "/camp/auschwitz" },
+    { name: "Buchenwald", country: "Allemagne", path: "/camp/buchenwald" },
+    { name: "Mauthausen", country: "Autriche", path: "/camp/mauthausen" },
+    { name: "Ravensbrück", country: "Allemagne", path: "/camp/ravensbruck" },
+    { name: "Neuengamme", country: "Allemagne", path: "/camp/neuengamme" },
+  ],
+};
 
-          <blockquote className="mx-auto mt-12 max-w-2xl border-l-2 border-primary py-4 pl-6 text-left">
-            <p className="font-serif text-xl italic leading-relaxed text-foreground">
-              &ldquo;Nous etions partis pour l{"'"}inconnu. Et cet inconnu, c{"'"}etait la mort.&rdquo;
-            </p>
-            <footer className="mt-4 text-sm text-muted-foreground">
-              &mdash; Charlotte Delbo, deportee de Compiegne vers Auschwitz
-            </footer>
-          </blockquote>
-
-          <p className="mt-12 text-lg leading-relaxed text-muted-foreground">
-            Royallieu est un temoignage de la complicite du regime de Vichy dans la persecution
-            et la deportation. Ce camp situe sur le sol francais rappelle que la barbarie nazie
-            a ete rendue possible par des collaborations locales. Le devoir de memoire implique
-            aussi de regarder en face cette part sombre de l{"'"}histoire de France.
-          </p>
-        </div>
-      </section>
-
-      {/* ══════ NAVIGATION VERS AUTRES CAMPS ══════ */}
-      <section className="border-t border-border bg-background py-16">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-              Autres lieux de memoire
-            </p>
-            <h2 className="mt-4 font-serif text-2xl font-bold text-foreground md:text-3xl">
-              Decouvrir les autres camps
-            </h2>
-            <div className="mx-auto mt-4 h-px w-16 bg-primary" />
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <a
-              href="/"
-              className="group border border-border bg-card p-6 transition-colors hover:border-primary"
-            >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-                Pologne &middot; 1940-1945
-              </p>
-              <h3 className="mt-2 font-serif text-lg font-bold text-foreground">
-                Auschwitz-Birkenau
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Plus de 1,1 million de victimes. Symbole de la Shoah.
-              </p>
-              <p className="mt-3 text-sm font-medium text-primary group-hover:underline">
-                Voir &rarr;
-              </p>
-            </a>
-
-            <a
-              href="/buchenwald"
-              className="group border border-border bg-card p-6 transition-colors hover:border-primary"
-            >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-                Allemagne &middot; 1937-1945
-              </p>
-              <h3 className="mt-2 font-serif text-lg font-bold text-foreground">
-                Buchenwald
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Pres de Weimar. Auto-liberation des detenus.
-              </p>
-              <p className="mt-3 text-sm font-medium text-primary group-hover:underline">
-                Voir &rarr;
-              </p>
-            </a>
-
-            <a
-              href="/mauthausen"
-              className="group border border-border bg-card p-6 transition-colors hover:border-primary"
-            >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-                Autriche &middot; 1938-1945
-              </p>
-              <h3 className="mt-2 font-serif text-lg font-bold text-foreground">
-                Mauthausen
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Camp de categorie III. L{"'"}escalier de la mort.
-              </p>
-              <p className="mt-3 text-sm font-medium text-primary group-hover:underline">
-                Voir &rarr;
-              </p>
-            </a>
-
-            <a
-              href="/neuengamme"
-              className="group border border-border bg-card p-6 transition-colors hover:border-primary"
-            >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-                Allemagne &middot; 1938-1945
-              </p>
-              <h3 className="mt-2 font-serif text-lg font-bold text-foreground">
-                Neuengamme
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Pres de Hambourg. Tragedie de la baie de Lubeck.
-              </p>
-              <p className="mt-3 text-sm font-medium text-primary group-hover:underline">
-                Voir &rarr;
-              </p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════ FOOTER ══════ */}
-      <footer className="border-t border-border bg-secondary">
-        <div className="mx-auto max-w-4xl px-6 py-12">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <p className="font-serif text-lg font-bold text-foreground">
-              Concours National de la Resistance et de la Deportation
-            </p>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              Ce site a ete realise dans le cadre du Concours de la Resistance.
-              <br />
-              En memoire de toutes les victimes.
-            </p>
-            <p className="mt-2 text-xs text-muted-foreground">
-              &copy; Memorial de l{"'"}internement et de la deportation - Camp de Royallieu
-            </p>
-            <div className="mt-4 h-px w-16 bg-primary" />
-            <p className="text-xs text-muted-foreground">
-              &copy; 2025 &mdash; Devoir de Memoire
-            </p>
-          </div>
-        </div>
-      </footer>
-    </main>
-  )
+export default function Compiegne() {
+  return <CampPageLayout {...compiegneData} />;
 }
