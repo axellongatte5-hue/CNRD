@@ -50,18 +50,18 @@ export default function RavensbruckPage() {
                 pres du lac Schwedt dans le Mecklembourg, le camp fut construit en 1938-1939
                 par 500 detenus transferes de Sachsenhausen.
               </p>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Les premieres prisonnieres, environ 900 femmes, arriverent en mai 1939,
-                transferees depuis le camp de Lichtenburg en Saxe. Le camp etait concu
-                pour detenir des femmes considerees comme {"\""}indesirables{"\""}
-                par le regime nazi : opposantes politiques, resistantes, Temoins de Jehovah,
-                {"\""}asociales{"\""}, Roms, Juives et prisonnieres de guerre.
+              <p className=\"mt-6 text-lg leading-relaxed text-muted-foreground\">
+                Les premières prisonnières, environ 900 femmes, arrivèrent en mai 1939,
+                transférées depuis le camp de Lichtenburg en Saxe. Le camp était conçu
+                pour détenir des femmes considérées comme «indésirables»
+                par le régime nazi : opposantes politiques, résistantes, Témoins de Jéhovah,
+                «asociales», Roms, Juives et prisonnières de guerre.
               </p>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Un camp annexe pour hommes fut cree en avril 1941, et un camp pour
-                adolescentes, l{"'"}Uckermark, ouvrit en juin 1942. Ravensbruck devint
+              <p className=\"mt-6 text-lg leading-relaxed text-muted-foreground\">
+                Un camp annexe pour hommes fut créé en avril 1941, et un camp pour
+                adolescentes, l'Uckermark, ouvrit en juin 1942. Ravensbrück devint
                 ainsi un complexe concentrationnaire majeur avec plus de 70 Kommandos
-                exterieurs.
+                extérieurs.
               </p>
             </div>
           </div>
