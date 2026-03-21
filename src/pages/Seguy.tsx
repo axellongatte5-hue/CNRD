@@ -287,6 +287,295 @@ export default function Seguy() {
                 <div>
                   <h3 className="text-amber-400 font-bold mb-3">La découverte du camp et l'annonce de la mort</h3>
                   <p className="text-gray-300 italic mb-2">
+                    "Nous sommes arrivés à MAUTHAUSEN, camp de la mort […] une immenseimport { MapPin, Calendar, Award, AlertTriangle, Users, BookOpen, Quote, ExternalLink } from 'lucide-react';
+import PersonHeader from '../components/PersonHeader';
+
+const seguySections = [
+  { id: 'hero', label: 'Présentation' },
+  { id: 'biographie', label: 'Biographie' },
+  { id: 'resistance', label: 'Résistance' },
+  { id: 'deportation', label: 'Déportation' },
+  { id: 'temoignage', label: 'Témoignage' },
+  { id: 'sources', label: 'Sources' },
+];
+
+export default function Seguy() {
+  return (
+    <div className="min-h-screen bg-white">
+      <PersonHeader sections={seguySections} />
+      
+      {/* Spacer pour le header fixe */}
+      <div className="h-16" />
+
+      {/* Hero Section */}
+      <div id="hero" className="bg-slate-900 text-white py-20 px-8">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-5xl font-bold mb-4">Georges Séguy</h1>
+            <p className="text-amber-400 text-xl mb-6">1927 - 1982</p>
+            <p className="text-gray-300 text-lg mb-6">Résistant français, déporté à Mauthausen, Secrétaire général de la CGT</p>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-2 text-sm">
+                <MapPin className="w-4 h-4 text-amber-400" />
+                <span>Toulouse, France</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Calendar className="w-4 h-4 text-amber-400" />
+                <span>Naissance : 1927</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Users className="w-4 h-4 text-amber-400" />
+                <span>Secrétaire général CGT (1967-1982)</span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <div className="flex justify-center mb-4">
+              <div className="w-24 h-24 bg-slate-700 rounded-full flex items-center justify-center">
+                <Users className="w-12 h-12 text-slate-500" />
+              </div>
+            </div>
+            <p className="text-center text-gray-300 italic">
+              "Nous n'avons jamais désespéré ; nous avons tous fait dans nos cœurs le serment de venger tous nos morts."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Chronologie */}
+      <div id="biographie" className="max-w-5xl mx-auto px-8 py-16">
+        <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Chronologie</h2>
+
+        <div className="relative">
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-amber-400 via-red-500 to-green-500"></div>
+
+          <div className="space-y-12">
+            {/* 1927 - Naissance */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Naissance</h3>
+                <p className="text-sm text-gray-600">1927 à Toulouse, France</p>
+                <p className="text-xs text-blue-600 mt-1">Début d'apprentissage en imprimerie</p>
+              </div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-amber-400 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2 text-amber-600 font-bold text-xl">1927</div>
+            </div>
+
+            {/* Engagement */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right text-amber-600 font-bold text-xl">1940s</div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-amber-400 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Engagement dans la Résistance</h3>
+                <p className="text-sm text-blue-600">Apprenti chez Henri Lion, imprimeur travaillant pour la Résistance</p>
+                <p className="text-xs text-blue-600 mt-1">Adhésion aux Jeunesses communistes et aux FTP</p>
+              </div>
+            </div>
+
+            {/* Arrestation */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right bg-red-50 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Arrestation</h3>
+                <p className="text-sm text-red-600">4 février 1944 - Arrêté par la Gestapo</p>
+                <p className="text-xs text-red-600 mt-1">Sur dénonciation, avec tout le personnel de l'imprimerie</p>
+              </div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2 text-red-600 font-bold text-xl">4 Fév 1944</div>
+            </div>
+
+            {/* Prison */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right text-red-600 font-bold text-xl">Fév 1944</div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2 bg-red-50 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Prison de Toulouse</h3>
+                <p className="text-sm text-red-600">3 semaines d'emprisonnement</p>
+                <p className="text-xs text-red-600 mt-1">Puis transfert au camp de Royallieu à Compiègne</p>
+              </div>
+            </div>
+
+            {/* Déportation */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right bg-red-50 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Déportation</h3>
+                <p className="text-sm text-red-600">21 mars 1944 : Convoi vers l'Autriche</p>
+                <p className="text-xs text-red-600 mt-1">Arrivée le 26 mars au camp de Mauthausen (matricule 60581)</p>
+              </div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2 text-red-600 font-bold text-xl">21 Mars 1944</div>
+            </div>
+
+            {/* Gusen II */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right text-red-600 font-bold text-xl">1944</div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2 bg-red-50 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Transfert à Gusen II</h3>
+                <p className="text-sm text-red-600">Camp annexe de Mauthausen</p>
+                <p className="text-xs text-red-600 mt-1">Conditions de détention extrêmes</p>
+              </div>
+            </div>
+
+            {/* Libération */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right bg-green-50 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Libération</h3>
+                <p className="text-sm text-green-600">28 avril 1945 - Libéré par la Croix-Rouge</p>
+                <p className="text-xs text-green-600 mt-1">Évacuation vers la Suisse puis Annemasse</p>
+              </div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2 text-green-600 font-bold text-xl">28 Avr 1945</div>
+            </div>
+
+            {/* Retour */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right text-green-600 font-bold text-xl">5 Mai 1945</div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2 bg-green-50 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Retour à Toulouse</h3>
+                <p className="text-sm text-green-600">Pèse 38 kilos, "a du mal à refaire surface"</p>
+                <p className="text-xs text-green-600 mt-1">Doit renoncer au métier de typographe (séquelles de pleurésie)</p>
+              </div>
+            </div>
+
+            {/* CGT */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right bg-blue-50 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Secrétaire général de la CGT</h3>
+                <p className="text-sm text-blue-600">Figure emblématique du syndicalisme français</p>
+                <p className="text-xs text-blue-600 mt-1">Mandat de 1967 à 1982</p>
+              </div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2 text-blue-600 font-bold text-xl">1967-1982</div>
+            </div>
+
+            {/* Décès */}
+            <div className="flex items-center gap-8">
+              <div className="w-1/2 text-right text-gray-600 font-bold text-xl">1982</div>
+              <div className="relative z-10">
+                <div className="w-4 h-4 bg-gray-500 rounded-full border-4 border-white shadow"></div>
+              </div>
+              <div className="w-1/2">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Décès</h3>
+                <p className="text-sm text-gray-600">Fin d'une vie de résistance et d'engagement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Résistance */}
+      <div id="resistance" className="bg-gray-50 py-16 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">L'Engagement dans la Résistance</h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="md:col-span-2 bg-white p-8 rounded-lg shadow-sm">
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Georges Séguy entre en apprentissage dans l'imprimerie d'un petit patron de Toulouse, <strong>Henri Lion</strong>, qui travaille clandestinement pour la Résistance. Dans ce contexte, il adhère aux <strong>Jeunesses communistes</strong> et devient responsable d'un groupe des <strong>Francs-tireurs et partisans français (FTP)</strong>.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Son engagement précoce dans la lutte contre l'occupant nazi fait de lui, malgré son jeune âge, un maillon essentiel du réseau de résistance toulousain.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Le 4 février 1944, sur dénonciation, il est arrêté par la Gestapo avec tout le personnel de l'imprimerie, y compris le patron Henri Lion qui sera torturé lors des interrogatoires. La police ignore alors les activités exactes de Georges Séguy.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-amber-50 p-6 rounded-lg">
+                <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                  <Users className="w-5 h-5 text-amber-600" />
+                  Organisations
+                </h3>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Jeunesses communistes</li>
+                  <li>• Francs-tireurs et partisans français (FTP)</li>
+                  <li>• Imprimerie clandestine</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-blue-600" />
+                  Zones d'action
+                </h3>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Toulouse (Base)</li>
+                  <li>• Région toulousaine</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Déportation */}
+      <div id="deportation" className="py-16 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Mauthausen - Camp de la Mort</h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-900 text-white p-8 rounded-lg">
+              <h3 className="text-amber-400 font-bold text-xl mb-4">L'Enfer de Mauthausen</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Après trois semaines à la prison de Toulouse, Georges Séguy est envoyé au camp de Royallieu à Compiègne, puis déporté le 21 mars 1944 vers l'Autriche.
+              </p>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Il arrive le 26 mars 1944 au camp de <strong className="text-amber-400">Mauthausen</strong> où il reçoit le <strong className="text-amber-400">matricule 60581</strong>, avant d'être transféré au camp annexe de <strong className="text-amber-400">Gusen II</strong>.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Les camps de Gusen et Mauthausen sont finalement libérés fin avril 1945 par les armées américaine et soviétique.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 p-8 rounded-lg flex flex-col justify-center items-center">
+              <div className="w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center mb-6">
+                <Award className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-800 text-xl mb-4 text-center">Matricule 60581</h3>
+              <p className="text-gray-700 text-center mb-4">
+                Déporté à seulement 17 ans, Georges Séguy survit à l'horreur des camps nazis.
+              </p>
+              <div className="text-sm text-gray-600 text-center">
+                <p>Libéré le 28 avril 1945 par la Croix-Rouge</p>
+                <p className="mt-1">Poids au retour : 38 kilos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Témoignage */}
+      <div id="temoignage" className="bg-slate-900 text-white py-16 px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-amber-400">Témoignage (à 18 ans)</h2>
+          
+          <div className="space-y-8">
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <div className="flex items-start gap-4">
+                <Quote className="w-8 h-8 text-amber-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-amber-400 font-bold mb-3">La découverte du camp et l'annonce de la mort</h3>
+                  <p className="text-gray-300 italic mb-2">
                     "Nous sommes arrivés à MAUTHAUSEN, camp de la mort […] une immense tête de mort […] où l'on lisait au-dessous : camp d'extermination."
                   </p>
                   <p className="text-gray-300 italic">
