@@ -88,7 +88,7 @@ export default function RoyallieuPage() {
                             { year: \"Juin 1941\", text: \"Le camp devient officiellement le Frontstalag 122, camp d'internement pour les «ennemis du Reich».\" },
               { year: "Decembre 1941", text: "Creation d'un camp special pour les Juifs, separe du reste du camp." },
               { year: "27 mars 1942", text: "Depart du premier convoi de deportation de Juifs de France vers Auschwitz (convoi 1)." },
-              { year: "6 juillet 1942", text: "Depart du convoi des \"45 000\" : 1 175 resistants communistes vers Auschwitz." },
+              { year: \"6 juillet 1942\", text: \"Départ du convoi des «45 000» : 1 175 résistants communistes vers Auschwitz.\" },
               { year: "1943", text: "Intensification des deportations. Des convois partent regulierement vers Buchenwald, Mauthausen, Ravensbrueck." },
               { year: "22 mars 1944", text: "Deportation de nombreux resistants, dont des membres de reseaux de l'Oise." },
               { year: "31 juillet 1944", text: "Depart du convoi 77, l'un des derniers grands convois de Juifs vers Auschwitz (1 300 personnes)." },
