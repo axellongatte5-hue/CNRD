@@ -1,4 +1,4 @@
-import Image from "next/image"
+// Image import removed - using standard img tags
 
 /* ─── Data ─── */
 
