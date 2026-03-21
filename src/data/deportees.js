@@ -273,6 +273,74 @@ export const deportees = [
     color: "#ec4899",
     campId: "neuengamme",
     fate: "Décédé en déportation"
+    },
+  {
+    id: \"angele-rouzaud\",
+    name: \"Angèle Rouzaud\",
+    dates: \"Inconnue\",
+    photo: \"\",
+    summary: \"Résistante française, déportée à Ravensbrück\",
+    description: \"Angèle Rouzaud fait partie des nombreuses femmes françaises qui se sont engagées dans la Résistance pendant l'Occupation.\",
+    path: [
+      {
+        id: \"rouzaud-france\",
+        label: \"Arrestation\",
+        location: \"France\",
+        lat: 46.2276,
+        lng: 2.2137,
+        date: \"1944\",
+        type: \"origin\",
+        description: \"Arrêtée pour faits de résistance.\"
+      },
+      {
+        id: \"rouzaud-ravensbruck\",
+        label: \"Déportation\",
+        location: \"Ravensbrück\",
+        lat: 53.1903,
+        lng: 13.1697,
+        date: \"1944\",
+        type: \"camp\",
+        description: \"Principal camp de concentration pour femmes. Plus de 130 000 femmes y furent détenues.\"
+      }
+    ],
+    color: \"#f472b6\",
+    campId: \"ravensbruck\",
+    fate: \"Survivante, libérée en 1945\"
+  },
+  {
+    id: \"les-abs\",
+    name: \"Jeanne & Jean\",
+    dates: \"1893-1945 & 1897-1986\",
+    photo: \"\",
+    summary: \"Deux destins entrelacés dans la lutte contre l'oppression\",
+    description: \"Jeanne Verdier et Jean Cassou, deux figures de la Résistance française dont les parcours témoignent de l'engagement contre l'occupation nazie.\",
+    path: [
+      {
+        id: \"lesabs-france\",
+        label: \"Résistance\",
+        location: \"France\",
+        lat: 43.6047,
+        lng: 1.4442,
+        date: \"1940-1943\",
+        type: \"origin\",
+        description: \"Engagement dans la Résistance française.\"
+      },
+      {
+        id: \"lesabs-ravensbruck\",
+        label: \"Déportation (Jeanne)\",
+        location: \"Ravensbrück\",
+        lat: 53.1903,
+        lng: 13.1697,
+        date: \"1943-1945\",
+        type: \"camp\",
+        description: \"Jeanne Verdier déportée à Ravensbrück.\"
+      }
+    ],
+    color: \"#a855f7\",
+    campId: \"ravensbruck\",
+    fate: \"Jeanne libérée par la Croix-Rouge, Jean arrêté puis libéré\"
+  }
+];
   }
 ];
 
