@@ -84,13 +84,13 @@ function Feigelson() {
   ];
 
   return (
-    <div className=\"min-h-screen bg-white\">
+    <div className="min-h-screen bg-white">
       <PersonHeader sections={feigelsonSections} />
       
       {/* Spacer pour le header fixe */}
-      <div className=\"h-16\" />
+      <div className="h-16" />
 
-      <div id=\"hero\" className=\"bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 px-8\">
+      <div id="hero" className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-32 h-32 mx-auto mb-8 bg-gray-700 rounded-lg flex items-center justify-center">
             <Users className="w-16 h-16 text-gray-500" />
@@ -104,8 +104,8 @@ function Feigelson() {
         </div>
       </div>
 
-      <div className=\"max-w-4xl mx-auto px-8 py-12\">
-        <section id=\"parcours\" className=\"mb-16\">
+      <div className="max-w-4xl mx-auto px-8 py-12">
+        <section id="parcours" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Parcours</h2>
           <div className="space-y-8">
             {timelineEvents.map((event, idx) => (
@@ -123,8 +123,8 @@ function Feigelson() {
           </div>
         </section>
 
-        <section id=\"resistance\" className=\"mb-16\">
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Une entrée précoce dans la Résistance</h2>
+        <section id="resistance" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Une entrée précoce dans la Résistance</h2>
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded mb-6">
             <p className="text-gray-800 leading-relaxed">
               Raphaël Feigelson naît le 17 février 1926 à Paris dans une famille juive française. À seulement 14 ans, il refuse la défaite de 1940 et s'engage immédiatement dans la Résistance aux côtés de ses parents. Il devient rapidement chef militaire régional des Forces Unies de la Jeunesse Patriotique (F.U.J.P.), puis officier des Forces Françaises de l'Intérieur (F.F.I.).
@@ -132,8 +132,8 @@ function Feigelson() {
           </div>
         </section>
 
-        <section id=\"deportation\" className=\"mb-16\">
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Les étapes de la déportation</h2>
+        <section id="deportation" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Les étapes de la déportation</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {deportationStages.map((stage, idx) => (
               <div
@@ -150,8 +150,8 @@ function Feigelson() {
           </div>
         </section>
 
-        <section id=\"temoignage\" className=\"mb-16\">
-          <div className=\"bg-red-50 border-l-4 border-red-600 p-8 rounded\">
+        <section id="temoignage" className="mb-16">
+          <div className="bg-red-50 border-l-4 border-red-600 p-8 rounded">
             <h3 className="text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
               <AlertTriangle className="w-6 h-6" />
               Témoignage direct
@@ -180,8 +180,8 @@ function Feigelson() {
           </div>
         </section>
 
-        <section id=\"liberation\" className=\"mb-16\">
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Évasion et libération</h2>
+        <section id="liberation" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Évasion et libération</h2>
           <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
             <p className="text-gray-800 leading-relaxed mb-4">
               Le 22 janvier 1945, Raphaël Feigelson parvient à s'évader d'Auschwitz. Il rejoint l'Armée soviétique, avec laquelle il participe à la libération du camp et empêche sa destruction totale par les SS en fuite.
@@ -195,8 +195,8 @@ function Feigelson() {
           </div>
         </section>
 
-        <section id=\"apres-guerre\" className=\"mb-16\">
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\">Après la guerre : une vie de transmission</h2>
+        <section id="apres-guerre" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Après la guerre : une vie de transmission</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {postWarWork.map((work, idx) => (
               <div
