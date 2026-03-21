@@ -479,9 +479,9 @@ export default function DrancyPage() {
 
           <div className="mt-12 border-l-2 border-primary py-4 pl-6">
             <p className="font-serif text-xl italic leading-relaxed text-foreground">
-              {"\""}Le convoi 77 represente la derniere tentative desespere des nazis
-              d{"'"}aneantir les Juifs de France avant la Liberation. Ces 1 300 personnes
-              furent deportees alors meme que les Allies approchaient de Paris.{"\""}
+              \"Le convoi 77 représente la dernière tentative désespérée des nazis
+              d'anéantir les Juifs de France avant la Libération. Ces 1 300 personnes
+              furent déportées alors même que les Alliés approchaient de Paris.\"
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               &mdash; Serge Klarsfeld
