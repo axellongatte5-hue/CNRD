@@ -83,7 +83,7 @@ export default function Home() {
     { value: "1955", unit: "", label: "rapport de la Sûreté nationale" },
   ];
 
-  
+  return (
     <div className=\"min-h-screen bg-[#eceae4] text-[#2c2c2b] overflow-x-hidden selection:bg-[#F5CB5C] selection:text-[#2c2c2b]\">
       <PersonHeader sections={bouteilleSections} />
 
