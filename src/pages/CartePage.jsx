@@ -18,14 +18,14 @@ L.Icon.Default.mergeOptions({
 const createIcon = (color, size = 24) => {
   return L.divIcon({
     className: 'custom-marker',
-    html: `<div style=\"
+    html: `<div style="
       background-color: ${color};
       width: ${size}px;
       height: ${size}px;
       border-radius: 50%;
       border: 3px solid white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    \"></div>`,
+    "></div>`,
     iconSize: [size, size],
     iconAnchor: [size/2, size/2],
   });
@@ -35,7 +35,7 @@ const createCampIcon = (color, type) => {
   const size = type === 'extermination' ? 32 : 28;
   return L.divIcon({
     className: 'custom-marker',
-    html: `<div style=\"
+    html: `<div style="
       background-color: ${color};
       width: ${size}px;
       height: ${size}px;
@@ -45,11 +45,11 @@ const createCampIcon = (color, type) => {
       display: flex;
       align-items: center;
       justify-content: center;
-    \">
-      <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"white\" stroke=\"white\" stroke-width=\"2\">
+    ">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2">
         ${type === 'extermination' 
-          ? '<path d=\"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5\"/>'
-          : '<path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>'
+          ? '<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>'
+          : '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'
         }
       </svg>
     </div>`,
@@ -118,31 +118,31 @@ export default function CartePage() {
   }, [selectedPerson, selectedCamp]);
 
   return (
-    <div className=\"h-screen flex flex-col bg-slate-900\">
+    <div className="h-screen flex flex-col bg-slate-900">
       {/* Navigation */}
-      <nav className=\"h-16 bg-slate-900/95 backdrop-blur-md border-b border-slate-700 flex-shrink-0\">
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full\">
-          <div className=\"flex items-center justify-between h-full\">
-            <Link to=\"/\" className=\"flex items-center gap-3 hover:opacity-80 transition-opacity\">
-              <Award className=\"w-6 h-6 text-amber-500\" />
-              <span className=\"font-semibold text-lg text-white hidden sm:block\">Mémoire de la Déportation</span>
-              <span className=\"font-semibold text-lg text-white sm:hidden\">CNRD</span>
+      <nav className="h-16 bg-slate-900/95 backdrop-blur-md border-b border-slate-700 flex-shrink-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+          <div className="flex items-center justify-between h-full">
+            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <Award className="w-6 h-6 text-amber-500" />
+              <span className="font-semibold text-lg text-white hidden sm:block">Mémoire de la Déportation</span>
+              <span className="font-semibold text-lg text-white sm:hidden">CNRD</span>
             </Link>
-            <div className=\"flex items-center gap-1\">
-              <Link to=\"/\" className=\"flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all\">
-                <Home className=\"w-4 h-4\" />
+            <div className="flex items-center gap-1">
+              <Link to="/" className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all">
+                <Home className="w-4 h-4" />
                 Accueil
               </Link>
-              <Link to=\"/personnages\" className=\"flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all\">
-                <Users className=\"w-4 h-4\" />
+              <Link to="/personnages" className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all">
+                <Users className="w-4 h-4" />
                 Personnages
               </Link>
-              <Link to=\"/camps\" className=\"flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all\">
-                <MapPin className=\"w-4 h-4\" />
+              <Link to="/camps" className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all">
+                <MapPin className="w-4 h-4" />
                 Camps
               </Link>
-              <Link to=\"/carte\" className=\"flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-amber-500/20 text-amber-400 transition-all\">
-                <Map className=\"w-4 h-4\" />
+              <Link to="/carte" className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-amber-500/20 text-amber-400 transition-all">
+                <Map className="w-4 h-4" />
                 Carte
               </Link>
             </div>
@@ -151,37 +151,37 @@ export default function CartePage() {
       </nav>
 
       {/* Main content */}
-      <div className=\"flex-1 flex relative\" data-testid=\"carte-page\">
+      <div className="flex-1 flex relative" data-testid="carte-page">
       {/* Sidebar */}
       <div className={`absolute top-0 left-0 h-full z-[1000] transition-transform duration-300 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
-        <div className=\"h-full w-80 bg-slate-900/95 backdrop-blur-md border-r border-slate-700 flex flex-col\">
+        <div className="h-full w-80 bg-slate-900/95 backdrop-blur-md border-r border-slate-700 flex flex-col">
           {/* Header */}
-          <div className=\"p-4 border-b border-slate-700\">
-            <div className=\"flex items-center justify-between mb-4\">
-              <h2 className=\"text-lg font-bold text-white\">Carte Interactive</h2>
+          <div className="p-4 border-b border-slate-700">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-bold text-white">Carte Interactive</h2>
               <button
                 onClick={() => setSidebarOpen(false)}
-                className=\"p-1 text-slate-400 hover:text-white rounded\"
+                className="p-1 text-slate-400 hover:text-white rounded"
               >
-                <X className=\"w-5 h-5\" />
+                <X className="w-5 h-5" />
               </button>
             </div>
             
             {/* Filters */}
-            <div className=\"space-y-2\">
+            <div className="space-y-2">
               <button
                 onClick={() => setShowPersons(!showPersons)}
                 className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-colors ${
                   showPersons ? 'bg-amber-500/20 text-amber-400' : 'bg-slate-800 text-slate-400'
                 }`}
               >
-                <span className=\"flex items-center gap-2\">
-                  <Users className=\"w-4 h-4\" />
+                <span className="flex items-center gap-2">
+                  <Users className="w-4 h-4" />
                   Personnages
                 </span>
-                {showPersons ? <Eye className=\"w-4 h-4\" /> : <EyeOff className=\"w-4 h-4\" />}
+                {showPersons ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
               </button>
               <button
                 onClick={() => setShowCamps(!showCamps)}
@@ -189,11 +189,11 @@ export default function CartePage() {
                   showCamps ? 'bg-amber-500/20 text-amber-400' : 'bg-slate-800 text-slate-400'
                 }`}
               >
-                <span className=\"flex items-center gap-2\">
-                  <MapPin className=\"w-4 h-4\" />
+                <span className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
                   Camps
                 </span>
-                {showCamps ? <Eye className=\"w-4 h-4\" /> : <EyeOff className=\"w-4 h-4\" />}
+                {showCamps ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
               </button>
               <button
                 onClick={() => setShowPaths(!showPaths)}
@@ -201,21 +201,21 @@ export default function CartePage() {
                   showPaths ? 'bg-amber-500/20 text-amber-400' : 'bg-slate-800 text-slate-400'
                 }`}
               >
-                <span className=\"flex items-center gap-2\">
-                  <Filter className=\"w-4 h-4\" />
+                <span className="flex items-center gap-2">
+                  <Filter className="w-4 h-4" />
                   Parcours
                 </span>
-                {showPaths ? <Eye className=\"w-4 h-4\" /> : <EyeOff className=\"w-4 h-4\" />}
+                {showPaths ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
               </button>
             </div>
           </div>
 
           {/* Persons list */}
-          <div className=\"flex-1 overflow-y-auto p-4\">
-            <h3 className=\"text-xs font-bold text-slate-500 uppercase tracking-wider mb-3\">
+          <div className="flex-1 overflow-y-auto p-4">
+            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
               Personnages ({deportees.length})
             </h3>
-            <div className=\"space-y-2\">
+            <div className="space-y-2">
               {deportees.map((person) => (
                 <button
                   key={person.id}
@@ -229,24 +229,24 @@ export default function CartePage() {
                       : 'bg-slate-800 hover:bg-slate-700'
                   }`}
                 >
-                  <div className=\"flex items-center gap-3\">
+                  <div className="flex items-center gap-3">
                     <div
-                      className=\"w-3 h-3 rounded-full\"
+                      className="w-3 h-3 rounded-full"
                       style={{ backgroundColor: person.color }}
                     />
                     <div>
-                      <div className=\"text-sm font-medium text-white\">{person.name}</div>
-                      <div className=\"text-xs text-slate-500\">{person.dates}</div>
+                      <div className="text-sm font-medium text-white">{person.name}</div>
+                      <div className="text-xs text-slate-500">{person.dates}</div>
                     </div>
                   </div>
                 </button>
               ))}
             </div>
 
-            <h3 className=\"text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 mt-6\">
+            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 mt-6">
               Camps ({camps.length})
             </h3>
-            <div className=\"space-y-2\">
+            <div className="space-y-2">
               {camps.map((camp) => (
                 <button
                   key={camp.id}
@@ -260,14 +260,14 @@ export default function CartePage() {
                       : 'bg-slate-800 hover:bg-slate-700'
                   }`}
                 >
-                  <div className=\"flex items-center gap-3\">
+                  <div className="flex items-center gap-3">
                     <div
-                      className=\"w-3 h-3 rounded-full\"
+                      className="w-3 h-3 rounded-full"
                       style={{ backgroundColor: camp.color }}
                     />
                     <div>
-                      <div className=\"text-sm font-medium text-white\">{camp.name}</div>
-                      <div className=\"text-xs text-slate-500\">{camp.country}</div>
+                      <div className="text-sm font-medium text-white">{camp.name}</div>
+                      <div className="text-xs text-slate-500">{camp.country}</div>
                     </div>
                   </div>
                 </button>
@@ -277,14 +277,14 @@ export default function CartePage() {
 
           {/* Selected info */}
           {(selectedPerson || selectedCamp) && (
-            <div className=\"p-4 border-t border-slate-700 bg-slate-800\">
+            <div className="p-4 border-t border-slate-700 bg-slate-800">
               {selectedPerson && (
                 <div>
-                  <h4 className=\"font-bold text-white mb-1\">{selectedPerson.name}</h4>
-                  <p className=\"text-xs text-slate-400 mb-2\">{selectedPerson.summary}</p>
+                  <h4 className="font-bold text-white mb-1">{selectedPerson.name}</h4>
+                  <p className="text-xs text-slate-400 mb-2">{selectedPerson.summary}</p>
                   <Link
                     to={`/personnage/${selectedPerson.id}`}
-                    className=\"text-xs text-amber-400 hover:text-amber-300\"
+                    className="text-xs text-amber-400 hover:text-amber-300"
                   >
                     Voir la fiche complète →
                   </Link>
@@ -292,11 +292,11 @@ export default function CartePage() {
               )}
               {selectedCamp && (
                 <div>
-                  <h4 className=\"font-bold text-white mb-1\">{selectedCamp.name}</h4>
-                  <p className=\"text-xs text-slate-400 mb-2\">{selectedCamp.description}</p>
+                  <h4 className="font-bold text-white mb-1">{selectedCamp.name}</h4>
+                  <p className="text-xs text-slate-400 mb-2">{selectedCamp.description}</p>
                   <Link
                     to={`/camp/${selectedCamp.id}`}
-                    className=\"text-xs text-amber-400 hover:text-amber-300\"
+                    className="text-xs text-amber-400 hover:text-amber-300"
                   >
                     Voir la fiche complète →
                   </Link>
@@ -311,25 +311,25 @@ export default function CartePage() {
       {!sidebarOpen && (
         <button
           onClick={() => setSidebarOpen(true)}
-          className=\"absolute top-4 left-4 z-[1000] p-3 bg-slate-900/95 backdrop-blur-md text-white rounded-lg border border-slate-700 shadow-lg hover:bg-slate-800 transition-colors\"
+          className="absolute top-4 left-4 z-[1000] p-3 bg-slate-900/95 backdrop-blur-md text-white rounded-lg border border-slate-700 shadow-lg hover:bg-slate-800 transition-colors"
         >
-          <Filter className=\"w-5 h-5\" />
+          <Filter className="w-5 h-5" />
         </button>
       )}
 
       {/* Map */}
-      <div className=\"flex-1\">
+      <div className="flex-1">
         <MapContainer
           center={[48.8566, 5.0]}
           zoom={5}
-          className=\"h-full w-full\"
+          className="h-full w-full"
           style={{ background: '#1e293b' }}
           zoomControl={false}
         >
-          <ZoomControl position=\"topright\" />
+          <ZoomControl position="topright" />
           <TileLayer
-            attribution='&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>'
-            url=\"https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png\"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
           />
           
           <MapFitter bounds={bounds} />
@@ -348,14 +348,14 @@ export default function CartePage() {
               }}
             >
               <Popup>
-                <div className=\"text-center min-w-[150px]\">
-                  <h3 className=\"font-bold text-lg\">{camp.name}</h3>
-                  <p className=\"text-sm text-gray-600\">{camp.country}</p>
-                  <p className=\"text-xs text-gray-500 mt-1\">{camp.dates}</p>
-                  <p className=\"text-xs text-red-600 font-medium mt-1\">{camp.victims} victimes</p>
+                <div className="text-center min-w-[150px]">
+                  <h3 className="font-bold text-lg">{camp.name}</h3>
+                  <p className="text-sm text-gray-600">{camp.country}</p>
+                  <p className="text-xs text-gray-500 mt-1">{camp.dates}</p>
+                  <p className="text-xs text-red-600 font-medium mt-1">{camp.victims} victimes</p>
                   <Link
                     to={`/camp/${camp.id}`}
-                    className=\"text-xs text-blue-600 hover:underline mt-2 block\"
+                    className="text-xs text-blue-600 hover:underline mt-2 block"
                   >
                     Voir la fiche →
                   </Link>
@@ -405,17 +405,17 @@ export default function CartePage() {
                 }}
               >
                 <Popup>
-                  <div className=\"min-w-[180px]\">
-                    <h3 className=\"font-bold\">{person.name}</h3>
-                    <p className=\"text-sm font-medium\" style={{ color: person.color }}>
+                  <div className="min-w-[180px]">
+                    <h3 className="font-bold">{person.name}</h3>
+                    <p className="text-sm font-medium" style={{ color: person.color }}>
                       {point.label}
                     </p>
-                    <p className=\"text-sm\">{point.location}</p>
-                    <p className=\"text-xs text-gray-500\">{point.date}</p>
-                    <p className=\"text-xs mt-1\">{point.description}</p>
+                    <p className="text-sm">{point.location}</p>
+                    <p className="text-xs text-gray-500">{point.date}</p>
+                    <p className="text-xs mt-1">{point.description}</p>
                     <Link
                       to={`/personnage/${person.id}`}
-                      className=\"text-xs text-blue-600 hover:underline mt-2 block\"
+                      className="text-xs text-blue-600 hover:underline mt-2 block"
                     >
                       Voir la fiche →
                     </Link>
@@ -428,24 +428,24 @@ export default function CartePage() {
       </div>
 
       {/* Legend */}
-      <div className=\"absolute bottom-4 right-4 z-[1000] bg-slate-900/95 backdrop-blur-md rounded-lg border border-slate-700 p-4\">
-        <h4 className=\"text-xs font-bold text-slate-400 uppercase tracking-wider mb-3\">Légende</h4>
-        <div className=\"space-y-2 text-xs\">
-          <div className=\"flex items-center gap-2\">
-            <div className=\"w-4 h-4 rounded-full bg-red-500 border-2 border-white\" />
-            <span className=\"text-slate-300\">Camp d'extermination</span>
+      <div className="absolute bottom-4 right-4 z-[1000] bg-slate-900/95 backdrop-blur-md rounded-lg border border-slate-700 p-4">
+        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Légende</h4>
+        <div className="space-y-2 text-xs">
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 rounded-full bg-red-500 border-2 border-white" />
+            <span className="text-slate-300">Camp d'extermination</span>
           </div>
-          <div className=\"flex items-center gap-2\">
-            <div className=\"w-4 h-4 rounded-full bg-amber-500 border-2 border-white\" />
-            <span className=\"text-slate-300\">Camp de concentration</span>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 rounded-full bg-amber-500 border-2 border-white" />
+            <span className="text-slate-300">Camp de concentration</span>
           </div>
-          <div className=\"flex items-center gap-2\">
-            <div className=\"w-4 h-4 rounded bg-blue-500 border-2 border-white\" />
-            <span className=\"text-slate-300\">Camp de transit</span>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 rounded bg-blue-500 border-2 border-white" />
+            <span className="text-slate-300">Camp de transit</span>
           </div>
-          <div className=\"flex items-center gap-2 pt-2 border-t border-slate-700\">
-            <div className=\"w-3 h-3 rounded-full bg-slate-400 border-2 border-white\" />
-            <span className=\"text-slate-300\">Étape de parcours</span>
+          <div className="flex items-center gap-2 pt-2 border-t border-slate-700">
+            <div className="w-3 h-3 rounded-full bg-slate-400 border-2 border-white" />
+            <span className="text-slate-300">Étape de parcours</span>
           </div>
         </div>
       </div>
