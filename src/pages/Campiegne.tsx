@@ -1,3 +1,4 @@
+// Image import removed - using standard img tags
 
 export default function RoyallieuPage() {
   return (
@@ -84,10 +85,10 @@ export default function RoyallieuPage() {
 
             {[
               { year: "Juin 1940", text: "L'armee allemande requisitionne les casernes de Royallieu apres l'armistice." },
-                            { year: \"Juin 1941\", text: \"Le camp devient officiellement le Frontstalag 122, camp d'internement pour les «ennemis du Reich».\" },
+                            { year: "Juin 1941", text: "Le camp devient officiellement le Frontstalag 122, camp d'internement pour les «ennemis du Reich»." },
               { year: "Decembre 1941", text: "Creation d'un camp special pour les Juifs, separe du reste du camp." },
               { year: "27 mars 1942", text: "Depart du premier convoi de deportation de Juifs de France vers Auschwitz (convoi 1)." },
-              { year: \"6 juillet 1942\", text: \"Départ du convoi des «45 000» : 1 175 résistants communistes vers Auschwitz.\" },
+              { year: "6 juillet 1942", text: "Départ du convoi des «45 000» : 1 175 résistants communistes vers Auschwitz." },
               { year: "1943", text: "Intensification des deportations. Des convois partent regulierement vers Buchenwald, Mauthausen, Ravensbrueck." },
               { year: "22 mars 1944", text: "Deportation de nombreux resistants, dont des membres de reseaux de l'Oise." },
               { year: "31 juillet 1944", text: "Depart du convoi 77, l'un des derniers grands convois de Juifs vers Auschwitz (1 300 personnes)." },
@@ -147,7 +148,7 @@ export default function RoyallieuPage() {
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   A partir de decembre 1941, un camp separe est cree pour les Juifs, isoles du reste
                   des internes. C{"'"}est de ce camp que partent les premiers convois de deportation
-                  de Juifs de France vers Auschwitz-Birkenau, dans le cadre de la \"Solution finale\".
+                  de Juifs de France vers Auschwitz-Birkenau, dans le cadre de la « Solution finale ».
                 </p>
               </div>
 
@@ -221,13 +222,13 @@ export default function RoyallieuPage() {
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Premier convoi de deportation de Juifs de France vers Auschwitz. 1 112 hommes juifs,
                   pour la plupart etrangers, sont deportes. Seuls 19 survivront. Ce convoi marque le
-                  debut de la \"Solution finale\" en France.
+                  debut de la « Solution finale » en France.
                 </p>
               </div>
 
               <div className="border border-border bg-card p-8 transition-colors hover:border-primary">
                 <h3 className="font-serif text-xl font-bold text-foreground">
-                  Le convoi des \"45 000\"
+                  Le convoi des "45 000"
                 </h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Le 6 juillet 1942, 1 175 resistants communistes sont deportes vers Auschwitz.
@@ -389,7 +390,7 @@ export default function RoyallieuPage() {
                 </h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Les internes organisent des cours et des conferences. Professeurs, intellectuels
-                  et etudiants partagent leurs connaissances. Cette \"universite du camp\" permet
+                  et etudiants partagent leurs connaissances. Cette "universite du camp" permet
                   de maintenir une vie intellectuelle et de resister a l{"'"}abrutissement voulu par
                   les nazis.
                 </p>
