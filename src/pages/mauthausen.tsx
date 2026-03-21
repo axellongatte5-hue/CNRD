@@ -1,4 +1,4 @@
-import Image from "next/image"
+// Image import removed - using standard img tags
 
 /* ─── Data ─── */
 
@@ -16,8 +16,8 @@ const timelineEvents = [
       "Le camp est construit a cote des carrieres de granit de Wiener Graben, exploitees par la societe SS DEST (Deutsche Erd- und Steinwerke). Le travail dans les carrieres devient rapidement un outil d'extermination : les detenus sont forces de porter des blocs de pierre de 50 kg dans l'escalier de la mort.",
   },
   {
-    date: \"1939\",
-    title: \"Classification «Catégorie III»\",
+    date: "1939",
+    title: "Classification «Catégorie III»",
     description:
       "Les nazis classent Mauthausen comme camp de «catégorie III», la plus sévère, réservé aux prisonniers considérés comme «irréductibles» et «irrécupérables». Cette classification implique les conditions de détention les plus brutales et la plus faible espérance de vie de tout le système concentrationnaire.",
   },
@@ -63,7 +63,7 @@ const campSections = [
       "L'entree principale, avec son portail de granit et son aigle nazi, est devenue un symbole du systeme concentrationnaire.",
       "Le camp comptait une chambre a gaz deguisee en salle de douche, ou des milliers de detenus furent assassines au Zyklon B.",
       "Le crematorium fonctionnait en permanence, incinerant les corps des victimes executees, mortes de faim ou d'epuisement.",
-      "Le \"Bunker\" (prison du camp) etait un lieu de torture ou les detenus etaient soumis aux sevices les plus cruels.",
+      "Le « Bunker » (prison du camp) etait un lieu de torture ou les detenus etaient soumis aux sevices les plus cruels.",
       "Un terrain de football SS jouxtait le camp, ou les gardiens se divertissaient a quelques metres des atrocites.",
     ],
   },
@@ -71,10 +71,10 @@ const campSections = [
     title: "L'escalier de la mort",
     subtitle: "186 marches vers l'enfer",
     description:
-      "Le \"Todesstiege\" (escalier de la mort) est le symbole le plus terrifiant de Mauthausen. Cet escalier de 186 marches, taille dans la roche, reliait le fond de la carriere de Wiener Graben au camp. Les detenus devaient le gravir plusieurs fois par jour en portant des blocs de granit de 25 a 50 kg sur le dos.",
+      "Le « Todesstiege » (escalier de la mort) est le symbole le plus terrifiant de Mauthausen. Cet escalier de 186 marches, taille dans la roche, reliait le fond de la carriere de Wiener Graben au camp. Les detenus devaient le gravir plusieurs fois par jour en portant des blocs de granit de 25 a 50 kg sur le dos.",
     details: [
       "Les marches, irregulieres et glissantes, causaient de nombreuses chutes. Les gardes SS poussaient deliberement des prisonniers dans le vide.",
-      "Le mur au-dessus de la carriere etait surnomme le \"Mur des parachutistes\" : les SS y precipitaient des detenus dans le vide.",
+      "Le mur au-dessus de la carriere etait surnomme le « Mur des parachutistes » : les SS y precipitaient des detenus dans le vide.",
       "Les prisonniers epuises qui tombaient etaient battus ou abattus sur place par les gardes.",
       "Le granit extrait servait aux grands projets architecturaux du Reich, notamment les plans megalomanes d'Albert Speer pour Berlin.",
       "Plusieurs milliers de detenus sont morts dans la carriere et dans l'escalier de la mort.",
@@ -86,7 +86,7 @@ const campSections = [
     description:
       "Gusen, a 5 km de Mauthausen, etait parfois considere comme encore plus mortel que le camp principal. Divise en trois camps (Gusen I, II et III), il abritait des ateliers d'armement souterrains ou les detenus travaillaient dans des conditions epouvantables.",
     details: [
-      "Les tunnels souterrains de Gusen, appeles \"Bergkristall\", servaient a fabriquer des chasseurs Messerschmitt Me 262.",
+      "Les tunnels souterrains de Gusen, appeles « Bergkristall », servaient a fabriquer des chasseurs Messerschmitt Me 262.",
       "Le taux de mortalite a Gusen etait parmi les plus eleves de tous les camps : travail epuisant, sous-alimentation, epidemies.",
       "Les detenus espagnols republicains furent nombreux a Gusen, ou beaucoup perirent.",
       "Une chambre a gaz mobile (camion) faisait la navette entre Mauthausen et Gusen pour executer les prisonniers.",
@@ -100,7 +100,7 @@ const conditions = [
     title: "La faim",
     subtitle: "Famine organisee",
     description:
-      "Les rations alimentaires etaient deliberement insuffisantes : une soupe claire, un morceau de pain noir, parfois un ersatz de cafe. Les detenus recevaient entre 700 et 1 000 calories par jour, bien en dessous du minimum vital. La faim etait un outil de domination et d'extermination lente. Les \"Muselmanner\" (detenus squelettiques) etaient voues a une mort certaine.",
+      "Les rations alimentaires etaient deliberement insuffisantes : une soupe claire, un morceau de pain noir, parfois un ersatz de cafe. Les detenus recevaient entre 700 et 1 000 calories par jour, bien en dessous du minimum vital. La faim etait un outil de domination et d'extermination lente. Les « Muselmanner » (detenus squelettiques) etaient voues a une mort certaine.",
   },
   {
     title: "La carriere",
@@ -112,7 +112,7 @@ const conditions = [
     title: "La violence",
     subtitle: "Cruaute systematique",
     description:
-      "Mauthausen etait repute pour la cruaute exceptionnelle de ses gardes SS. Les tortures incluaient la pendaison par les poignets, l'immersion dans l'eau glacee, les coups de fouet. Les executions etaient frequentes : pendaisons, fusillades, noyades dans les bassins du camp. Le \"mur des parachutistes\" au-dessus de la carriere servait a precipiter des detenus dans le vide pour le divertissement des SS.",
+      "Mauthausen etait repute pour la cruaute exceptionnelle de ses gardes SS. Les tortures incluaient la pendaison par les poignets, l'immersion dans l'eau glacee, les coups de fouet. Les executions etaient frequentes : pendaisons, fusillades, noyades dans les bassins du camp. Le « mur des parachutistes » au-dessus de la carriere servait a precipiter des detenus dans le vide pour le divertissement des SS.",
   },
   {
     title: "Le froid",
@@ -124,7 +124,7 @@ const conditions = [
     title: "La deshumanisation",
     subtitle: "Destruction de l'identite",
     description:
-      "Les prisonniers de Mauthausen subissaient une deshumanisation totale : tonte, confiscation de tout effet personnel, attribution d'un numero. Les triangles de couleur identifiaient chaque categorie : rouge pour les politiques, vert pour les criminels, rose pour les homosexuels, violet pour les Temoins de Jehovah, bleu pour les apatrides, noir pour les \"asociaux\". Les Juifs portaient deux triangles superposes formant l'etoile de David.",
+      "Les prisonniers de Mauthausen subissaient une deshumanisation totale : tonte, confiscation de tout effet personnel, attribution d'un numero. Les triangles de couleur identifiaient chaque categorie : rouge pour les politiques, vert pour les criminels, rose pour les homosexuels, violet pour les Temoins de Jehovah, bleu pour les apatrides, noir pour les « asociaux ». Les Juifs portaient deux triangles superposes formant l'etoile de David.",
   },
 ]
 
@@ -245,16 +245,16 @@ export default function MauthausenPage() {
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Classe par les nazis comme camp de{" "}
               <span className="font-semibold text-foreground">
-                \"categorie III\"
+                "categorie III"
               </span>
               , la plus severe, Mauthausen etait reserve aux prisonniers
               consideres comme{" "}
               <span className="font-semibold text-foreground">
-                \"irreducables\"
+                « irreducables »
               </span>{" "}
               et{" "}
               <span className="font-semibold text-foreground">
-                \"irrecuperables\"
+                « irrecuperables »
               </span>
               . Cette classification signifiait les conditions les plus
               inhumaines et la plus faible esperance de survie.
