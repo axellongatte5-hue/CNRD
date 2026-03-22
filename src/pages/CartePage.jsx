@@ -124,7 +124,6 @@ export default function CartePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex items-center justify-between h-full">
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <Award className="w-6 h-6 text-amber-500" />
               <span className="font-semibold text-lg text-white hidden sm:block">Mémoire de la Déportation</span>
               <span className="font-semibold text-lg text-white sm:hidden">CNRD</span>
             </Link>
