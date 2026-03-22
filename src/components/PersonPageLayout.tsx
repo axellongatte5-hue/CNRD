@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Award, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { ReactNode } from 'react';
 
 interface PersonPageLayoutProps {
@@ -14,7 +14,6 @@ export default function PersonPageLayout({ children }: PersonPageLayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <Award className="w-6 h-6 text-amber-500" />
               <span className="font-semibold text-lg hidden sm:block">Mémoire de la Déportation</span>
               <span className="font-semibold text-lg sm:hidden">CNRD</span>
             </Link>
@@ -39,7 +38,6 @@ export default function PersonPageLayout({ children }: PersonPageLayoutProps) {
       <footer className="bg-slate-900 border-t border-slate-800 py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <Award className="w-5 h-5 text-amber-500" />
             <span className="font-semibold">Mémoire de la Déportation</span>
           </div>
           <p className="text-slate-500 text-sm">
