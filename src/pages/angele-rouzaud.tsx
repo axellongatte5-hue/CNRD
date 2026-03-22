@@ -292,7 +292,6 @@ export default function AngeleRouzaud() {
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             <div className="border-l-2 border-amber-500 bg-slate-900 p-6">
               <div className="flex items-center gap-3 mb-3">
-                <Award className="w-6 h-6 text-amber-400" />
                 <h3 className="font-bold text-white">Reconnaissance</h3>
               </div>
               <p className="text-sm text-slate-300">
@@ -328,7 +327,6 @@ export default function AngeleRouzaud() {
         <div className="mx-auto max-w-4xl px-6 py-12">
           <div className="flex flex-col items-center gap-4 text-center">
             <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-amber-400" />
               <span className="font-semibold text-white">Mémoire de la Déportation</span>
             </div>
             <p className="text-sm text-slate-400">
