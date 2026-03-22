@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Calendar, Award, AlertTriangle, Users, Heart, Flame } from 'lucide-react';
+import { MapPin, Calendar, AlertTriangle, Users, Heart, Flame } from 'lucide-react';
 
 export default function AngeleRouzaud() {
   return (
@@ -9,7 +9,6 @@ export default function AngeleRouzaud() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Award className="w-5 h-5 text-amber-500" />
               <span className="font-semibold text-white">Mémoire de la Déportation</span>
             </Link>
             <div className="flex gap-6 items-center">
