@@ -444,4 +444,3 @@ export const timelineEvents = [
   { year: 1944, event: "Débarquement et Libération", detail: "6 juin — Débarquement en Normandie. Libération progressive de la France" },
   { year: 1945, event: "Libération des camps", detail: "Janvier–Mai — Découverte de l'horreur des camps par les Alliés" }
 ];
-"
