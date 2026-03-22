@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Calendar, Award, AlertTriangle, Users, BookOpen, FileText, Quote } from 'lucide-react';
+import { MapPin, Calendar, AlertTriangle, Users, BookOpen, FileText, Quote } from 'lucide-react';
 import PersonHeader from '../components/PersonHeader';
 
 const rollandSections = [
