@@ -149,7 +149,6 @@ function LesAbs() {
         <div className="mt-12 grid md:grid-cols-2 gap-8">
           <div className="border border-slate-700 bg-slate-800 p-8">
             <h3 className="font-serif text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <Award className="w-5 h-5 text-amber-400" />
               Carrière Artistique & Intellectuelle
             </h3>
             <ul className="space-y-3">
