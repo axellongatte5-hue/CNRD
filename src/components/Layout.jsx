@@ -22,9 +22,9 @@ export default function Layout({ children }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Titre */}
-            <Link to=\"/\" className=\"flex items-center gap-3 hover:opacity-80 transition-opacity\">
-              <span className=\"font-semibold text-lg hidden sm:block\">Mémoire de la Déportation</span>
-              <span className=\"font-semibold text-lg sm:hidden\">CNRD</span>
+            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <span className="font-semibold text-lg hidden sm:block">Mémoire de la Déportation</span>
+              <span className="font-semibold text-lg sm:hidden">CNRD</span>
             </Link>
 
             {/* Desktop Navigation */}
