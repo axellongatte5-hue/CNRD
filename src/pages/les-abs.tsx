@@ -246,7 +246,6 @@ function LesAbs() {
         <div className="mx-auto max-w-4xl px-6 py-12">
           <div className="flex flex-col items-center gap-4 text-center">
             <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-amber-400" />
               <p className="font-serif text-lg font-bold text-white">
                 Mémoire de la Déportation
               </p>
