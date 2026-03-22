@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Award, ArrowRight, Users, MapPin, Map } from 'lucide-react';
+import { ArrowRight, Users, MapPin, Map } from 'lucide-react';
 import { deportees, camps } from '../data/deportees';
 
 export default function HomePage() {
